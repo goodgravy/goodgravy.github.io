@@ -1,0 +1,14 @@
+language: go
+
+env:
+  global:
+  - secure: ncZek7OGO/jkXOCkmIuNpqa2JDeq09UKJ18J9mXEkWjzOPP1x9FoKz3hHFZqmxVUIgsxw8wCzgw67Xf4E8uSpvqaCX809zsOHPd9MeFDeMnl/eb8lE+rvhzEbtH+PwJ1yVCVgCeeXh4z7WBZyQyE/Dvozjz9KPilxR8pwZ4CGAPMV2lpBj7uQpQPFg4TspfOqbUYQixBwLVuVcnJEwAjfeFqpv+DRTCloCwCimrvmkytyUpjWM1PgsxCw0zFOGigdEE25rgIZAXqqxc9nsV/1YAsjPi5ABVdkVuL3CEgBI9a92Sk/ibjLCi8NcdjsjUEZmQ/u/yvgluhhp4pE3VswtLh/NYNOu3Rlr//EMJOzwIrfUMCPwQjr8W/HFR8vkKAsk+XWSPkPY9r4fq2DQOg9EOTOmeuAbq4qp0/CN+zv042FMHYsYVPV7YCF8uYgPd6DeIhQzZAisgKDVbxFnkQq6bwMKxK7xVoCNa/DIjkDQVsygJ4ONPM92IoDDovPe8k3vPgX6tnKtSaFifY2gzSKVSQTV3y8Y1Y9mjoM/n0+HGM62MnohpJ26QACDD1d1PXJQWFvOAa/DRgqdycFOoOrETUDjDRBOxCaKZwQ4iwJH5UFahY3sHNotFVnjxJddEzwixeub7aGUaH9yUQdSfnXNl/IVmmBcsZjmu0q9ARUnc=
+
+install:
+  - go get -v github.com/spf13/hugo
+
+script:
+  - hugo
+
+after_success:
+  - ./deploy.sh
