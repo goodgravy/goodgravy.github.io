@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://jmsbrdy.com/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Jun 2015 14:06:44 +0100</lastBuildDate>
+    <atom:link href="https://jmsbrdy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hackathon idea: Virtual Reality shopping experience</title>
+      <link>https://jmsbrdy.com/vr-campaign-page/</link>
+      <pubDate>Sat, 06 Jun 2015 14:06:44 +0100</pubDate>
+      
+      <guid>https://jmsbrdy.com/vr-campaign-page/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://teespring.com/&#34;&gt;Teespring&lt;/a&gt; we have quarterly hackathons. We all throw suggestions into a melting-pot of ideas in the run-up to the event, with the most promising, most interesting, and most popular suggestions graduating to being hacked on by a small team for a couple of days.&lt;/p&gt;
+
+&lt;p&gt;A friend of mine at &lt;a href=&#34;http://www.dodocase.com/collections/virtual-reality&#34;&gt;DODOcase&lt;/a&gt; had given me a couple of Google Cardboard-based virtual reality viewers that I hadn&amp;rsquo;t gotten around to playing with yet, and this hackathon was the perfect opportunity to have a play!&lt;/p&gt;
+
+&lt;p&gt;The basic idea was to use the &lt;a href=&#34;https://vr.chromeexperiments.com/&#34;&gt;Virtual Reality capabilities in WebGL&lt;/a&gt; to give a Cardboard-equipped customer a 3D virtual preview of the product. This is still experimental stuff, but well-supported in all modern mobile browsers!&lt;/p&gt;
+
+&lt;p&gt;In order to prove the idea was even vaguely possible, and to give my Hackathon pitch some substance, I put together &lt;a href=&#34;https://jmsbrdy.com/vr-campaign.html&#34;&gt;this quick-and-dirty prototype&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the end, I didn&amp;rsquo;t move the idea past this prototype stage (and ended up hacking on machine learning fraud detection instead… more on that another time maybe), but I was surprised by how easy it was to get VR working on my phone browser, and how well it performed!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Bollocks</title>
+      <link>https://jmsbrdy.com/google-bollocks/</link>
+      <pubDate>Fri, 16 Jan 2015 14:50:15 +0100</pubDate>
+      
+      <guid>https://jmsbrdy.com/google-bollocks/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2ZTp1coqajQ#t=33s&#34;&gt;Spectacles, Testicles, Wallet and Watch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We think of it as the tongue-in-cheek mnemonic for recalling the sign of the cross. But is that all it means?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I think not&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s become clear to me that infamous technophile, Pope Francis, has leveraged his position as head of the Catholic church to exert influence over the product roadmap of everyone’s favourite search behemoth: Google.
+Let’s look at news around recent product launches for Google:
+Google Glass: spectacles
+???
+Google Wallet: wallet
+Android Wear: watch&lt;/p&gt;
+
+&lt;p&gt;Can you see what’s missing?
+From these facts, the only conclusion I can possibly draw is that Google, in partnership with the Holy See, is planning some sort of hi-tech bollocks, almost certainly available in red, yellow and blue to follow Google’s branding.
+The user experience can only be guessed at, but this writer hopes for increased pain tolerance and bluetooth LE support.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
