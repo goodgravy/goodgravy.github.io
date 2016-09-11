@@ -7,7 +7,7 @@ title = "Hackathon idea: Virtual Reality shopping experience"
 
 +++
 
-At [Teespring](https://teespring.com/) we have quarterly hackathons. We all throw suggestions into a melting-pot of ideas in the run-up to the event, with the most promising, most interesting, and most popular suggestions graduating to being hacked on by a small team for a couple of days.
+At [Teespring](https://teespring.com/) we have quarterly hackathons. We all throw suggestions into a melting-pot of ideas in the run-up to the event, with the most promising, most interesting, and most popular suggestions graduating to be hacked upon by a small team for a couple of days.
 
 A friend of mine at [DODOcase](http://www.dodocase.com/collections/virtual-reality) had given me a couple of Google Cardboard-based virtual reality viewers that I hadn't gotten around to playing with yet, and this hackathon was the perfect opportunity to have a play!
 
