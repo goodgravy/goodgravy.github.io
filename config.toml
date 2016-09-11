@@ -4,7 +4,7 @@ license = "Creative Commons Attribution 4.0 International Public License"
 licenselink = "https://creativecommons.org/licenses/by/4.0/legalcode"
 source_repo = "http://github.com/goodgravy/goodgravy.github.io"
 min_version = 0.14
-baseurl = "https://jmsbrdy.com"
+baseurl = "https://goodgravy.github.io"
 
 [author]
     name = "James Brady"
