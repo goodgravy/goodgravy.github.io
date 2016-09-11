@@ -5,7 +5,24 @@ licenselink = "https://creativecommons.org/licenses/by/4.0/legalcode"
 source_repo = "http://github.com/goodgravy/goodgravy.github.io"
 min_version = 0.14
 baseurl = "https://goodgravy.github.io"
+theme = "hyde-x"
 
 [author]
     name = "James Brady"
-    homepage = "https://jmsbrdy.com"
+
+[params]
+    # Changes sidebar background and link/accent colours.
+    # See below for more colour options.
+    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
+    theme = "theme-base-0d layout-reverse"
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Blog".
+    home = "Home"
+
+    # Metadata used to drive integrations.
+    gravatarHash = "d0249ecb41e74c4ad49b91cf7c179f8c"
+
+    # Sidebar social links, these must be full URLs.
+    github = "https://github.com/goodgravy"
+    twitter = "https://twitter.com/goodgravy"

@@ -1,8 +1,7 @@
 +++
-Description = "Revealed: Google's Seminal New Product"
+Description = "Revealed: Google's \"seminal\" new product."
 Tags = ["Tech", "News", "Google"]
 date = "2015-01-16T14:50:15+01:00"
-menu = "main"
 title = "Google Bollocks"
 
 +++

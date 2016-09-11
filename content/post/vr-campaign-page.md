@@ -1,9 +1,8 @@
 +++
-Description = "A quick and dirty prototype for a virtual reality Teespring campaign page"
+Description = "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
 Tags = ["Development", "Teespring", "VR"]
 date = "2015-06-06T14:06:44+01:00"
-menu = "main"
-title = "Hackathon idea: Virtual Reality shopping experience"
+title = "Prototype: Virtual Reality e-commerce"
 
 +++
 
