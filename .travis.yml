@@ -16,4 +16,5 @@ script:
   - hugo
 
 after_success:
+  - echo 'jmsbrdy.com' > ./public/CNAME
   - ./deploy.sh
