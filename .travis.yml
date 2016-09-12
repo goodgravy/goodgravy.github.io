@@ -12,7 +12,8 @@ install:
   - go get -v github.com/spf13/hugo
 
 script:
-  - hugo --theme=hyde-x
+  - git clone https://github.com/zyro/hyde-x ./themes/hyde-x
+  - hugo
 
 after_success:
   - ./deploy.sh
