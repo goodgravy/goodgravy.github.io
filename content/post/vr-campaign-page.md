@@ -2,6 +2,7 @@
 Description = "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
 Tags = ["Development", "Teespring", "VR"]
 date = "2015-06-06T14:06:44+01:00"
+draft = true
 title = "Prototype: Virtual Reality e-commerce"
 
 +++
@@ -12,6 +13,9 @@ A friend of mine at [DODOcase](http://www.dodocase.com/collections/virtual-reali
 
 The basic idea was to use the [Virtual Reality capabilities in WebGL](https://vr.chromeexperiments.com/) to give a Cardboard-equipped customer a 3D virtual preview of the product. This is still experimental stuff, but well-supported in all modern mobile browsers!
 
-In order to prove the idea was even vaguely possible, and to give my Hackathon pitch some substance, I put together [this quick-and-dirty prototype](/vr-campaign.html).
+In order to prove the idea was even vaguely possible, and to give my Hackathon pitch some substance, I put together this quick-and-dirty prototype ([full-screen version here](/vr-campaign.html)):
+
+<iframe src="/vr-campaign.html">
+</iframe>
 
 In the end, I didn't move the idea past this prototype stage (and ended up hacking on machine learning fraud detection instead… more on that another time maybe), but I was surprised by how easy it was to get VR working on my phone browser, and how well it performed!
