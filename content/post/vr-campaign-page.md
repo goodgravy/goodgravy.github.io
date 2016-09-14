@@ -2,7 +2,6 @@
 Description = "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
 Tags = ["Development", "Teespring", "VR"]
 date = "2015-06-06T14:06:44+01:00"
-draft = true
 title = "Prototype: Virtual Reality e-commerce"
 
 +++
@@ -27,7 +26,12 @@ In order to prove the idea was even vaguely possible, and to give my Hackathon
 pitch some substance, I put together this quick-and-dirty prototype
 ([full-screen version here](/vr-campaign.html)):
 
-<iframe src="/vr-campaign.html"> </iframe>
+<iframe src="/vr-campaign.html" height="350px" width="100%"
+  style="border: none"> </iframe>
+
+Here, the Cardboard shows the left render to your left eye, and the right
+render to your right eye. The camera locations are slightly different meaning
+you get a [stereoscopic](https://en.wikipedia.org/wiki/Stereoscopy) effect!
 
 In the end, I didn't move the idea past this prototype stage (and ended up
 hacking on machine learning fraud detection instead… more on that another time
