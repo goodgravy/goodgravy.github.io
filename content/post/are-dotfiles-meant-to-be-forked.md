@@ -7,6 +7,14 @@ title = "Are dotfiles meant to be forked?"
 
 +++
 
+## tl;dr
+
+I don't think so, and created [Full
+Stop](https://github.com/goodgravy/full-stop/) as a way for us to share dotfile
+**tooling** while staying agnostic about the **content**.
+
+---
+
 In ["Dotfiles Are Meant to Be
 Forked"](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), Zach
 Holman points out that we _all_ benefit through sharing the efficiency-boosting
