@@ -1,45 +1,41 @@
 (function(window, document) {
-
-	var textareas = document.getElementsByTagName('textarea');
-	var decoded = textareas[0];
-	var encoded = textareas[1];
-	var stringFromCharCode = String.fromCharCode;
-
-	function hexEscape(string) {
-		var length = string.length;
-		var index = -1;
-		var result = '';
-		var hex;
-		while (++index < length) {
-			hex = string.charCodeAt(index).toString(16).toUpperCase();
-			result += '\\x' + ('00' + hex).slice(-2);
-		}
-		return result;
-	}
+	var decoded = document.querySelector('textarea');
+	var encodedChars = document.querySelector('div.encoded.characters');
+	var encodedBits = document.querySelector('div.encoded.binary');
 
 	function binEscape(string) {
-		var result = '';
+		var byteSequences = [];
 		var symbols = Array.from(string);
+
 		for (var index = 0; index < symbols.length; index++) {
-			result += binEscapeSymbol(symbols[index]) + '\n';
+			byteSequences.push(binEscapeSymbol(symbols[index]));
 		}
-		return result;
+		return byteSequences.join('\n');
 	}
 
 	function binEscapeSymbol(symbol) {
 		var utf8Value = utf8.encode(symbol);
-		var result = '';
+		var bytes = [];
 		var bin;
+
 		for (var index = 0; index < utf8Value.length; index++) {
 			bin = utf8Value.charCodeAt(index).toString(2);
-			result += ('00000000' + bin).slice(-8) + ' ';
+			bytes.push(('00000000' + bin).slice(-8));
 		}
-		return result;
+		return bytes.join(' ');
+	}
+
+	function splitChars(string) {
+		var chars = Array.from(string);
+		var spacesForReturns = chars.map(function(char) {
+			return char.replace(/(\r\n|\n|\r)/gm, '');
+		});
+		return Array.from(spacesForReturns).join('\n');
 	}
 
 	function update() {
-		encoded.value = binEscape(decoded.value);
-		decoded.className = encoded.className = '';
+		encodedChars.innerText = splitChars(decoded.value);
+		encodedBits.innerText = binEscape(decoded.value);
 	};
 
 	// https://mathiasbynens.be/notes/oninput

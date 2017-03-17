@@ -31,17 +31,13 @@ a:hover, a:focus {
 	background: #36c;
 }
 
-textarea {
-	font-family: Monaco, Consolas, monospace;
-}
-
 #footer {
 	margin-top: 2em;
 	text-align: center;
 }
 
 textarea {
-	border: 3px double green;
+	font-family: Monaco, Consolas, monospace;
 	background: #90ee90;
 	width: 100%;
 	-moz-box-sizing: border-box;
@@ -52,6 +48,27 @@ textarea {
 	padding: .7em;
 	resize: vertical;
 	min-height: 9.5em;
+}
+
+div.encoded {
+	font-family: Monaco, Consolas, monospace;
+	background: #ccc;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: .7em;
+	min-height: 20em;
+}
+
+div.characters {
+	float: left;
+	width: 10%;
+}
+
+div.binary {
+	background: #eee;
+	float: right;
+	width: 90%;
 }
 
 code {
@@ -84,4 +101,10 @@ code {
 		border-width: 0 1px;
 	}
 
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
 }
