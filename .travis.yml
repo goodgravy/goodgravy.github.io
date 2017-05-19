@@ -9,7 +9,9 @@ script:
 - hugo -v
 after_success:
 - echo 'jmsbrdy.com' > ./public/CNAME
-- './deploy.sh'
-env:
-  global:
-    secure: MUdnFZxQ0bIdbX5XrTw2qT4QUJw0UsbkyTZDEtXJf5MWdkIOYBxQPw4OEhb41aQqz1Cm7zz2zLMGM8gbs6XY+C/FbvarMyrRWQwGuc9iZxeaNzUWP1IoLNVSrMxLPxxyXvsoTeckwdRdkvz93Tr7toTeva97+RtE/JYMyTO62WMsjikUGl1W1OJmUV7QV5F4BAALCJuYo5w7+Gfs8fsw6sOYzOIOrZ/BhMuJKpwOYjCbRjp3EnuUVk89R3kUPFrss8RsA9xuNezktadd48fKkKJSGTlgWgS9fKN8Rwfl1xl0EQYnAjKWVUks1pW5uMrXFdYjf2lIo0ZnRISQvsKzWXRGneauqs03+1Pl/+j2o7+h6lv7e8Y6agD9XSvV+BwxdGWGJ6HnqDwRj2kPF+8v6kLfqEH1oWFeJhlUWj/fwUiVqHEBypVlIKGF73H47l2ocPi7DxXs6xVrleLWfEyicBAOtO6cdTQeZy7XIvWbj2NzCjB76ixbfd41TYN7BsCSqo191Tr613MpqN7txFyOddIM9V0fJbdzYZDJzLJO9NmUmTU+Oh0w5cX3Dkf1xOi0RwIypuTkv2THkAgGIE8eNA6YNT1R+PNOpS+uz7LMlPkDm2J8CQD+tBa9zb9CY/1Qk3uDwJ/SJGuKSBg/qlEQTnTVZkQUh1hPhQVRY/sPI6Q=
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
