@@ -6,7 +6,7 @@ install:
 - go get -v github.com/spf13/hugo
 script:
 - git clone https://github.com/zyro/hyde-x ./themes/hyde-x
-- hugo
+- hugo -v
 after_success:
 - echo 'jmsbrdy.com' > ./public/CNAME
 - './deploy.sh'
