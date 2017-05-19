@@ -5,7 +5,7 @@ branches:
 install:
 - go get -v github.com/spf13/hugo
 script:
-- git clone https://github.com/zyro/hyde-x ./themes/hyde-x
+- git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git ./themes/hugo-tranquilpeak-theme
 - hugo -v
 after_success:
 - echo 'jmsbrdy.com' > ./public/CNAME
