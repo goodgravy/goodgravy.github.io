@@ -47,7 +47,7 @@ theme = "hugo-tranquilpeak-theme"
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/kakawait"
+  url = "https://github.com/goodgravy"
 
 [params]
   # Customize date format use to render blog post date, categories and other
