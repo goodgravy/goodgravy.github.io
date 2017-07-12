@@ -13,3 +13,10 @@ deploy:
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: source
+after_deploy:
+  - |
+    curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+     -H "X-Auth-Email: ${CF_EMAIL}" \
+     -H "X-Auth-Key: ${CF_API_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"purge_everything":true}'
