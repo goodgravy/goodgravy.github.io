@@ -4,14 +4,15 @@ date = "2016-09-18T15:09:41+01:00"
 description = ""
 keywords = []
 title = "Are dotfiles meant to be forked?"
+showDate = false
 
 +++
 
-## tl;dr
-
-I don't think so, and created [Full
+**Tl;dr**: I don't think so, so I created [Full
 Stop](https://github.com/goodgravy/full-stop/) as a way for us to share dotfile
 **tooling** while staying agnostic about the **content**.
+
+<!--more-->
 
 ---
 

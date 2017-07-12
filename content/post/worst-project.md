@@ -2,6 +2,7 @@
 Description = "Taking \"Not Invented Here\" to a whole new level."
 Tags = ["IBM", "development"]
 date = "2013-07-05T16:43:55+01:00"
+showDate = false
 title = "The worst project I ever worked on"
 
 +++
@@ -14,6 +15,8 @@ I was recently asked:
 After a quick scan through my mental graveyard of half-finished, half-assed
 ideas too embarrassing for me to dignify with a link here, I settled upon my
 first job out of university.
+
+<!--more-->
 
 ## The company
 

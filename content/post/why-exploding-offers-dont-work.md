@@ -1,13 +1,16 @@
 +++
 categories = []
 date = "2015-02-11T18:03:18+01:00"
+showDate = false
 description = ""
 keywords = []
 title = "Why exploding job offers don't work for senior hires"
+coverImage = "/img/explosion.jpg"
+coverSize = "partial"
+coverMeta = "out"
+thumbnailImagePosition = "right"
 
 +++
-
-## The tl;dr
 
 At the moment -- and for the foreseeable future -- the power balance of hiring
 negotiations favours the engineering candidates rather than with the hiring
@@ -16,6 +19,8 @@ manipulate candidates will likely be ineffective, and could potentially
 backfire horribly.
 
 This is how I became one such backfire.
+
+<!--more-->
 
 ## The offer
 

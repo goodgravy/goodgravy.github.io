@@ -1,15 +1,19 @@
 +++
 categories = []
 date = "2016-12-19T20:56:42+01:00"
+showDate = false
 description = ""
 keywords = []
 title = "Queues, Culture, and Computer Science"
+thumbnailImage = "/img/array.png"
+thumbnailImagePosition = "right"
 
 +++
 
 Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners -- and scowl at interlopers -- are so rich that I've lost count of the number of serious, extended conversations I've had about the do's and don'ts, the Ps and Qs, of waiting for service.
 
 As a programmer, though, it's also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+<!--more-->
 
 # The United Kingdom: arrays
 

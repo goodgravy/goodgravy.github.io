@@ -1,8 +1,11 @@
 +++
 date = "2013-03-17T13:25:08+01:00"
+showDate = false
 description = "A punch box is an easy DIY project that's perfect for gifting."
 keywords = ["DIY", "present"]
 title = "Home-made present: how to make a punch box"
+thumbnailImage = "/img/punch-box/finished.jpg"
+thumbnailImagePosition = "right"
 
 +++
 
@@ -16,6 +19,7 @@ project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes
 ages ago. It's based on an old parlour game: the idea is to conceal little
 messages inside a nice-looking block, to be popped out with a pencil when the
 recipient feels like it.
+<!--more-->
 
 Now, that Kickstarter project is long since finished but I reckoned I could
 have a pretty good go at making my own version. Here's what I ended up with so
