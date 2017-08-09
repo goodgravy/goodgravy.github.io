@@ -5,7 +5,7 @@ showDate = false
 keywords = []
 tags = []
 title = "Swamp coolers for the house?"
-thumbnailImage = "/img/factory.jpg"
+thumbnailImage = "/img/hot-temp.png"
 thumbnailImagePosition = "right"
 +++
 
