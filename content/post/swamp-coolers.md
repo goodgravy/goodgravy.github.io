@@ -3,7 +3,7 @@ categories = []
 date = "2017-08-01T00:00:00Z"
 showDate = false
 keywords = []
-tags = []
+tags = ["swamp-cooler"]
 title = "Swamp coolers for the house?"
 thumbnailImage = "/img/hot-temp.png"
 thumbnailImagePosition = "right"
@@ -53,12 +53,12 @@ Given ancient Persians were using these things to cool whole houses in the _midd
 
 Most of the examples online definitely fall in the [ugly](http://lifehacker.com/5583151/set-up-a-super-simple-evaporative-cooler-for-immediate-heat-relief) [but](http://www.instructables.com/id/DIY-baby-swampy-small-evaporative-cooler/) [functional](http://www.instructables.com/id/Swamp-Cooler-1/) camp.
 
-However, Thibault Faverie's [Cold pot](http://thibault-faverie.com/Cold-Pot) looks amazing, and he provides a high-level overview of the internal gubbins too!
+Then, I found Thibault Faverie's [Cold Pot](http://thibault-faverie.com/Cold-Pot) which looks amazing. It uses terracotta as a porous material for the water to evaporate from, and a small fan to move air through it. However, I must admit that to my inexperienced eye it looks like it wouldn't be very effective. No evaporation occurs within the air stream itself – it relies on the chill of the ceramic being passed through multiple components before it gets into the air. I'm pretty sure we can do better.
 
 ## Where from here?
 I suspect it will be a fairly long process to find something which works well, looks nice, and is easy to put together, so I wanted to get these initial thoughts down now rather than them becoming just another draft post.
 
-My planned next steps are:
+My planned next steps are – in some order:
 
 * figure out what to use as a porous material
   * Plan A is a terracotta plant pot
