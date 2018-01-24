@@ -14,7 +14,7 @@ theme = "hugo-tranquilpeak-theme"
 
 [author]
   name = "James Brady"
-  bio = "I'm a professional software engineer and an amateur woodworker. I like Ruby, Elixir, hard problems and learning new things with which solve them. I am fascinated by frisbees to the point of it getting a bit weird. I'm learning to speak Catalan. I am mostly vegetarian. That is all."
+  bio = "I'm a software engineer by trade and an woodworker for fun. I like Ruby, Elixir, hard problems and learning new things with which solve them. I am fascinated by frisbees to the point of it getting a bit weird. I'm learning to speak Catalan. I like hiking in, up, and around vertiginous scenery. I play the trumpet poorly. That is all."
   job = "[Teespring](https://teespring.com)"
   location = "Oristà: a teeny tiny village in Catalunya"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
