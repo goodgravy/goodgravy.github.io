@@ -38,7 +38,7 @@ In most professions, our daily work comes down to efficiently and effectively co
 
 We take on larger, more complex projects as we grow in our careers and this provides a gratifying sense of forwards progress over time. We develop and refine our skills as we go—enabling us to take on larger projects—and this increase in ability and confidence is gratifying in and of itself.
 
-I believe one reason skill growth is so satisfying is that it is [_atelic_](https://en.wikipedia.org/wiki/Telicity#Defining_the_relevant_notion_of_"completeness"), meaning that it isn't predicated on a particular deliverable, or on a particular timeline. Yes, we might aim to complete a training course—for example—by this or that date, but finishing the course isn't what gives us that warm fuzzy feeling: it is the gratification of seeing ourselves become an ever-so slightly better version of ourselves. This path of personal growth is a process which we can take as far as we want, as quickly or slowly as we want.
+I believe one reason skill growth is so satisfying is that it is _atelic_[^1], meaning that it isn't predicated on a particular deliverable, or on a particular timeline. Yes, we might aim to complete a training course—for example—by this or that date, but finishing the course isn't what gives us that warm fuzzy feeling: it is the gratification of seeing ourselves become an ever-so slightly better version of ourselves. This path of personal growth is a process which we can take as far as we want, as quickly or slowly as we want.
 
 However, one of the traps I've seen people fall prey to in their careers is to focus too much on the atelic.
 
@@ -61,3 +61,5 @@ Then, I read about atelic pursuits and it clicked. For me, it's the **act of doi
 In the past, I've entertained daydreams of being a professional woodwoorker. Now, though, I think it would be a terrible idea. The pressure to finish each piece would sap enjoyment out of the process, and I'm sure that over time the lure of modern power tools would be irresistible. The deliciously-slow, lifelong, atelic pursuit of mastery for mastery's sake would be subverted by the same pressures and dynamics we face in our day jobs.
 
 Instead, we should recognise and embrace the telic nature of our day-to-day work, while preserving and protecting the atelic nature of our hobbies, whatever they are.
+
+[^1]: I came across the philosophical aspect of telicity in [this blog post](https://aeon.co/ideas/how-schopenhauers-thought-can-illuminate-a-midlife-crisis).
