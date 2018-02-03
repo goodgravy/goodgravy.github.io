@@ -1,5 +1,4 @@
 +++
-categories = []
 date = "2016-09-18T15:09:41+01:00"
 description = ""
 keywords = []

@@ -1,5 +1,4 @@
 +++
-categories = []
 date = "2017-07-12T00:00:00Z"
 showDate = false
 keywords = ["tech"]

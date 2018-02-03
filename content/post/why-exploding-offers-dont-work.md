@@ -1,5 +1,4 @@
 +++
-categories = []
 date = "2015-02-11T18:03:18+01:00"
 showDate = false
 description = ""
