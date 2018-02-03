@@ -3,7 +3,6 @@ title: "Life coaches hate this one crazy trick to stave off burn-out and increas
 slug: "atelic-pursuits"
 date: 2018-02-02T13:25:50-05:00
 showDate: false
-draft: true
 tags:
 - woodwork
 - tech
