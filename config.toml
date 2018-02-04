@@ -9,7 +9,6 @@ theme = "hugo-tranquilpeak-theme"
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
   archive = "archives"
 
 [author]
