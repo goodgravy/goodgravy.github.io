@@ -1,5 +1,5 @@
 ---
-title: "Running Elixir on Google Cloud Platform"
+title: "Elixir on Google Cloud Platform: hot code reloading?"
 date: 2018-02-04T09:19:19-08:00
 showDate: false
 tags:
@@ -17,7 +17,9 @@ coverSize: "partial"
 coverMeta: "out"
 ---
 
-I stepped through [this guide](https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine) for a _Hello World_ app running on Google Cloud Platform to see how it compares to running Elixir on other full service hosting options.
+I stepped through [this guide](https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine) for a _Hello World_ app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?
+
+In doing so, I confirmed GCP doesn't make use of Erlang's hot code reloading when re-deploying apps, but how important is that?
 
 <!--more-->
 
