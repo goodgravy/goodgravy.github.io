@@ -5,7 +5,7 @@ baseurl = "https://jmsbrdy.com"
 theme = "hugo-tranquilpeak-theme"
 
 [permalinks]
-  post = "/:year/:month/:slug/"
+  post = "/:slug/"
 
 [taxonomies]
   tag = "tags"
