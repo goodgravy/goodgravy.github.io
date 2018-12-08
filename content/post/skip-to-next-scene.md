@@ -1,5 +1,6 @@
 ---
 title: "#showerthought: skip to next scene in video?"
+slug: "skip-to-next-scene"
 date: 2018-12-05T16:14:41-08:00
 showDate: false
 tags:
