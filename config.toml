@@ -4,6 +4,7 @@ source_repo = "http://github.com/goodgravy/goodgravy.github.io"
 min_version = 0.14
 baseurl = "https://jmsbrdy.com"
 theme = "hugo-tranquilpeak-theme"
+paginate = 20
 
 [permalinks]
   post = "/:slug/"
