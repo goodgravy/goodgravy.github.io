@@ -7,7 +7,7 @@ tags:
 - tag2
 keywords:
 - tech
-#thumbnailImage: ""
+#thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/your_image.png"
 #thumbnailImagePosition: right
 #coverImage: ""
 #coverSize: "partial"

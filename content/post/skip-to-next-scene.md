@@ -11,9 +11,9 @@ keywords:
 - scrubbing
 - content-aware
 - media
-thumbnailImage: "/img/clapperboard.png"
+thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/clapperboard.png"
 thumbnailImagePosition: right
-coverImage: "/img/black-lodge.jpg"
+coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/black-lodge.jpg"
 coverSize: "partial"
 coverMeta: "out"
 ---
@@ -35,8 +35,7 @@ A key concept in video encoding is _frame types_. Each _frame_ (a single image i
 
 Inter frames are where things get interesting. The idea is that for the **vast** majority of video content, frame N is pretty similar to frame N-1 (and frame N+1 for that matter). Using this fact, it's possible to store frame N in a **much** more compact way by representing it as a delta on its neighbouring frames. Interestingly, this so-called inter framing is why colours and shapes can appear to erroneously "smear" over a second or two of video if the video file is damaged or incomplete. The decoder gets confused and can propagate forward corruption from one frame into subsequent frames.
 
-
-{{< figure src="/img/ipb.png" caption="In this diagram, the green **I** frames are the key frames. The blue and red **B** and **P** frames are different types of inter frames." >}}
+{{<postimage title="In this diagram, the green **I** frames are the key frames. The blue and red **B** and **P** frames are different types of inter frames." path="/jmsbrdy.com/ipb.png">}}
 
 Video encoders support automatic insertion of key frames when they detect a significant delta between two frames – e.g. across scene changes. The thinking here is that if two adjacent frames are quite dissimilar, there's no benefit in calculating delta and using an inter frame: we might as well store the first frame of the new scene as a key frame.
 

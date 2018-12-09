@@ -12,21 +12,12 @@ keywords:
 - side projects
 - motivation
 - career
-thumbnailImage: "/img/atelic-pursuits/spoon-making.gif"
+thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/spoon-making.gif"
 thumbnailImagePosition: right
-coverImage: "/img/atelic-pursuits/spiral-wood.jpg"
+coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/spiral-wood.jpg"
 coverSize: "partial"
 coverMeta: "out"
 ---
-
-<style>
-.post figure.three-in-a-row {
-  display: inline-block;
-  width: 33%;
-  vertical-align: middle;
-  margin: 0
-}
-</style>
 
 I'm fortunate to enjoy my job. I hope you do too. Figuring out clever solutions to difficult problems is innately satisfying. However, I've always felt a yearning for various hobbies and side projects to augment the gratification I get from my work.
 
@@ -50,9 +41,11 @@ To be clear, professional development is crucial (and it's fun!), but at some po
 
 One of my hobbies is woodworking. More specifically, the [sort of woodworking](https://www.youtube.com/user/PaulSellersWoodwork) which would have been familiar to my grandpa: using slow, error-prone, difficult-to-master handtools. Eschewing modern [power-tools](https://en.wikipedia.org/wiki/Thickness_planer), [gizmos](https://en.wikipedia.org/wiki/Domino_joiner) or [guides](https://www.highlandwoodworking.com/david-barron-magnetic-dovetail-saw-guide.aspx) designed to flatten or sidestep the learning curve.
 
-{{< figure src="/img/atelic-pursuits/bench-plane.jpg" class="three-in-a-row" >}}
-{{< figure src="/img/atelic-pursuits/chisel.jpg" class="three-in-a-row" >}}
-{{< figure src="/img/atelic-pursuits/dovetail-saw.jpg" class="three-in-a-row" >}}
+{{< postimage classes="fig-33" path="/jmsbrdy.com/bench-plane.jpg" >}}
+{{< postimage classes="fig-33" path="/jmsbrdy.com/chisel.jpg" >}}
+{{< postimage classes="fig-33" path="/jmsbrdy.com/dovetail-saw.jpg" >}}
+
+<div style="clear:both"></div>
 
 I could never quite put my finger on _why_ I was such a Luddite in this case. There's certainly a hankering after a dose of quaint authenticity, to offset the future-chasing nature of my professional life. However, there seemed to be more to it than that.
 

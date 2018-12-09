@@ -4,7 +4,7 @@ date: 2017-08-25T15:06:22+02:00
 showDate: false
 keywords:
 - tech
-thumbnailImage: /img/esp-cat-flag.png
+thumbnailImage: https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/esp-cat-flag.png
 thumbnailImagePosition: "right"
 ---
 
@@ -22,7 +22,7 @@ Well, tl;dr, you can make surprisingly informed guesses with very few rules!
 
 I put together a little test in [Elixir](https://elixir-lang.org/) (which you **have** to try if you've not already – I love it) to see which of these word transformations are more or less useful in guessing a Catalan word from a Spanish one.
 
-![Efficacy of different Spanish to Catalan transformations](/img/esp-cat-chart-individual.png)
+{{<postimage title="Efficacy of different Spanish to Catalan transformations" path="/jmsbrdy.com/esp-cat-chart-individual.png">}}
 
 The two series represent the two data sources I was working with: [Wikibooks](https://es.wikibooks.org/wiki/Catal%C3%A1n/Diccionario_castellano-catal%C3%A1n) and this [lexicon of construction terminology](http://cit.iec.cat/LMC/default.asp?opcio=0). Please excuse the an&#230;mic and peculiar data sources: it was nigh on impossible to find a good mapping from Spanish words to Catalan, or vice versa. More on that later.
 
@@ -41,7 +41,7 @@ Some of the transformations (e.g. `ie_to_e`) are only marginally effective, wher
 
 Applied one after another, these five simple transformations increase the word similarity from 14% to 25% for the Wikibooks data, and from 9% to 14% for the construction data!
 
-![Cumulative efficacy of Spanish to Catalan transformations](/img/esp-cat-chart-cumulative.png)
+{{<postimage title="Cumulative efficacy of Spanish to Catalan transformations" path="/jmsbrdy.com/esp-cat-chart-cumulative.png">}}
 
 ## How reliable are these results for real texts?
 The main challenge with this experiment was getting my hands on clean data – as is often the case.

@@ -13,9 +13,9 @@ keywords:
 - locking
 - concurrency
 - performance
-thumbnailImage: "/img/lock.jpg"
+thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/lock.jpg"
 thumbnailImagePosition: right
-coverImage: "/img/cilla.jpg"
+coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/cilla.jpg"
 coverSize: "partial"
 coverMeta: "out"
 coverCaption: "Cover image is apropos of nothing, but isn't she a nice doggie?"

@@ -3,7 +3,7 @@ Description = "Their \"seminal\" new product."
 Tags = ["Tech", "News", "Google"]
 date = "2015-01-16T14:50:15+01:00"
 title = "Google Bollocks"
-thumbnailImage = "/img/Google_-G-_Logo.png"
+thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/Google_-G-_Logo.png"
 thumbnailImagePosition = "right"
 showDate = false
 

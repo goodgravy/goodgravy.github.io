@@ -4,7 +4,7 @@ showDate = false
 description = "A punch box is an easy DIY project that's perfect for gifting."
 keywords = ["DIY", "present"]
 title = "Home-made present: how to make a punch box"
-thumbnailImage = "/img/punch-box/finished.jpg"
+thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/finished.jpg"
 thumbnailImagePosition = "right"
 
 +++
@@ -25,7 +25,7 @@ Now, that Kickstarter project is long since finished but I reckoned I could
 have a pretty good go at making my own version. Here's what I ended up with so
 you can decide whether to keep reading or not:
 
-![Finished product](/img/punch-box/finished.jpg)
+{{<postimage title="Finished product" path="/jmsbrdy.com/finished.jpg">}}
 
 I know, it looks like shit doesn't it? Don't worry: they'll be blown away that
 you made the effort &#x1f44c;.
@@ -58,7 +58,7 @@ edge, to keep the crêpe nice and tidy.
 
 This shows a cross-section of the completed box:
 
-![Cross-section of the box](/img/punch-box/cross-section.png)
+{{<postimage title="Cross-section of the box" path="/jmsbrdy.com/cross-section.png">}}
 
 # How to do it
 
@@ -92,8 +92,7 @@ line up with the holes in the block.
 
 Here's how the wood-paper sandwich looks before and after drilling:
 
-![Cross-section before
-drilling](/img/punch-box/cross-section-before-drilling.png)
+{{<postimage title="Cross-section before drilling" path="/jmsbrdy.com/cross-section-before-drilling.png">}}
 
 ## Inserting the notes
 

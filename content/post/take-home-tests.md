@@ -9,9 +9,9 @@ tags:
 keywords:
 - tech
 - interviewing
-thumbnailImage: "/img/CV_alan_sugar.jpg"
+thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/CV_alan_sugar.jpg"
 thumbnailImagePosition: right
-coverImage: "/img/blake-connally-373084.jpg"
+coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/blake-connally-373084.jpg"
 coverSize: "partial"
 coverMeta: "out"
 ---

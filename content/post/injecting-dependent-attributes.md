@@ -4,7 +4,7 @@ showDate = false
 keywords = ["tech"]
 tags = []
 title = "Injecting into transient FactoryGirl attributes"
-thumbnailImage = "/img/factory.jpg"
+thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/factory.jpg"
 thumbnailImagePosition = "right"
 +++
 

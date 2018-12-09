@@ -4,7 +4,7 @@ showDate = false
 keywords = []
 tags = ["swamp-cooler"]
 title = "Swamp coolers for the house?"
-thumbnailImage = "/img/hot-temp.png"
+thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/hot-temp.png"
 thumbnailImagePosition = "right"
 +++
 
@@ -16,7 +16,7 @@ Luckily, the house is traditionally constructed with extremely thick, solid ston
 
 ## Why not air conditioning?
 
-{{< image classes="float right fig-50" src="/img/ugly-ac.jpg" title="Perfectly installed AC unit" >}}
+{{< postimage classes="float right fig-50" path="/jmsbrdy.com/ugly-ac.jpg" title="Perfectly installed AC unit" >}}
 
 Despite it being really effective, I don't love air conditioning for a few reasons:
 
@@ -32,7 +32,7 @@ Instead, we started looking at evaporative cooling, also known as _swamp coolers
 
 [Swamp coolers](https://en.wikipedia.org/wiki/Evaporative_cooler) work on the principle of evaporation absorbing a good amount of heat from the surrounding air – it's why misting your skin on a hot day feels refreshing and cool. They harness this phenomenon by directing (ideally hot and dry) air over a wet surface, resulting in cooler and more humid air.
 
-{{< image classes="float right fig-50" src="/img/burning-man-swamp-cooler.jpg" title="Solar powered swamp cooler in Black Rock City" >}}
+{{< postimage classes="float right fig-50" path="/jmsbrdy.com/burning-man-swamp-cooler.jpg" title="Solar powered swamp cooler in Black Rock City" >}}
 
 The coolers work best in an arid climate, which we don't have here but does explain why they're popular at Burning Man. in the middle of our summer days, however, humidity is around 25% which should be fine according to [this helpful page](https://www.air-n-water.com/common-swamp-mistakes.htm).
 
@@ -42,7 +42,7 @@ The coolers work best in an arid climate, which we don't have here but does exp
 
 The vibe we're going for in the house is rustic, trying to keep many of the original bits and pieces. This allows us to bodge all the DIY and claim it's characterful.
 
-{{< image classes="float right fig-50" src="/img/evaporative-cooler.jpg" title="Dalek sandwich toaster" >}}
+{{< postimage classes="float right fig-50" path="/jmsbrdy.com/evaporative-cooler.jpg" title="Dalek sandwich toaster" >}}
 
 However, unfortunately, most – if not all – of the commercially available coolers look like props from Doctor Who.
 
