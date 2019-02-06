@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swamp Cooler on jmsbrdy.com</title>
+    <link>https://jmsbrdy.com/tags/swamp-cooler/</link>
+    <description>Recent content in Swamp Cooler on jmsbrdy.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 19 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jmsbrdy.com/tags/swamp-cooler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Swamp cooler: experimenting with airflow</title>
+      <link>https://jmsbrdy.com/swamp-cooler-experimenting-with-airflow/</link>
+      <pubDate>Sat, 19 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmsbrdy.com/swamp-cooler-experimenting-with-airflow/</guid>
+      <description>&lt;p&gt;The first step of my &lt;a href=&#34;https://jmsbrdy.com/tags/swamp-cooler/&#34;&gt;swamp cooler project&lt;/a&gt; is to figure out the construction of the evaporative cooling vessel.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d like to use an upturned terracotta pot for the vessel itself, with air entering at the bottom, passing up the inside and out the drainage hole at the top.&lt;/p&gt;
+
+&lt;p&gt;Unlike the &lt;a href=&#34;http://thibault-faverie.com/Cold-Pot&#34;&gt;Cold Pot&lt;/a&gt; – which pushes air through a dry aluminium sleeve – I&amp;rsquo;m trying to maximise the surface area of wet terracotta which the incoming air passes over before emerging from the exhaust.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swamp coolers for the house?</title>
+      <link>https://jmsbrdy.com/swamp-coolers-for-the-house/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmsbrdy.com/swamp-coolers-for-the-house/</guid>
+      <description>&lt;p&gt;It has been &lt;strong&gt;hot&lt;/strong&gt; here recently in Catalunya. Like 40°C and forest-fires-covering-our-patio-in-ash hot.&lt;/p&gt;
+
+&lt;p&gt;Luckily, the house is traditionally constructed with extremely thick, solid stone walls which means the worst of the heat doesn&amp;rsquo;t make it inside – so long as we remember to shut the windows. Even so, a little extra help to keep the temperature down during the day would be very welcome.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

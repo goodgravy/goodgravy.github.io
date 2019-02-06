@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.20.7 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="James Brady">
+<meta name="keywords" content="">
+<meta name="description" content="Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &ndash; and scowl at interlopers &ndash; are so rich that I&rsquo;ve lost count of the number of serious, extended conversations I&rsquo;ve had about the do&rsquo;s and don&rsquo;ts, the Ps and Qs, of waiting for service.
+
+As a programmer, though, it&rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+">
+
+
+<meta property="og:description" content="Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &ndash; and scowl at interlopers &ndash; are so rich that I&rsquo;ve lost count of the number of serious, extended conversations I&rsquo;ve had about the do&rsquo;s and don&rsquo;ts, the Ps and Qs, of waiting for service.
+
+As a programmer, though, it&rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Queues, Culture, and Computer Science">
+<meta name="twitter:title" content="Queues, Culture, and Computer Science">
+<meta property="og:url" content="https://jmsbrdy.com/queues-culture-and-computer-science/">
+<meta property="twitter:url" content="https://jmsbrdy.com/queues-culture-and-computer-science/">
+<meta property="og:site_name" content="jmsbrdy.com">
+<meta property="og:description" content="Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &ndash; and scowl at interlopers &ndash; are so rich that I&rsquo;ve lost count of the number of serious, extended conversations I&rsquo;ve had about the do&rsquo;s and don&rsquo;ts, the Ps and Qs, of waiting for service.
+
+As a programmer, though, it&rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+">
+<meta name="twitter:description" content="Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &ndash; and scowl at interlopers &ndash; are so rich that I&rsquo;ve lost count of the number of serious, extended conversations I&rsquo;ve had about the do&rsquo;s and don&rsquo;ts, the Ps and Qs, of waiting for service.
+
+As a programmer, though, it&rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+">
+<meta property="og:locale" content="en">
+
+  
+  
+    <meta property="article:modified_time" content="2016-12-19T20:56:42">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@goodgravy">
+
+
+  <meta name="twitter:creator" content="@goodgravy">
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/array.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/array.png">
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=640">
+
+
+    <title>Queues, Culture, and Computer Science</title>
+
+    <link rel="icon" href="/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://jmsbrdy.com/queues-culture-and-computer-science/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">jmsbrdy.com</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=90" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=110" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">James Brady</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m a software engineer by trade and an woodworker for fun. I like hard problems and learning new things with which solve them. I&rsquo;m learning to speak Catalan. I like hiking in, up, and around vertiginous scenery. I play the trumpet poorly. That is all.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/goodgravy" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Queues, Culture, and Computer Science
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &ndash; and scowl at interlopers &ndash; are so rich that I&rsquo;ve lost count of the number of serious, extended conversations I&rsquo;ve had about the do&rsquo;s and don&rsquo;ts, the Ps and Qs, of waiting for service.</p>
+
+<p>As a programmer, though, it&rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
+</p>
+
+<h1 id="the-united-kingdom-arrays">The United Kingdom: arrays</h1>
+
+<p>The spiritual home of the queue, many of its citizens would argue. A perceptible smugness tends to exude from the pasty pores of my countrymen when they lament how other, &ldquo;less refined&rdquo; cultures &ldquo;don&rsquo;t even know how to queue&rdquo;…</p>
+
+<p>Of course, what they should <em>really</em> say is that people in other countries have a different approach to queueing. But how so?</p>
+
+<p>The British model their queues on <strong>arrays</strong>. That is, a single-file, strictly-ordered line, where each person knows absolutely nothing about those in front or behind them, because to pry would be rude.</p>
+
+
+
+
+<div class="figure " >
+  
+    <img class="fig-img"
+    
+      srcset="
+        https://res.cloudinary.com/dshgddh17/w_375/jmsbrdy.com/array.png 375w,
+        https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/array.png 750w,
+        https://res.cloudinary.com/dshgddh17/w_1000/jmsbrdy.com/array.png 1000w,
+        https://res.cloudinary.com/dshgddh17/w_1500/jmsbrdy.com/array.png 1500w"
+      src="https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/array.png"
+    
+    
+    >
+  
+  
+</div>
+
+
+
+<p>The cashier, administrator or official who is servicing the backlog of visitors works their way strictly from front to back. The gentlenodes in the array need no intelligence or state whatsoever: everything operates on rigid, ancient social conventions.</p>
+
+<h1 id="spain-singly-linked-lists">Spain: singly-linked lists</h1>
+
+<blockquote>
+<p>¿Quién da la vez?</p>
+</blockquote>
+
+<p>Someone might ask as they walk into a bank in rural Spain.</p>
+
+<p>In España, queueing is based on <strong>singly-linked lists</strong>. That is, a totally-ordered set of gentlenodes, but where the ordering of the nodes is much less evident to an outside observer than it might be for the case of an array. The nodes could be scattered around seemingly at random, and each one just knows about one neighbour.</p>
+
+
+
+
+<div class="figure " >
+  
+    <img class="fig-img"
+    
+      srcset="
+        https://res.cloudinary.com/dshgddh17/w_375/jmsbrdy.com/list.png 375w,
+        https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/list.png 750w,
+        https://res.cloudinary.com/dshgddh17/w_1000/jmsbrdy.com/list.png 1000w,
+        https://res.cloudinary.com/dshgddh17/w_1500/jmsbrdy.com/list.png 1500w"
+      src="https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/list.png"
+    
+    
+    >
+  
+  
+</div>
+
+
+
+<p><em>¿Quién da la vez?</em> roughly means <em>Who is last?</em>, and this is how the linked-list is formed. Each person knows who is in front of them in the line, and just needs to keep an eye on them. When that person is finished, they know that they&rsquo;re up next.</p>
+
+<p>It&rsquo;s a singly- rather than doubly-linked list because each person has no idea how many other people are behind them in the queue.</p>
+
+<h1 id="china-heaps">China: heaps</h1>
+
+<p>I&rsquo;ve only visited China briefly, but to my eyes it seemed like queueing in China is based around <strong>heaps</strong>.</p>
+
+
+
+
+<div class="figure " >
+  
+    <img class="fig-img"
+    
+      srcset="
+        https://res.cloudinary.com/dshgddh17/w_375/jmsbrdy.com/heap.png 375w,
+        https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/heap.png 750w,
+        https://res.cloudinary.com/dshgddh17/w_1000/jmsbrdy.com/heap.png 1000w,
+        https://res.cloudinary.com/dshgddh17/w_1500/jmsbrdy.com/heap.png 1500w"
+      src="https://res.cloudinary.com/dshgddh17/w_750/jmsbrdy.com/heap.png"
+    
+    
+    >
+  
+  
+</div>
+
+
+
+<p>The person who is at the front of the line to be serviced is very well known, but behind them things become much less clear. We certainly don&rsquo;t know who is <em>last</em>. You&rsquo;d expect that people within 2 or 3 layers from the front would be seen before someone 10 rows back, but you never really know how the throng will morph.</p>
+
+<p>The set of people waiting, therefore isn&rsquo;t really ordered in any way, and certainly not strictly in terms of when you started queueing. It&rsquo;s characteristics are totally different from everything we hold dear in the UK.</p>
+
+<h1 id="pros-and-cons">Pros and Cons</h1>
+
+<p>Of course, one approach isn&rsquo;t absolutely better than another. In the same way that a developer might choose between the different data structures depending on the traits of the problem they&rsquo;re trying to solve, different cultures have ended up with different approaches to queueing based on their needs and norms.</p>
+
+<p>From my perspective, the British are pathologically stand-offish and refuse to engage with strangers on a human level, preferring instead to let the unspoken maxims of etiquette define who gets seen first at the bank.</p>
+
+<ul>
+<li>communication must be kept to an <em>absolute minimum</em> hence the Spanish approach wouldn&rsquo;t work: the idea of asking a question to an entire room of strangers is an abhorrence</li>
+<li>physical contact is unacceptable, so any kind of jostling towards the front (as often happens in the Chinese heap approach) is an impossible idea to entertain</li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/deploying-a-static-site-to-github-pages-using-travis-and-cloudflare/" data-tooltip="Deploying a static site to Github Pages using Travis and Cloudflare">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/are-dotfiles-meant-to-be-forked/" data-tooltip="Are dotfiles meant to be forked?">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 James Brady. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/deploying-a-static-site-to-github-pages-using-travis-and-cloudflare/" data-tooltip="Deploying a static site to Github Pages using Travis and Cloudflare">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/are-dotfiles-meant-to-be-forked/" data-tooltip="Are dotfiles meant to be forked?">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=110" alt="" />
+    
+    <h4 id="about-card-name">James Brady</h4>
+    
+      <div id="about-card-bio">I&rsquo;m a software engineer by trade and an woodworker for fun. I like hard problems and learning new things with which solve them. I&rsquo;m learning to speak Catalan. I like hiking in, up, and around vertiginous scenery. I play the trumpet poorly. That is all.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        <a href="https://teespring.com">Teespring</a>
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Oristà: a teeny tiny village in Catalunya
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/ynabadell/">
+                <h3 class="media-heading">ynabadell: connect your Sabadell bank account with YNAB</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>We&rsquo;ve recently started using You Need A Budget (<a href="https://www.youneedabudget.com/">YNAB</a>) to plan our finances. Unfortunately, like most finance apps it&rsquo;s focussed squarely on the north american market: its automatic transaction importing only works for some US and Canadian banks – and we live and bank in Spain…</p>
+
+<p>YNAB <strong>does</strong> support a manual process, where you upload QFX or OFX files – or CSVs (in their required format). However, our bank (<a href="https://www.bancsabadell.com">Sabadell</a>) supports neither QFX nor OFX, and their CSV format is markedly different from that which YNAB expects in the upload. We were stuck with the prospect of importing every single transaction by hand, or manually downloading a CSV from Sabadell and munging it into a shape that YNAB can understand.</p>
+
+<p>Surely we can do better?</p>
+
+<p>So became <a href="https://github.com/goodgravy/ynabadell"><strong>ynabadell</strong></a> – a tool to automatically import transactions from Sabadell into your YNAB ledger.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/skip-to-next-scene/">
+                <h3 class="media-heading">#showerthought: skip to next scene in video?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Don&rsquo;t video player controls seem dumb?</p>
+
+<p>Desktop and web-based players alike allow the user to jump forwards or backwards by 5 or 10 seconds, or possibly speed up and slow down playback. These controls operate identically no matter what the user is watching – there&rsquo;s no connection between the <strong>content</strong> of the video, and the controls.</p>
+
+<p>DVDs were the first format I know of that allowed you to skip via <strong>chapters</strong>, but even something as basic as those coarse-grained content-aware controls aren&rsquo;t available in things like YouTube videos today.</p>
+
+<p>Here&rsquo;s an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I&rsquo;ll leave the bad news to the end!</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/innodb-and-table-level-locking/">
+                <h3 class="media-heading">InnoDB and Table-level Locking</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>One of the main reasons InnoDB is the go-to choice for our MySQL tables is that it supports row-level locking<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. This means that as we&rsquo;re reading from and writing to a table, we don&rsquo;t need to wait for <strong>all</strong> the other processes to finish up their work before we can get access to that table.</p>
+
+<p>For larger tables, this ability to have multiple processes working on the same table at the same time is almost essential to get any level of decent performance, for most workloads.</p>
+
+<p>However, we recently ran into a problem where – because of a detail of how InnoDB and MySQL work – we ended up doing table-level locking rather than row-level, with disastrous results.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/elixir-on-google-cloud-platform-hot-code-reloading/">
+                <h3 class="media-heading">Elixir on Google Cloud Platform: hot code reloading?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I stepped through <a href="https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine">this guide</a> for a <em>Hello World</em> app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?</p>
+
+<p>In doing so, I confirmed GCP doesn&rsquo;t make use of Erlang&rsquo;s hot code reloading when re-deploying apps, but how important is that?</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/atelic-pursuits/">
+                <h3 class="media-heading">Life coaches hate this one crazy trick to stave off burn-out and increase motivation!</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I&rsquo;m fortunate to enjoy my job. I hope you do too. Figuring out clever solutions to difficult problems is innately satisfying. However, I&rsquo;ve always felt a yearning for various hobbies and side projects to augment the gratification I get from my work.</p>
+
+<p>I recently gained some clarity about this yearning: what it is we are looking for, and why it&rsquo;s important. Hopefully there&rsquo;s something here that strikes a chord with you, and is of use.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/take-home-tests/">
+                <h3 class="media-heading">Take Home Tests</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I recently came across <a href="https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/">a discussion on Reddit</a> concerning take-home tests as part of an interview process. Is it was acceptable for companies to ask candidates to work on a problem in their own time, so that their submitted solution helps decide whether to move forwards to an on-site interview?</p>
+
+<p>The level of antipathy towards take-home tests in that discussion was an enormous surprise. The majority of commenters were not just against the idea, but <strong>virulently</strong> so, railing against it as another example of unreasonable demands made on candidates. Most people viewed these tests as a waste of time, rude, disrespectful, or a combination of all three. I think there was <a href="https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/dsw9cmk/">only one person</a> whose opinion wasn&rsquo;t negative, and even that was ambivalent at best.</p>
+
+<p>I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they&rsquo;re approached in a thoughtful and careful way, they&rsquo;re one of the best tools for effective interviewing. Here&rsquo;s what I think does—and doesn&rsquo;t—work.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/it-it-possible-to-guess-catalan-words/">
+                <h3 class="media-heading">It it possible to guess Catalan words?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I&rsquo;m currently learning Catalan and Spanish, and am reminded every day of the languages&rsquo; <a href="https://en.wikipedia.org/wiki/Romance_languages">shared ancestor</a> by how often they share similar (or identical) words.</p>
+
+<p>For example, it&rsquo;s easy to deduce that <em>introducción</em> (in Spanish) means the same as <em>introducció</em> (in Catalan), or that <em>respuesta</em> and <em>resposta</em> are the same thing.</p>
+
+<p>In fact, when you look at the Spanish and Catalan words next to each other, it seems that the same kinds of transformations crop up again and again: consonants becoming repeated, vowels being dropped off the ends of words, stressed vowels changing in predictable ways, …</p>
+
+<p>Of course, the languages are very different and often use completely distinct words, but it got me thinking: how reliably can we guess a Catalan word from a Spanish one, using just a small set of simple transformations?</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/swamp-cooler-experimenting-with-airflow/">
+                <h3 class="media-heading">Swamp cooler: experimenting with airflow</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>The first step of my <a href="/tags/swamp-cooler/">swamp cooler project</a> is to figure out the construction of the evaporative cooling vessel.</p>
+
+<p>I&rsquo;d like to use an upturned terracotta pot for the vessel itself, with air entering at the bottom, passing up the inside and out the drainage hole at the top.</p>
+
+<p>Unlike the <a href="http://thibault-faverie.com/Cold-Pot">Cold Pot</a> – which pushes air through a dry aluminium sleeve – I&rsquo;m trying to maximise the surface area of wet terracotta which the incoming air passes over before emerging from the exhaust.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/injecting-into-transient-factorygirl-attributes/">
+                <h3 class="media-heading">Injecting into transient FactoryGirl attributes</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">I was just writing some code which parses a URL in order to extract a piece of the path.
+When working correctly, the code under test takes a URL something like this:
+http://site.com/.well-known/pki-validation/4b1706977f59ffe3c1ddf282bbee6f45.txt  … and returns just the hash-like part of the path: 4b1706977f59ffe3c1ddf282bbee6f45.
+Creating factories to effectively test it was surprisingly fiddly! Here are the options I considered and what worked for me – in the hope it&rsquo;s of some use to you.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jmsbrdy.com/swamp-coolers-for-the-house/">
+                <h3 class="media-heading">Swamp coolers for the house?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>It has been <strong>hot</strong> here recently in Catalunya. Like 40°C and forest-fires-covering-our-patio-in-ash hot.</p>
+
+<p>Luckily, the house is traditionally constructed with extremely thick, solid stone walls which means the worst of the heat doesn&rsquo;t make it inside – so long as we remember to shut the windows. Even so, a little extra help to keep the temperature down during the day would be very welcome.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         18 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://jmsbrdy.com/images/sebastia.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

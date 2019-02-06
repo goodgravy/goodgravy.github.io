@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on jmsbrdy.com</title>
+    <link>https://jmsbrdy.com/tags/javascript/</link>
+    <description>Recent content in Javascript on jmsbrdy.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 Feb 2019 18:42:48 +0100</lastBuildDate>
+    
+	<atom:link href="https://jmsbrdy.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ynabadell: connect your Sabadell bank account with YNAB</title>
+      <link>https://jmsbrdy.com/ynabadell/</link>
+      <pubDate>Mon, 04 Feb 2019 18:42:48 +0100</pubDate>
+      
+      <guid>https://jmsbrdy.com/ynabadell/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;ve recently started using You Need A Budget (&lt;a href=&#34;https://www.youneedabudget.com/&#34;&gt;YNAB&lt;/a&gt;) to plan our finances. Unfortunately, like most finance apps it&amp;rsquo;s focussed squarely on the north american market: its automatic transaction importing only works for some US and Canadian banks – and we live and bank in Spain…&lt;/p&gt;
+
+&lt;p&gt;YNAB &lt;strong&gt;does&lt;/strong&gt; support a manual process, where you upload QFX or OFX files – or CSVs (in their required format). However, our bank (&lt;a href=&#34;https://www.bancsabadell.com&#34;&gt;Sabadell&lt;/a&gt;) supports neither QFX nor OFX, and their CSV format is markedly different from that which YNAB expects in the upload. We were stuck with the prospect of importing every single transaction by hand, or manually downloading a CSV from Sabadell and munging it into a shape that YNAB can understand.&lt;/p&gt;
+
+&lt;p&gt;Surely we can do better?&lt;/p&gt;
+
+&lt;p&gt;So became &lt;a href=&#34;https://github.com/goodgravy/ynabadell&#34;&gt;&lt;strong&gt;ynabadell&lt;/strong&gt;&lt;/a&gt; – a tool to automatically import transactions from Sabadell into your YNAB ledger.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
