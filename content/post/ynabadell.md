@@ -15,11 +15,11 @@ keywords:
 - export
 - api
 - sabadell
-#thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/your_image.png"
-#thumbnailImagePosition: right
-#coverImage: ""
-#coverSize: "partial"
-#coverMeta: "out"
+thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/calculator.jpg"
+thumbnailImagePosition: right
+coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/piggy.jpg"
+coverSize: "partial"
+coverMeta: "out"
 ---
 
 We've recently started using You Need A Budget ([YNAB](https://www.youneedabudget.com/)) to plan our finances. Unfortunately, like most finance apps it's focussed squarely on the north american market: its automatic transaction importing only works for some US and Canadian banks – and we live and bank in Spain…
