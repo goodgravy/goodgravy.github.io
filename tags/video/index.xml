@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Video on jmsbrdy.com</title>
+    <title>video on jmsbrdy.com</title>
     <link>https://jmsbrdy.com/tags/video/</link>
-    <description>Recent content in Video on jmsbrdy.com</description>
+    <description>Recent content in video on jmsbrdy.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 05 Dec 2018 16:14:41 -0800</lastBuildDate>
     
@@ -17,14 +17,9 @@
       
       <guid>https://jmsbrdy.com/skip-to-next-scene/</guid>
       <description>&lt;p&gt;Don&amp;rsquo;t video player controls seem dumb?&lt;/p&gt;
-
 &lt;p&gt;Desktop and web-based players alike allow the user to jump forwards or backwards by 5 or 10 seconds, or possibly speed up and slow down playback. These controls operate identically no matter what the user is watching – there&amp;rsquo;s no connection between the &lt;strong&gt;content&lt;/strong&gt; of the video, and the controls.&lt;/p&gt;
-
 &lt;p&gt;DVDs were the first format I know of that allowed you to skip via &lt;strong&gt;chapters&lt;/strong&gt;, but even something as basic as those coarse-grained content-aware controls aren&amp;rsquo;t available in things like YouTube videos today.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I&amp;rsquo;ll leave the bad news to the end!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Here&amp;rsquo;s an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I&amp;rsquo;ll leave the bad news to the end!&lt;/p&gt;</description>
     </item>
     
   </channel>

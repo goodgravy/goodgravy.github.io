@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elixir on jmsbrdy.com</title>
+    <title>elixir on jmsbrdy.com</title>
     <link>https://jmsbrdy.com/tags/elixir/</link>
-    <description>Recent content in Elixir on jmsbrdy.com</description>
+    <description>Recent content in elixir on jmsbrdy.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 04 Feb 2018 09:19:19 -0800</lastBuildDate>
     
@@ -17,10 +17,7 @@
       
       <guid>https://jmsbrdy.com/elixir-on-google-cloud-platform-hot-code-reloading/</guid>
       <description>&lt;p&gt;I stepped through &lt;a href=&#34;https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine&#34;&gt;this guide&lt;/a&gt; for a &lt;em&gt;Hello World&lt;/em&gt; app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?&lt;/p&gt;
-
-&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;</description>
     </item>
     
   </channel>

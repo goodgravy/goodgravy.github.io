@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on jmsbrdy.com</title>
@@ -17,14 +17,9 @@
       
       <guid>https://jmsbrdy.com/ynabadell/</guid>
       <description>&lt;p&gt;We&amp;rsquo;ve recently started using You Need A Budget (&lt;a href=&#34;https://www.youneedabudget.com/&#34;&gt;YNAB&lt;/a&gt;) to plan our finances. Unfortunately, like most finance apps it&amp;rsquo;s focussed squarely on the north american market: its automatic transaction importing only works for some US and Canadian banks – and we live and bank in Spain…&lt;/p&gt;
-
 &lt;p&gt;YNAB &lt;strong&gt;does&lt;/strong&gt; support a manual process, where you upload QFX or OFX files – or CSVs (in their required format). However, our bank (&lt;a href=&#34;https://www.bancsabadell.com&#34;&gt;Sabadell&lt;/a&gt;) supports neither QFX nor OFX, and their CSV format is markedly different from that which YNAB expects in the upload. We were stuck with the prospect of importing every single transaction by hand, or manually downloading a CSV from Sabadell and munging it into a shape that YNAB can understand.&lt;/p&gt;
-
 &lt;p&gt;Surely we can do better?&lt;/p&gt;
-
-&lt;p&gt;So became &lt;a href=&#34;https://github.com/goodgravy/ynabadell&#34;&gt;&lt;strong&gt;ynabadell&lt;/strong&gt;&lt;/a&gt; – a tool to automatically import transactions from Sabadell into your YNAB ledger.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;So became &lt;a href=&#34;https://github.com/goodgravy/ynabadell&#34;&gt;&lt;strong&gt;ynabadell&lt;/strong&gt;&lt;/a&gt; – a tool to automatically import transactions from Sabadell into your YNAB ledger.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -34,14 +29,9 @@
       
       <guid>https://jmsbrdy.com/skip-to-next-scene/</guid>
       <description>&lt;p&gt;Don&amp;rsquo;t video player controls seem dumb?&lt;/p&gt;
-
 &lt;p&gt;Desktop and web-based players alike allow the user to jump forwards or backwards by 5 or 10 seconds, or possibly speed up and slow down playback. These controls operate identically no matter what the user is watching – there&amp;rsquo;s no connection between the &lt;strong&gt;content&lt;/strong&gt; of the video, and the controls.&lt;/p&gt;
-
 &lt;p&gt;DVDs were the first format I know of that allowed you to skip via &lt;strong&gt;chapters&lt;/strong&gt;, but even something as basic as those coarse-grained content-aware controls aren&amp;rsquo;t available in things like YouTube videos today.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I&amp;rsquo;ll leave the bad news to the end!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Here&amp;rsquo;s an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I&amp;rsquo;ll leave the bad news to the end!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,13 +40,9 @@
       <pubDate>Thu, 29 Mar 2018 06:21:34 -0700</pubDate>
       
       <guid>https://jmsbrdy.com/innodb-and-table-level-locking/</guid>
-      <description>&lt;p&gt;One of the main reasons InnoDB is the go-to choice for our MySQL tables is that it supports row-level locking&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This means that as we&amp;rsquo;re reading from and writing to a table, we don&amp;rsquo;t need to wait for &lt;strong&gt;all&lt;/strong&gt; the other processes to finish up their work before we can get access to that table.&lt;/p&gt;
-
+      <description>&lt;p&gt;One of the main reasons InnoDB is the go-to choice for our MySQL tables is that it supports row-level locking&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This means that as we&amp;rsquo;re reading from and writing to a table, we don&amp;rsquo;t need to wait for &lt;strong&gt;all&lt;/strong&gt; the other processes to finish up their work before we can get access to that table.&lt;/p&gt;
 &lt;p&gt;For larger tables, this ability to have multiple processes working on the same table at the same time is almost essential to get any level of decent performance, for most workloads.&lt;/p&gt;
-
-&lt;p&gt;However, we recently ran into a problem where – because of a detail of how InnoDB and MySQL work – we ended up doing table-level locking rather than row-level, with disastrous results.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;However, we recently ran into a problem where – because of a detail of how InnoDB and MySQL work – we ended up doing table-level locking rather than row-level, with disastrous results.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -66,10 +52,7 @@
       
       <guid>https://jmsbrdy.com/elixir-on-google-cloud-platform-hot-code-reloading/</guid>
       <description>&lt;p&gt;I stepped through &lt;a href=&#34;https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine&#34;&gt;this guide&lt;/a&gt; for a &lt;em&gt;Hello World&lt;/em&gt; app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?&lt;/p&gt;
-
-&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -79,10 +62,7 @@
       
       <guid>https://jmsbrdy.com/atelic-pursuits/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m fortunate to enjoy my job. I hope you do too. Figuring out clever solutions to difficult problems is innately satisfying. However, I&amp;rsquo;ve always felt a yearning for various hobbies and side projects to augment the gratification I get from my work.&lt;/p&gt;
-
-&lt;p&gt;I recently gained some clarity about this yearning: what it is we are looking for, and why it&amp;rsquo;s important. Hopefully there&amp;rsquo;s something here that strikes a chord with you, and is of use.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;I recently gained some clarity about this yearning: what it is we are looking for, and why it&amp;rsquo;s important. Hopefully there&amp;rsquo;s something here that strikes a chord with you, and is of use.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -92,12 +72,8 @@
       
       <guid>https://jmsbrdy.com/take-home-tests/</guid>
       <description>&lt;p&gt;I recently came across &lt;a href=&#34;https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/&#34;&gt;a discussion on Reddit&lt;/a&gt; concerning take-home tests as part of an interview process. Is it was acceptable for companies to ask candidates to work on a problem in their own time, so that their submitted solution helps decide whether to move forwards to an on-site interview?&lt;/p&gt;
-
 &lt;p&gt;The level of antipathy towards take-home tests in that discussion was an enormous surprise. The majority of commenters were not just against the idea, but &lt;strong&gt;virulently&lt;/strong&gt; so, railing against it as another example of unreasonable demands made on candidates. Most people viewed these tests as a waste of time, rude, disrespectful, or a combination of all three. I think there was &lt;a href=&#34;https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/dsw9cmk/&#34;&gt;only one person&lt;/a&gt; whose opinion wasn&amp;rsquo;t negative, and even that was ambivalent at best.&lt;/p&gt;
-
-&lt;p&gt;I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they&amp;rsquo;re approached in a thoughtful and careful way, they&amp;rsquo;re one of the best tools for effective interviewing. Here&amp;rsquo;s what I think does—and doesn&amp;rsquo;t—work.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they&amp;rsquo;re approached in a thoughtful and careful way, they&amp;rsquo;re one of the best tools for effective interviewing. Here&amp;rsquo;s what I think does—and doesn&amp;rsquo;t—work.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,14 +83,9 @@
       
       <guid>https://jmsbrdy.com/it-it-possible-to-guess-catalan-words/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m currently learning Catalan and Spanish, and am reminded every day of the languages&amp;rsquo; &lt;a href=&#34;https://en.wikipedia.org/wiki/Romance_languages&#34;&gt;shared ancestor&lt;/a&gt; by how often they share similar (or identical) words.&lt;/p&gt;
-
 &lt;p&gt;For example, it&amp;rsquo;s easy to deduce that &lt;em&gt;introducción&lt;/em&gt; (in Spanish) means the same as &lt;em&gt;introducció&lt;/em&gt; (in Catalan), or that &lt;em&gt;respuesta&lt;/em&gt; and &lt;em&gt;resposta&lt;/em&gt; are the same thing.&lt;/p&gt;
-
 &lt;p&gt;In fact, when you look at the Spanish and Catalan words next to each other, it seems that the same kinds of transformations crop up again and again: consonants becoming repeated, vowels being dropped off the ends of words, stressed vowels changing in predictable ways, …&lt;/p&gt;
-
-&lt;p&gt;Of course, the languages are very different and often use completely distinct words, but it got me thinking: how reliably can we guess a Catalan word from a Spanish one, using just a small set of simple transformations?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Of course, the languages are very different and often use completely distinct words, but it got me thinking: how reliably can we guess a Catalan word from a Spanish one, using just a small set of simple transformations?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -124,12 +95,8 @@
       
       <guid>https://jmsbrdy.com/swamp-cooler-experimenting-with-airflow/</guid>
       <description>&lt;p&gt;The first step of my &lt;a href=&#34;https://jmsbrdy.com/tags/swamp-cooler/&#34;&gt;swamp cooler project&lt;/a&gt; is to figure out the construction of the evaporative cooling vessel.&lt;/p&gt;
-
 &lt;p&gt;I&amp;rsquo;d like to use an upturned terracotta pot for the vessel itself, with air entering at the bottom, passing up the inside and out the drainage hole at the top.&lt;/p&gt;
-
-&lt;p&gt;Unlike the &lt;a href=&#34;http://thibault-faverie.com/Cold-Pot&#34;&gt;Cold Pot&lt;/a&gt; – which pushes air through a dry aluminium sleeve – I&amp;rsquo;m trying to maximise the surface area of wet terracotta which the incoming air passes over before emerging from the exhaust.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Unlike the &lt;a href=&#34;http://thibault-faverie.com/Cold-Pot&#34;&gt;Cold Pot&lt;/a&gt; – which pushes air through a dry aluminium sleeve – I&amp;rsquo;m trying to maximise the surface area of wet terracotta which the incoming air passes over before emerging from the exhaust.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -140,7 +107,7 @@
       <guid>https://jmsbrdy.com/injecting-into-transient-factorygirl-attributes/</guid>
       <description>I was just writing some code which parses a URL in order to extract a piece of the path.
 When working correctly, the code under test takes a URL something like this:
-http://site.com/.well-known/pki-validation/4b1706977f59ffe3c1ddf282bbee6f45.txt  … and returns just the hash-like part of the path: 4b1706977f59ffe3c1ddf282bbee6f45.
+http://site.com/.well-known/pki-validation/4b1706977f59ffe3c1ddf282bbee6f45.txt … and returns just the hash-like part of the path: 4b1706977f59ffe3c1ddf282bbee6f45.
 Creating factories to effectively test it was surprisingly fiddly! Here are the options I considered and what worked for me – in the hope it&amp;rsquo;s of some use to you.</description>
     </item>
     
@@ -151,10 +118,7 @@ Creating factories to effectively test it was surprisingly fiddly! Here are the 
       
       <guid>https://jmsbrdy.com/swamp-coolers-for-the-house/</guid>
       <description>&lt;p&gt;It has been &lt;strong&gt;hot&lt;/strong&gt; here recently in Catalunya. Like 40°C and forest-fires-covering-our-patio-in-ash hot.&lt;/p&gt;
-
-&lt;p&gt;Luckily, the house is traditionally constructed with extremely thick, solid stone walls which means the worst of the heat doesn&amp;rsquo;t make it inside – so long as we remember to shut the windows. Even so, a little extra help to keep the temperature down during the day would be very welcome.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Luckily, the house is traditionally constructed with extremely thick, solid stone walls which means the worst of the heat doesn&amp;rsquo;t make it inside – so long as we remember to shut the windows. Even so, a little extra help to keep the temperature down during the day would be very welcome.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -164,14 +128,11 @@ Creating factories to effectively test it was surprisingly fiddly! Here are the 
       
       <guid>https://jmsbrdy.com/deploying-a-static-site-to-github-pages-using-travis-and-cloudflare/</guid>
       <description>&lt;p&gt;A quick and easy way to use these 3rd party services to deliver your site:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cloudflare.com/&#34;&gt;Cloudflare&lt;/a&gt; speeds up your site and gives you HTTPS for free.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; is basically zero-configuration, free hosting.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://travis-ci.org/&#34;&gt;Travis CI&lt;/a&gt; glues the pieces together. And it&amp;rsquo;s free.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -181,9 +142,7 @@ Creating factories to effectively test it was surprisingly fiddly! Here are the 
       
       <guid>https://jmsbrdy.com/queues-culture-and-computer-science/</guid>
       <description>&lt;p&gt;Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners &amp;ndash; and scowl at interlopers &amp;ndash; are so rich that I&amp;rsquo;ve lost count of the number of serious, extended conversations I&amp;rsquo;ve had about the do&amp;rsquo;s and don&amp;rsquo;ts, the Ps and Qs, of waiting for service.&lt;/p&gt;
-
-&lt;p&gt;As a programmer, though, it&amp;rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
-&lt;/p&gt;</description>
+&lt;p&gt;As a programmer, though, it&amp;rsquo;s also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,9 +153,7 @@ Creating factories to effectively test it was surprisingly fiddly! Here are the 
       <guid>https://jmsbrdy.com/are-dotfiles-meant-to-be-forked/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tl;dr&lt;/strong&gt;: I don&amp;rsquo;t think so, so I created &lt;a href=&#34;https://github.com/goodgravy/full-stop/&#34;&gt;Full
 Stop&lt;/a&gt; as a way for us to share dotfile
-&lt;strong&gt;tooling&lt;/strong&gt; while staying agnostic about the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;strong&gt;tooling&lt;/strong&gt; while staying agnostic about the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -208,8 +165,7 @@ Stop&lt;/a&gt; as a way for us to share dotfile
       <description>&lt;p&gt;At &lt;a href=&#34;https://teespring.com/&#34;&gt;Teespring&lt;/a&gt; we have quarterly hackathons. We all
 throw suggestions into a melting-pot of ideas in the run-up to the event, with
 the most promising, most interesting, and most popular suggestions graduating
-to be hacked upon by a small team for a couple of days.
-&lt;/p&gt;</description>
+to be hacked upon by a small team for a couple of days.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -223,10 +179,7 @@ negotiations favours the engineering candidates rather than with the hiring
 company. One consequence of this is that any attempt to hurry, strong-arm, or
 manipulate candidates will likely be ineffective, and could potentially
 backfire horribly.&lt;/p&gt;
-
-&lt;p&gt;This is how I became one such backfire.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;This is how I became one such backfire.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -236,11 +189,8 @@ backfire horribly.&lt;/p&gt;
       
       <guid>https://jmsbrdy.com/google-bollocks/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2ZTp1coqajQ#t=33s&#34;&gt;Spectacles, Testicles, Wallet and Watch&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;We think of it as the tongue-in-cheek mnemonic for recalling the &lt;a href=&#34;http://en.wikipedia.org/wiki/Sign_of_the_Cross&#34;&gt;sign of the cross&lt;/a&gt;. But is this all that it signifies?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I think not&lt;/strong&gt;.
-&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;I think not&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -250,16 +200,12 @@ backfire horribly.&lt;/p&gt;
       
       <guid>https://jmsbrdy.com/the-worst-project-i-ever-worked-on/</guid>
       <description>&lt;p&gt;I was recently asked:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;what&amp;rsquo;s the worst project you ever worked on?&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;After a quick scan through my mental graveyard of half-finished, half-assed
 ideas too embarrassing for me to dignify with a link here, I settled upon my
-first job out of university.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+first job out of university.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -271,14 +217,12 @@ first job out of university.&lt;/p&gt;
       <description>&lt;p&gt;I was always told to prize gifts that people had put time and effort into.
 Hoping my SO shared the same view, I decided to make her a little something for
 her birthday.&lt;/p&gt;
-
 &lt;p&gt;Being creatively barren, I attempted plagiarism. I remembered seeing &lt;a href=&#34;http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes-for-valentines-day&#34;&gt;this
 Kickstarter
 project&lt;/a&gt;
 ages ago. It&amp;rsquo;s based on an old parlour game: the idea is to conceal little
 messages inside a nice-looking block, to be popped out with a pencil when the
-recipient feels like it.
-&lt;/p&gt;</description>
+recipient feels like it.&lt;/p&gt;</description>
     </item>
     
   </channel>

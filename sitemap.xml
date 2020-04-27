@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/javascript/</loc>
+    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/</loc>
+    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/post/</loc>
+    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/</loc>
+    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/tech/</loc>
+    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
+  </url>
   
   <url>
     <loc>https://jmsbrdy.com/ynabadell/</loc>
@@ -12,8 +38,23 @@
   </url>
   
   <url>
+    <loc>https://jmsbrdy.com/tags/video/</loc>
+    <lastmod>2018-12-05T16:14:41-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jmsbrdy.com/innodb-and-table-level-locking/</loc>
     <lastmod>2018-03-29T06:21:34-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/teespring/</loc>
+    <lastmod>2018-03-29T06:21:34-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/elixir/</loc>
+    <lastmod>2018-02-04T09:19:19-08:00</lastmod>
   </url>
   
   <url>
@@ -22,8 +63,23 @@
   </url>
   
   <url>
+    <loc>https://jmsbrdy.com/tags/google/</loc>
+    <lastmod>2018-02-04T09:19:19-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jmsbrdy.com/atelic-pursuits/</loc>
     <lastmod>2018-02-02T13:25:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/woodwork/</loc>
+    <lastmod>2018-02-02T13:25:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/interviewing/</loc>
+    <lastmod>2018-01-24T15:57:19+01:00</lastmod>
   </url>
   
   <url>
@@ -38,6 +94,11 @@
   
   <url>
     <loc>https://jmsbrdy.com/swamp-cooler-experimenting-with-airflow/</loc>
+    <lastmod>2017-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/swamp-cooler/</loc>
     <lastmod>2017-08-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -72,6 +133,11 @@
   </url>
   
   <url>
+    <loc>https://jmsbrdy.com/tags/vr/</loc>
+    <lastmod>2015-06-06T14:06:44+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jmsbrdy.com/why-exploding-job-offers-dont-work-for-senior-hires/</loc>
     <lastmod>2015-02-11T18:03:18+01:00</lastmod>
   </url>
@@ -79,6 +145,16 @@
   <url>
     <loc>https://jmsbrdy.com/google-bollocks/</loc>
     <lastmod>2015-01-16T14:50:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/news/</loc>
+    <lastmod>2015-01-16T14:50:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jmsbrdy.com/tags/ibm/</loc>
+    <lastmod>2013-07-05T16:43:55+01:00</lastmod>
   </url>
   
   <url>
@@ -93,97 +169,6 @@
   
   <url>
     <loc>https://jmsbrdy.com/archives/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/elixir/</loc>
-    <lastmod>2018-02-04T09:19:19-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/google/</loc>
-    <lastmod>2018-02-04T09:19:19-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/ibm/</loc>
-    <lastmod>2013-07-05T16:43:55+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/interviewing/</loc>
-    <lastmod>2018-01-24T15:57:19+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/javascript/</loc>
-    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/news/</loc>
-    <lastmod>2015-01-16T14:50:15+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/post/</loc>
-    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/swamp-cooler/</loc>
-    <lastmod>2017-08-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/</loc>
-    <lastmod>2018-02-04T09:19:19-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/tech/</loc>
-    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/teespring/</loc>
-    <lastmod>2018-03-29T06:21:34-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/video/</loc>
-    <lastmod>2018-12-05T16:14:41-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/vr/</loc>
-    <lastmod>2015-06-06T14:06:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/tags/woodwork/</loc>
-    <lastmod>2018-02-02T13:25:50-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmsbrdy.com/</loc>
-    <lastmod>2019-02-04T18:42:48+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

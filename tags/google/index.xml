@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Google on jmsbrdy.com</title>
+    <title>google on jmsbrdy.com</title>
     <link>https://jmsbrdy.com/tags/google/</link>
-    <description>Recent content in Google on jmsbrdy.com</description>
+    <description>Recent content in google on jmsbrdy.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 04 Feb 2018 09:19:19 -0800</lastBuildDate>
     
@@ -17,10 +17,7 @@
       
       <guid>https://jmsbrdy.com/elixir-on-google-cloud-platform-hot-code-reloading/</guid>
       <description>&lt;p&gt;I stepped through &lt;a href=&#34;https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine&#34;&gt;this guide&lt;/a&gt; for a &lt;em&gt;Hello World&lt;/em&gt; app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?&lt;/p&gt;
-
-&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;In doing so, I confirmed GCP doesn&amp;rsquo;t make use of Erlang&amp;rsquo;s hot code reloading when re-deploying apps, but how important is that?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,11 +27,8 @@
       
       <guid>https://jmsbrdy.com/google-bollocks/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2ZTp1coqajQ#t=33s&#34;&gt;Spectacles, Testicles, Wallet and Watch&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;We think of it as the tongue-in-cheek mnemonic for recalling the &lt;a href=&#34;http://en.wikipedia.org/wiki/Sign_of_the_Cross&#34;&gt;sign of the cross&lt;/a&gt;. But is this all that it signifies?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I think not&lt;/strong&gt;.
-&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;I think not&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>
