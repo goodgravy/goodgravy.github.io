@@ -1,9 +1,13 @@
 branches:
   only:
   - source
+install:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
 script:
-- git submodule update --rebase
-- ./bin/hugo -v
+- ls -lrtA themes
+- hugo version
+- hugo -v
 deploy:
   local_dir: public
   provider: pages
