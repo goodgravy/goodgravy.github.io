@@ -10,11 +10,11 @@ script:
 - hugo -v
 deploy:
   local_dir: public
-  provider: pages
-  skip_cleanup: true
+  provider: pages:git
+  edge: true
+  deploy_key: travis_key
   target_branch: master
   fqdn: jmsbrdy.com
-  github_token: "$GITHUB_TOKEN"
   on:
     branch: source
 after_deploy:
