@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data on jmsbrdy.com</title>
+    <link>https://jmsbrdy.com/tags/data/</link>
+    <description>Recent content in data on jmsbrdy.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 May 2020 11:52:55 +0200</lastBuildDate>
+    
+	<atom:link href="https://jmsbrdy.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data</title>
+      <link>https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/</link>
+      <pubDate>Thu, 28 May 2020 11:52:55 +0200</pubDate>
+      
+      <guid>https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/</guid>
+      <description>We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&amp;rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.</description>
+    </item>
+    
+  </channel>
+</rss>

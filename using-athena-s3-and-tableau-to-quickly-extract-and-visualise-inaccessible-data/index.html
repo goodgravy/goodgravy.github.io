@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="James Brady">
+<meta name="keywords" content="aws, athena, s3, etl, tableau, sql">
+<meta name="description" content="We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.">
+
+
+<meta property="og:description" content="We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data">
+<meta name="twitter:title" content="Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data">
+<meta property="og:url" content="https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/">
+<meta property="twitter:url" content="https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/">
+<meta property="og:site_name" content="jmsbrdy.com">
+<meta property="og:description" content="We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.">
+<meta name="twitter:description" content="We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.">
+<meta property="og:locale" content="en">
+
+  
+    <meta property="article:published_time" content="2020-05-28T11:52:55">
+  
+  
+    <meta property="article:modified_time" content="2020-05-28T11:52:55">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="tech">
+    
+      <meta property="article:tag" content="aws">
+    
+      <meta property="article:tag" content="data">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@goodgravy">
+
+
+  <meta name="twitter:creator" content="@goodgravy">
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/aws-athena-logo.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/aws-athena-logo.png">
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/dshgddh17/jmsbrdy.com/athena.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dshgddh17/jmsbrdy.com/athena.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=640">
+
+
+    <title>Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data</title>
+
+    <link rel="icon" href="/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">jmsbrdy.com</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=90" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=110" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">James Brady</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m a software engineer by trade and an woodworker for fun. I like hard problems and learning new things with which solve them. I&rsquo;m learning to speak Catalan. I like hiking up hills and mountain biking down them. I play the trumpet poorly. That is all.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/goodgravy" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://linkedin.com/in/goodgravy" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--full"
+       style="background-image:url('https://res.cloudinary.com/dshgddh17/jmsbrdy.com/athena.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+    
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>We use <a href="https://fivetran.com/">Fivetran</a> and <a href="https://www.snowflake.com/">Snowflake</a> for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&rsquo;t help. This is the story of how we solved the issue with Athena and S3.</p>
+<h2 id="telemetry-data-in-our-production-facilities">Telemetry data in our production facilities</h2>
+<p>We gather a large amount of data about the flow of work through our production facilities. Who scanned which QR codes at what time? Which press was used by which person during what period, and how many items did they produce? What are our inventory levels for each SKU in each locations, and how many SKUs have been picked and are ready to enter the next phase of fulfillment?</p>
+<p>We use those data internally to inform our decisions within the facility itself, but the data stays within the private network of the building – we had never needed to hook it out to Fivetran, Snowflake, Tableau, etc. to create dashboards for broader consumption.</p>
+<p>When we saw that efficiency had dropped at our Kentucky plant, we therefore didn&rsquo;t have all of the data available in our usual analysis tools – it was trapped within the plant&rsquo;s private network.</p>
+<h2 id="liberating-the-inaccessible-data">Liberating the inaccessible data</h2>
+<p>We had a few options to be able to munge and understand the data from our plant. These included:</p>
+<ol>
+<li>Punching a hole through the plant firewall and allowing Fivetran to extract data directly from the databases.</li>
+<li>Setting up a read replica outside of the firewall, and allowing Fivetran to pull data from there.</li>
+<li>Setting up new tooling <strong>inside</strong> the firewall to extract and analyse the data there, rather than in Tableau.</li>
+<li>Shuttle the data out of the facility and have it end up in Tableau through some other means.</li>
+</ol>
+<p>Option #1 is recommended against <a href="https://fivetran.com/docs/databases/mysql/setup-guide#allowportaccess">by Fivetran themselves</a> due to load on the master database.</p>
+<p>Option #2 is pretty clearly <em>the right option</em> here, but unfortunately it didn&rsquo;t work for us in this case. Setting up a new read replica in RDS is easy enough, but we knew from past experience that dumping all the data out of the plant&rsquo;s databases, loading that into the new replica, and having the replication catch-up would mean several hours of downtime. Our facility is running 24/7 at maximum capacity at the moment (hence why fixing this efficiency problem was so urgent!): hours of downtime was unacceptable.</p>
+<p>Option #3 is workable, but stinks. We want to correlate these data with other information already in Tableau, and create holistic dashboards: we need these data out from behind the firewall.</p>
+<p>So we&rsquo;re left with option #4. Despite my initial wariness, it was actually a good fit for our particular situation for a couple of reasons:</p>
+<ul>
+<li>We only care about recent data – stretching back a few weeks up to today. So, exporting the data and sending it somewhere outside the private network wasn&rsquo;t a crazy idea.</li>
+<li>We only cared about a narrow subset of the data – the production rate on the presses – so again, this made the manual export more reasonable.</li>
+<li>It turns out that Tableau <a href="https://www.tableau.com/about/blog/2017/5/connect-your-s3-data-amazon-athena-connector-tableau-103-71105">can pull data from Athena</a>, and Athena can pull from a wide variety of <a href="https://docs.aws.amazon.com/athena/latest/ug/work-with-data-stores.html">data sources</a>, in a variety of <a href="https://docs.aws.amazon.com/athena/latest/ug/serde-reference.html">data formats</a>. Athena was the key piece of technology that opened our eyes to the possibility of exporting data in a basic format (like CSV), getting it out of the private network, and still being able to work with it in really powerful ways.</li>
+</ul>
+<h2 id="setting-up-athena">Setting up Athena</h2>
+<p>AWS claim that<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
+<blockquote>
+<p>Amazon Athena is an interactive query service that makes it easy to analyze data directly in Amazon Simple Storage Service (Amazon S3) using standard SQL. With a few actions in the AWS Management Console, you can point Athena at your data stored in Amazon S3 and begin using standard SQL to run ad-hoc queries and get results in seconds.</p>
+</blockquote>
+<p>Now I like marketing claims as much as anyone, but the thing is: <strong>this is actually true</strong>☝️. In my mental model, text files lying around in S3 are <em>so far</em> away from relational databases that I assumed there would be a painful setup process, or a confusing configuration step, or severe limitations on real-world use cases.</p>
+<p>However, for us, it was truly as simple as dropping the CSVs into a bucket, manually creating a matching table schema (automatic data discovery and schema inference <a href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">is available</a>), and starting to run SQL queries against the data in those CSVs.</p>
+<p>Here&rsquo;s the <code>CREATE TABLE</code> statement which Athena creates automatically for you:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">EXTERNAL</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>press_impressions<span style="color:#f92672">`</span>(
+  <span style="color:#f92672">`</span>start_time<span style="color:#f92672">`</span> <span style="color:#66d9ef">timestamp</span>, 
+  <span style="color:#f92672">`</span>press_id<span style="color:#f92672">`</span> int, 
+  <span style="color:#f92672">`</span>press_name<span style="color:#f92672">`</span> string, 
+  <span style="color:#f92672">`</span>operator_name<span style="color:#f92672">`</span> string, 
+  <span style="color:#f92672">`</span>impression_count<span style="color:#f92672">`</span> int)
+<span style="color:#66d9ef">ROW</span> FORMAT DELIMITED 
+  FIELDS TERMINATED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;,&#39;</span> 
+STORED <span style="color:#66d9ef">AS</span> INPUTFORMAT 
+  <span style="color:#e6db74">&#39;org.apache.hadoop.mapred.TextInputFormat&#39;</span> 
+OUTPUTFORMAT 
+  <span style="color:#e6db74">&#39;org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat&#39;</span>
+<span style="color:#66d9ef">LOCATION</span>
+  <span style="color:#e6db74">&#39;s3://out-bucket/data/our-folder&#39;</span>
+</code></pre></div><h2 id="hooking-it-all-together">Hooking it all together</h2>
+<p>From here, it was as simple as creating a new Athena connection in Tableau and all of the data was available to to our analysts. We could create charts and dashboards in our usual tool chain, correlated against other metrics from other data sources, and quickly understand how to boost efficiency.</p>
+<p>One note: we are trying to move to user-less authentication and authorization in IAM as much as possible, so it would be nice to have a role-based access option in Tableau, but it&rsquo;s not a deal-breaker for us.</p>
+<p>Overall, I must admit I went into this project with great trepidation. I was already thinking about how I would manually generate charts from the exported CSV data if Athena turned out not to be as straightforward as it purported to be. However, I was pleasantly surprised – pleasantly astounded – that within minutes, it proved the marketing claims true: you just point it at an S3 bucket and you get a SQL interface back.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://docs.aws.amazon.com/athena/latest/ug/what-is.html">https://docs.aws.amazon.com/athena/latest/ug/what-is.html</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/tech/">tech</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/aws/">aws</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/data/">data</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/ynabadell/" data-tooltip="ynabadell: connect your Sabadell bank account with YNAB">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 James Brady. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/ynabadell/" data-tooltip="ynabadell: connect your Sabadell bank account with YNAB">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=110" alt="" />
+    
+    <h4 id="about-card-name">James Brady</h4>
+    
+      <div id="about-card-bio">I&rsquo;m a software engineer by trade and an woodworker for fun. I like hard problems and learning new things with which solve them. I&rsquo;m learning to speak Catalan. I like hiking up hills and mountain biking down them. I play the trumpet poorly. That is all.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        <a href="https://teespring.com">Teespring</a>
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Oristà: a teeny tiny village in Catalunya
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      
+      <div id="cover" style="background-image:url('https://jmsbrdy.com/images/sebastia.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

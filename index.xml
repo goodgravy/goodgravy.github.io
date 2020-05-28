@@ -5,10 +5,20 @@
     <link>https://jmsbrdy.com/</link>
     <description>Recent content on jmsbrdy.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Feb 2019 18:42:48 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 11:52:55 +0200</lastBuildDate>
     
 	<atom:link href="https://jmsbrdy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data</title>
+      <link>https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/</link>
+      <pubDate>Thu, 28 May 2020 11:52:55 +0200</pubDate>
+      
+      <guid>https://jmsbrdy.com/using-athena-s3-and-tableau-to-quickly-extract-and-visualise-inaccessible-data/</guid>
+      <description>We use Fivetran and Snowflake for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn&amp;rsquo;t help. This is the story of how we solved the issue with Athena and S3.
+Telemetry data in our production facilities We gather a large amount of data about the flow of work through our production facilities.</description>
+    </item>
     
     <item>
       <title>ynabadell: connect your Sabadell bank account with YNAB</title>
