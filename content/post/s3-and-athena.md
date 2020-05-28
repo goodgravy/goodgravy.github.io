@@ -81,6 +81,8 @@ LOCATION
 ## Hooking it all together
 From here, it was as simple as creating a new Athena connection in Tableau and all of the data was available to to our analysts. We could create charts and dashboards in our usual tool chain, correlated against other metrics from other data sources, and quickly understand how to boost efficiency.
 
+{{< postimage path="/jmsbrdy.com/athena-diagram.png" title="Architecture: the script, S3, Athena, and Tableau" >}}
+
 One note: we are trying to move to user-less authentication and authorization in IAM as much as possible, so it would be nice to have a role-based access option in Tableau, but it's not a deal-breaker for us.
 
 Overall, I must admit I went into this project with great trepidation. I was already thinking about how I would manually generate charts from the exported CSV data if Athena turned out not to be as straightforward as it purported to be. However, I was pleasantly surprised – pleasantly astounded – that within minutes, it proved the marketing claims true: you just point it at an S3 bucket and you get a SQL interface back.
