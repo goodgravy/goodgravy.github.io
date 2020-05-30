@@ -3,9 +3,7 @@ date:  "2016-12-19T20:56:42+01:00"
 description:  ""
 keywords:  []
 title:  "Queues, Culture, and Computer Science"
-thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/array.png"
-thumbnailImagePosition:  "right"
-
+thumbnail:  "../assets/array.png"
 ---
 
 Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners -- and scowl at interlopers -- are so rich that I've lost count of the number of serious, extended conversations I've had about the do's and don'ts, the Ps and Qs, of waiting for service.
@@ -20,7 +18,7 @@ Of course, what they should _really_ say is that people in other countries have 
 
 The British model their queues on **arrays**. That is, a single-file, strictly-ordered line, where each person knows absolutely nothing about those in front or behind them, because to pry would be rude.
 
-{{<postimage path="/jmsbrdy.com/array.png">}}
+![](../assets/array.png)
 
 The cashier, administrator or official who is servicing the backlog of visitors works their way strictly from front to back. The gentlenodes in the array need no intelligence or state whatsoever: everything operates on rigid, ancient social conventions.
 
@@ -31,7 +29,7 @@ Someone might ask as they walk into a bank in rural Spain.
 
 In España, queueing is based on **singly-linked lists**. That is, a totally-ordered set of gentlenodes, but where the ordering of the nodes is much less evident to an outside observer than it might be for the case of an array. The nodes could be scattered around seemingly at random, and each one just knows about one neighbour.
 
-{{<postimage path="/jmsbrdy.com/list.png">}}
+![](../assets/list.png)
 
 _¿Quién da la vez?_ roughly means _Who is last?_, and this is how the linked-list is formed. Each person knows who is in front of them in the line, and just needs to keep an eye on them. When that person is finished, they know that they're up next.
 
@@ -40,7 +38,7 @@ It's a singly- rather than doubly-linked list because each person has no idea ho
 # China: heaps
 I've only visited China briefly, but to my eyes it seemed like queueing in China is based around **heaps**.
 
-{{<postimage path="/jmsbrdy.com/heap.png">}}
+![](../assets/heap.png)
 
 The person who is at the front of the line to be serviced is very well known, but behind them things become much less clear. We certainly don't know who is _last_. You'd expect that people within 2 or 3 layers from the front would be seen before someone 10 rows back, but you never really know how the throng will morph.
 

@@ -1,16 +1,14 @@
 ---
 date:  "2016-09-18T15:09:41+01:00"
 description:  ""
-keywords:  []
+keywords:  [tech]
 title:  "Are dotfiles meant to be forked?"
 
 ---
 
-**Tl;dr**: I don't think so, so I created [Full
-Stop](https://github.com/goodgravy/full-stop/) as a way for us to share dotfile
-**tooling** while staying agnostic about the **content**.
+**Tl;dr**: I don't think so, so I created [Full Stop](https://github.com/goodgravy/full-stop/) as a way for us to share dotfile **tooling** while staying agnostic about the **content**.
 
----
+<!-- excerpt -->
 
 In ["Dotfiles Are Meant to Be
 Forked"](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), Zach
@@ -78,7 +76,7 @@ Full Stop tries to draw a line between the content of your dotfiles (which you
 own, and you alone), and the plumbing which hooks up that configuration to take
 effect on a system.
 
-Even if all of our personal configurations are wildly different, we should be
+Even if all of our personal configurations are completely different, we should be
 able to use the same tooling to apply it to a computer. This is the goal of
 Full Stop.
 
