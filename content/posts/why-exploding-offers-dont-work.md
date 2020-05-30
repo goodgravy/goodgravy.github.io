@@ -15,6 +15,8 @@ backfire horribly.
 
 This is how I became one such backfire.
 
+<!-- excerpt -->
+
 ## The offer
 
 I had been lucky enough to receive an offer to join Widget Co. as an
