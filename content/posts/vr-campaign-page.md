@@ -1,10 +1,9 @@
 ---
-Description:  "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
-Tags:  ["tech", "Teespring", "VR"]
+description:  "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
+tags:  ["tech", "Teespring", "VR"]
 date:  "2015-06-06T14:06:44+01:00"
 title:  "Prototype: Virtual Reality e-commerce"
-thumbnailImage:  "/img/vr-campaign/front.png"
-thumbnailImagePosition:  "right"
+thumbnail:  "../assets/vr-shirt-front.png"
 
 ---
 

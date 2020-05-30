@@ -14,7 +14,6 @@ her birthday.
 Being creatively barren, I attempted plagiarism.
 
 <!-- excerpt -->
-
 I remembered seeing [this
 Kickstarter
 project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes-for-valentines-day)

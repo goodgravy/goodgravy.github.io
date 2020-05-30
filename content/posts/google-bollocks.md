@@ -1,9 +1,8 @@
 ---
-Tags:  ["Tech", "News", "Google"]
+tags:  ["Tech", "News", "Google"]
 date:  "2015-01-16T14:50:15+01:00"
 title:  "Google Bollocks: their seminal new product"
-thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/Google_-G-_Logo.png"
-thumbnailImagePosition:  "right"
+thumbnail:  "../assets/Google_-G-_Logo.png"
 
 ---
 [Spectacles, Testicles, Wallet and Watch](https://www.youtube.com/watch?v=2ZTp1coqajQ#t=33s).

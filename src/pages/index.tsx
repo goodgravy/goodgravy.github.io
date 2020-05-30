@@ -43,7 +43,8 @@ interface ThumbProps {
 }
 
 const StyledPostExcerpt = styled.div`
-  clear: both;
+  margin-bottom: 3em;
+  overflow: auto;
 `
 
 const StyledThumbnail = styled(Img)`
