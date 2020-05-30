@@ -3,10 +3,7 @@ date:  "2015-02-11T18:03:18+01:00"
 description:  ""
 keywords:  []
 title:  "Why exploding job offers don't work for senior hires"
-coverImage:  "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/explosion.jpg"
-coverSize:  "partial"
-coverMeta:  "out"
-thumbnailImagePosition:  "right"
+thumbnail: ../assets/explosion.jpg
 
 ---
 
