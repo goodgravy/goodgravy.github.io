@@ -22,7 +22,7 @@ A quick and easy way to use these 3rd party services to deliver your site:
 ## Travis CI configuration
 Full file [here](https://github.com/goodgravy/goodgravy.github.io/blob/source/.travis.yml), relevant excerpt here:
 
-{{< codeblock yaml >}}
+```yaml
 deploy:
   local_dir: public
   provider: pages
@@ -39,7 +39,7 @@ after_deploy:
      -H "X-Auth-Key: ${CF_API_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"purge_everything":true}'
-{{< /codeblock >}}
+```
 
 ## Cloudflare configuration
 Following [this guide](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) should get you basically there.
