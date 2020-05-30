@@ -3,8 +3,7 @@ date:  "2013-03-17T13:25:08+01:00"
 description:  "A punch box is an easy DIY project that's perfect for gifting."
 keywords:  ["DIY", "present"]
 title:  "Home-made present: how to make a punch box"
-thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/finished.jpg"
-thumbnailImagePosition:  "right"
+thumbnail: ../assets/finished.jpg
 
 ---
 
@@ -12,7 +11,11 @@ I was always told to prize gifts that people had put time and effort into.
 Hoping my SO shared the same view, I decided to make her a little something for
 her birthday.
 
-Being creatively barren, I attempted plagiarism. I remembered seeing [this
+Being creatively barren, I attempted plagiarism.
+
+<!-- excerpt -->
+
+I remembered seeing [this
 Kickstarter
 project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes-for-valentines-day)
 ages ago. It's based on an old parlour game: the idea is to conceal little
