@@ -49,6 +49,7 @@ const StyledPostExcerpt = styled.div`
 const StyledThumbnail = styled(Img)`
   width: 256px;
   float: right;
+  margin-left: 1em;
 `
 const PostExcerpt: React.FC<PostExcerptProps> = ({node, title}) => {
   return (
