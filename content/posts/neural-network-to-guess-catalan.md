@@ -8,7 +8,7 @@ keywords:
 coverImage: https://res.cloudinary.com/dshgddh17/jmsbrdy.com/neural.jpg
 thumbnailImage: https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/neural-thumb.jpeg
 thumbnailImagePosition: "right"
-draft: true
+published: false
 
 ---
 
