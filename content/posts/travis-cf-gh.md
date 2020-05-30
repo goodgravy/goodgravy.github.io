@@ -1,6 +1,5 @@
 ---
 date:  "2017-07-12T00:00:00Z"
-showDate:  false
 keywords:  ["tech"]
 tags:  []
 title:  "Deploying a static site to Github Pages using Travis and Cloudflare"

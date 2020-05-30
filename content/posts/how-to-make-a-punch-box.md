@@ -1,6 +1,5 @@
 ---
 date:  "2013-03-17T13:25:08+01:00"
-showDate:  false
 description:  "A punch box is an easy DIY project that's perfect for gifting."
 keywords:  ["DIY", "present"]
 title:  "Home-made present: how to make a punch box"

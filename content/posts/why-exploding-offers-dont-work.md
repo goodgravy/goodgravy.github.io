@@ -1,6 +1,5 @@
 ---
 date:  "2015-02-11T18:03:18+01:00"
-showDate:  false
 description:  ""
 keywords:  []
 title:  "Why exploding job offers don't work for senior hires"

@@ -1,7 +1,6 @@
 ---
 title: "Take Home Tests"
 date: 2018-01-24T15:57:19+01:00
-showDate: false
 tags:
 - teespring
 - tech

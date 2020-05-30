@@ -1,7 +1,6 @@
 ---
 title: "Can a neural network guess Catalan words?"
 date: 2017-09-01T15:06:22+02:00
-showDate: false
 keywords:
 - tech
 - ml

@@ -35,7 +35,6 @@ const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
       <article>
         <header>
           <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
         </header>
         <div className={`page-content`}>
           <div dangerouslySetInnerHTML={{__html: post.html}} />
@@ -73,7 +72,6 @@ interface PageQueryData {
     html: string
     frontmatter: {
       title: string
-      date: string
     }
   }
 }
@@ -91,7 +89,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

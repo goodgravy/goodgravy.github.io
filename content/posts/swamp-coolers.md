@@ -1,6 +1,5 @@
 ---
 date:  "2017-08-01T00:00:00Z"
-showDate:  false
 keywords:  []
 tags:  ["swamp-cooler"]
 title:  "Swamp coolers for the house?"

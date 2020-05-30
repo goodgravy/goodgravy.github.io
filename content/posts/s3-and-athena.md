@@ -1,7 +1,6 @@
 ---
 title: "Using Athena, S3, and Tableau to quickly extract and visualise inaccessible data"
 date: 2020-05-28T11:52:55+02:00
-showDate: false
 tags:
 - tech
 - aws

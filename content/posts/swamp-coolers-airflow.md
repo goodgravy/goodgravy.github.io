@@ -1,6 +1,5 @@
 ---
 date:  "2017-08-19T00:00:00Z"
-showDate:  false
 keywords:  []
 tags:  ["swamp-cooler"]
 title:  "Swamp cooler: experimenting with airflow"

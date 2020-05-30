@@ -1,6 +1,5 @@
 ---
 date:  "2017-08-01T00:00:00Z"
-showDate:  false
 keywords:  ["tech"]
 tags:  []
 title:  "Injecting into transient FactoryGirl attributes"

@@ -2,7 +2,6 @@
 title: "ynabadell: connect your Sabadell bank account with YNAB"
 slug: "ynabadell"
 date: 2019-02-04T18:42:48+01:00
-showDate: false
 tags:
 - tech
 - javascript

@@ -1,7 +1,6 @@
 ---
 title: "Elixir on Google Cloud Platform: hot code reloading?"
 date: 2018-02-04T09:19:19-08:00
-showDate: false
 tags:
 - tech
 - elixir

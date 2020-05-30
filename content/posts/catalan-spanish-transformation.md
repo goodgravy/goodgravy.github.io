@@ -1,7 +1,6 @@
 ---
 title: "It it possible to guess Catalan words?"
 date: 2017-08-25T15:06:22+02:00
-showDate: false
 keywords:
 - tech
 thumbnailImage: https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/esp-cat-flag.png

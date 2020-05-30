@@ -1,6 +1,5 @@
 ---
 date:  "2016-09-13T10:47:20+01:00"
-showDate:  false
 description:  ""
 keywords:  []
 published: false

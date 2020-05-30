@@ -2,7 +2,6 @@
 date:  "2013-03-12T11:43:25+01:00"
 title:  "How a death won a lifelong customer"
 published: false
-showDate:  false
 
 ---
 

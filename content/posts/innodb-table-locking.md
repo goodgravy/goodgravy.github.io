@@ -1,7 +1,6 @@
 ---
 title: "InnoDB and Table-level Locking"
 date: 2018-03-29T06:21:34-07:00
-showDate: false
 tags:
 - tech
 - teespring
