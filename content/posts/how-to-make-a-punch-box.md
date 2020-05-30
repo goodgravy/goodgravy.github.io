@@ -18,13 +18,12 @@ project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes
 ages ago. It's based on an old parlour game: the idea is to conceal little
 messages inside a nice-looking block, to be popped out with a pencil when the
 recipient feels like it.
-<!--more-->
 
 Now, that Kickstarter project is long since finished but I reckoned I could
 have a pretty good go at making my own version. Here's what I ended up with so
 you can decide whether to keep reading or not:
 
-{{<postimage title="Finished product" path="/jmsbrdy.com/finished.jpg">}}
+![Finished product](../assets/finished.jpg)
 
 I know, it looks like shit doesn't it? Don't worry: they'll be blown away that
 you made the effort &#x1f44c;.
@@ -33,8 +32,7 @@ you made the effort &#x1f44c;.
 
 * three blocks of wood (I used 150mm × 150mm × 20mm, but up to you)
 * crêpe paper
-* two pieces of thick, patterned paper (same size as the faces of the blocks,
-  e.g. 150mm × 150mm in my case)
+* two pieces of thick, patterned paper (the same size as the faces of the blocks, e.g. 150mm × 150mm in my case)
 * [washi tape](http://www.cutetape.com/)
 * glue (I used 3M spray mount)
 * writing paper
@@ -57,7 +55,7 @@ edge, to keep the crêpe nice and tidy.
 
 This shows a cross-section of the completed box:
 
-{{<postimage title="Cross-section of the box" path="/jmsbrdy.com/cross-section.png">}}
+![Cross-section of the box](../assets/cross-section.png)
 
 # How to do it
 
@@ -70,8 +68,8 @@ This shows a cross-section of the completed box:
 1. **Roll the notes up into tight spirals**. I set it up so that as they were
    unrolled, the message gradually appeared as written.
 
-## Preparing the wood and patterned paper What we're aiming for here is a wood
-block with holes drilled in it, and patterned paper with holes in it that
+## Preparing the wood and patterned paper
+What we're aiming for here is a wood block with holes drilled in it, and patterned paper with holes in it that
 exactly match the layout of holes in the wood block.
 
 To do that, we'll sandwich the wood and paper together (using two sacrificial
@@ -91,7 +89,7 @@ line up with the holes in the block.
 
 Here's how the wood-paper sandwich looks before and after drilling:
 
-{{<postimage title="Cross-section before drilling" path="/jmsbrdy.com/cross-section-before-drilling.png">}}
+![Cross-section before drilling](../assets/cross-section-before-drilling.png)
 
 ## Inserting the notes
 
