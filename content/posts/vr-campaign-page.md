@@ -25,10 +25,9 @@ well-supported in all modern mobile browsers!
 
 In order to prove the idea was even vaguely possible, and to give my Hackathon
 pitch some substance, I put together this quick-and-dirty prototype
-([full-screen version here](/vr-campaign.html)):
+([full-screen version here](/vr-campaign.xhtml)):
 
-<iframe src="/vr-campaign.html" height="350px" width="100%"
-  style="border: none"> </iframe>
+<iframe src="/vr-campaign.xhtml" height="350px" width="100%" style="border: none"> </iframe>
 
 Here, the Cardboard shows the left render to your left eye, and the right
 render to your right eye. The camera locations are slightly different meaning
