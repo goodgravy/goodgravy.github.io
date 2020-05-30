@@ -7,23 +7,31 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 import Bio from '../components/bio'
 
-interface Props {
+interface PageProps {
   readonly data: PageQueryData
+}
+
+interface PostPreview {
+  readonly node: {
+    readonly excerpt: string
+    readonly fields: {
+      readonly slug: string
+    }
+    readonly frontmatter: {
+      readonly date: string
+      readonly title: string
+      readonly thumbnail: {
+        readonly childImageSharp: {
+          fluid: any
+        }
+      }
+    }
+  }
 }
 
 interface PostExcerptProps {
   title: string
-  node: {
-    excerpt: string
-    fields: {
-      slug: string
-    }
-    frontmatter: {
-      date: string
-      title: string
-      thumbnail: any
-    }
-  }
+  PostPreview
 }
 
 interface ThumbProps {
@@ -58,7 +66,7 @@ const Thumbnail: React.FC<ThumbProps> = ({thumbnail}) => {
   return thumbnail ? <StyledThumbnail fluid={thumbnail.childImageSharp.fluid} /> : null
 }
 
-const Index: React.FC<Props> = ({data}) => {
+const Index: React.FC<PageProps> = ({data}) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
@@ -85,19 +93,7 @@ interface PageQueryData {
     }
   }
   allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string
-        fields: {
-          slug: string
-        }
-        frontmatter: {
-          date: string
-          title: string
-          thumbnail: any
-        }
-      }
-    }[]
+    edges: PostPreview[]
   }
 }
 
