@@ -1,12 +1,12 @@
-+++
-date = "2017-08-01T00:00:00Z"
-showDate = false
-keywords = ["tech"]
-tags = []
-title = "Injecting into transient FactoryGirl attributes"
-thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/factory.jpg"
-thumbnailImagePosition = "right"
-+++
+---
+date:  "2017-08-01T00:00:00Z"
+showDate:  false
+keywords:  ["tech"]
+tags:  []
+title:  "Injecting into transient FactoryGirl attributes"
+thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/factory.jpg"
+thumbnailImagePosition:  "right"
+---
 
 I was just writing some code which parses a URL in order to extract a piece of the path.
 

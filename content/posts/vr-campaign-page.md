@@ -1,13 +1,13 @@
-+++
-Description = "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
-Tags = ["tech", "Teespring", "VR"]
-date = "2015-06-06T14:06:44+01:00"
-showDate = false
-title = "Prototype: Virtual Reality e-commerce"
-thumbnailImage = "/img/vr-campaign/front.png"
-thumbnailImagePosition = "right"
+---
+Description:  "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
+Tags:  ["tech", "Teespring", "VR"]
+date:  "2015-06-06T14:06:44+01:00"
+showDate:  false
+title:  "Prototype: Virtual Reality e-commerce"
+thumbnailImage:  "/img/vr-campaign/front.png"
+thumbnailImagePosition:  "right"
 
-+++
+---
 
 At [Teespring](https://teespring.com/) we have quarterly hackathons. We all
 throw suggestions into a melting-pot of ideas in the run-up to the event, with

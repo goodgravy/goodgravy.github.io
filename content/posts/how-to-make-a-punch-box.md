@@ -1,13 +1,13 @@
-+++
-date = "2013-03-17T13:25:08+01:00"
-showDate = false
-description = "A punch box is an easy DIY project that's perfect for gifting."
-keywords = ["DIY", "present"]
-title = "Home-made present: how to make a punch box"
-thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/finished.jpg"
-thumbnailImagePosition = "right"
+---
+date:  "2013-03-17T13:25:08+01:00"
+showDate:  false
+description:  "A punch box is an easy DIY project that's perfect for gifting."
+keywords:  ["DIY", "present"]
+title:  "Home-made present: how to make a punch box"
+thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/finished.jpg"
+thumbnailImagePosition:  "right"
 
-+++
+---
 
 I was always told to prize gifts that people had put time and effort into.
 Hoping my SO shared the same view, I decided to make her a little something for

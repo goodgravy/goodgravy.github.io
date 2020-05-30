@@ -1,10 +1,10 @@
-+++
-date = "2013-03-12T11:43:25+01:00"
-title = "How a death won a lifelong customer"
-draft = true
-showDate = false
+---
+date:  "2013-03-12T11:43:25+01:00"
+title:  "How a death won a lifelong customer"
+draft:  true
+showDate:  false
 
-+++
+---
 
 In April 2008, I'd just finished an arduous [Y
 Combinator](https://www.ycombinator.com/) cycle. I was living in San Francisco

@@ -1,13 +1,13 @@
-+++
-date = "2016-12-19T20:56:42+01:00"
-showDate = false
-description = ""
-keywords = []
-title = "Queues, Culture, and Computer Science"
-thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/array.png"
-thumbnailImagePosition = "right"
+---
+date:  "2016-12-19T20:56:42+01:00"
+showDate:  false
+description:  ""
+keywords:  []
+title:  "Queues, Culture, and Computer Science"
+thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/array.png"
+thumbnailImagePosition:  "right"
 
-+++
+---
 
 Much has been written about the deep cultural significance that orderly queueing holds for the Briton. The opportunities it offers to display impeccable manners -- and scowl at interlopers -- are so rich that I've lost count of the number of serious, extended conversations I've had about the do's and don'ts, the Ps and Qs, of waiting for service.
 

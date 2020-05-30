@@ -1,12 +1,12 @@
-+++
-date = "2016-09-13T10:47:20+01:00"
-showDate = false
-description = ""
-keywords = []
-draft = true
-title = "Laws and user stories"
+---
+date:  "2016-09-13T10:47:20+01:00"
+showDate:  false
+description:  ""
+keywords:  []
+draft:  true
+title:  "Laws and user stories"
 
-+++
+---
 
 There was a flurry of activity a few years ago when several European countries
 pushed towards greater transparency, machine-readability, and accessibility of

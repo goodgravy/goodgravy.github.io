@@ -1,11 +1,11 @@
-+++
-Description = "Taking \"Not Invented Here\" to a whole new level."
-Tags = ["IBM", "tech"]
-date = "2013-07-05T16:43:55+01:00"
-showDate = false
-title = "The worst project I ever worked on"
+---
+Description:  "Taking \"Not Invented Here\" to a whole new level."
+Tags:  ["IBM", "tech"]
+date:  "2013-07-05T16:43:55+01:00"
+showDate:  false
+title:  "The worst project I ever worked on"
 
-+++
+---
 
 
 I was recently asked:

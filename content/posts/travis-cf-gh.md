@@ -1,11 +1,11 @@
-+++
-date = "2017-07-12T00:00:00Z"
-showDate = false
-keywords = ["tech"]
-tags = []
-title = "Deploying a static site to Github Pages using Travis and Cloudflare"
+---
+date:  "2017-07-12T00:00:00Z"
+showDate:  false
+keywords:  ["tech"]
+tags:  []
+title:  "Deploying a static site to Github Pages using Travis and Cloudflare"
 
-+++
+---
 
 A quick and easy way to use these 3rd party services to deliver your site:
 

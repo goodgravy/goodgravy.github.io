@@ -1,12 +1,12 @@
-+++
-date = "2017-08-01T00:00:00Z"
-showDate = false
-keywords = []
-tags = ["swamp-cooler"]
-title = "Swamp coolers for the house?"
-thumbnailImage = "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/hot-temp.png"
-thumbnailImagePosition = "right"
-+++
+---
+date:  "2017-08-01T00:00:00Z"
+showDate:  false
+keywords:  []
+tags:  ["swamp-cooler"]
+title:  "Swamp coolers for the house?"
+thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/hot-temp.png"
+thumbnailImagePosition:  "right"
+---
 
 It has been **hot** here recently in Catalunya. Like 40°C and forest-fires-covering-our-patio-in-ash hot.
 
