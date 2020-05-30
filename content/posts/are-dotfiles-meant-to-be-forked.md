@@ -10,8 +10,6 @@ title:  "Are dotfiles meant to be forked?"
 Stop](https://github.com/goodgravy/full-stop/) as a way for us to share dotfile
 **tooling** while staying agnostic about the **content**.
 
-<!--more-->
-
 ---
 
 In ["Dotfiles Are Meant to Be

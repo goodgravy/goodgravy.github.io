@@ -10,15 +10,13 @@ thumbnailImagePosition:  "right"
 
 ---
 
-At the moment -- and for the foreseeable future -- the power balance of hiring
+At the moment – and for the foreseeable future – the power balance of hiring
 negotiations favours the engineering candidates rather than with the hiring
 company. One consequence of this is that any attempt to hurry, strong-arm, or
 manipulate candidates will likely be ineffective, and could potentially
 backfire horribly.
 
 This is how I became one such backfire.
-
-<!--more-->
 
 ## The offer
 
@@ -47,8 +45,8 @@ deadline was relaxed until the beginning of the following week, which I
 appreciated but it was still nowhere near enough time to finish up the other
 conversations that I was enjoying elsewhere.
 
-I agonised over what to do that weekend, and on Monday -- still not feeling
-equipped with all the information I needed to make such a big decision -- **I
+I agonised over what to do that weekend, and on Monday – still not feeling
+equipped with all the information I needed to make such a big decision – **I
 accepted the exploding job offer**.
 
 In my head, I was a "definitely probably" on the offer. I really liked Widget
@@ -75,11 +73,11 @@ There was one company I was still talking to, and I was getting more and more
 excited by what they were trying to do, and with the monumental vision of the
 founders.
 
-As you can probably guess, I eventually decided that this other company --
-[Teespring](https://teespring.com) -- was the right option, and I had to
+As you can probably guess, I eventually decided that this other company –
+[Teespring](https://teespring.com) – was the right option, and I had to
 retract my acceptance of the first offer.
 
-I felt awful -- especially due to the impact on the team -- but also that I'd
+I felt awful – especially due to the impact on the team – but also that I'd
 been backed into a corner by the recruiter.
 
 ## Summary
@@ -96,7 +94,7 @@ In the end, not only did Widget Co.'s aggressive tactic tarnish my impression
 of them at the crucial moment, it also meant the entire team got to see the
 whole flip-flopping drama play out.
 
-My suggestion -- and the approach I take whenever making offers -- is to labour
+My suggestion – and the approach I take whenever making offers – is to labour
 the point that we want the candidate to have all the information they need
 before making the right decision for them. If the candidate feels rushed, they
 might get spooked and pull away. Or even worse: buckle to your pressure, accept

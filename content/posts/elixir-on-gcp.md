@@ -20,8 +20,6 @@ I stepped through [this guide](https://cloud.google.com/community/tutorials/elix
 
 In doing so, I confirmed GCP doesn't make use of Erlang's hot code reloading when re-deploying apps, but how important is that?
 
-<!--more-->
-
 ## How long does it take to get started?
 **Starting point**: OS X machine with Python installed; Google account with developer access and an existing payment profile.
 

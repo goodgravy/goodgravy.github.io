@@ -22,8 +22,6 @@ I'm fortunate to enjoy my job. I hope you do too. Figuring out clever solutions 
 
 I recently gained some clarity about this yearning: what it is we are looking for, and why it's important. Hopefully there's something here that strikes a chord with you, and is of use.
 
-<!--more-->
-
 In most professions, our daily work comes down to efficiently and effectively completing projects. In my case: hiring people, shipping software, building companies. For other people, perhaps it's landing a big client, building a house, pulling off a successful product launch, organising a successful conference, making a sale.
 
 We take on larger, more complex projects as we grow in our careers and this provides a gratifying sense of forwards progress over time. We develop and refine our skills as we go—enabling us to take on larger projects—and this increase in ability and confidence is gratifying in and of itself.

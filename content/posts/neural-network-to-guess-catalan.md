@@ -15,6 +15,4 @@ As a follow-up to [_It it possible to guess Catalan words?_](../../08/it-it-poss
 
 Specifically, suppose there are some transformations we might apply to words in one language in order to naïvely translate them into another language. Can a neural network learn which transformations to apply in which scenarios? Could it even learn brand new transformations to apply?
 
-<!--more-->
-
 It's not immediately clear how to express this problem as something which could be ingested by a neural network.

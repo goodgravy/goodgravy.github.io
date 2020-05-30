@@ -29,8 +29,6 @@ Surely we can do better?
 
 So became [**ynabadell**](https://github.com/goodgravy/ynabadell) – a tool to automatically import transactions from Sabadell into your YNAB ledger.
 
-<!--more-->
-
 Technically speaking, **ynabadell** resembles an ETL system in many ways:
 
 1. **Extract** transactions from Sabadell's online banking

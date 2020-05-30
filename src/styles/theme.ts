@@ -126,13 +126,36 @@ p {
   vertical-align: baseline;
 }
 
+blockquote::before{
+  font-family:Arial;
+  content: "\u201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
 blockquote {
   font-size: 1.4rem;
+  width:60%;
+  margin:50px 0 50px;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::after{
+  content: '';
 }
 
 blockquote p {
-  width: 55%;
-  margin-right: 40px;
+  width: 75%;
+  margin-right: 20px;
 }
 
 blockquote footer {

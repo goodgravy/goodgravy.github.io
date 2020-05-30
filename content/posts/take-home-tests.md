@@ -21,8 +21,6 @@ The level of antipathy towards take-home tests in that discussion was an enormou
 
 I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they're approached in a thoughtful and careful way, they're one of the best tools for effective interviewing. Here's what I think does—and doesn't—work.
 
-<!--more-->
-
 ## What doesn't work
 A poorly implemented take-home test can alienate candidates or fail to be a useful indicator of job performance—or both. Here's what to avoid:
 

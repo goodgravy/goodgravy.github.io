@@ -11,8 +11,6 @@ It has been **hot** here recently in Catalunya. Like 40°C and forest-fires-cove
 
 Luckily, the house is traditionally constructed with extremely thick, solid stone walls which means the worst of the heat doesn't make it inside – so long as we remember to shut the windows. Even so, a little extra help to keep the temperature down during the day would be very welcome.
 
-<!--more-->
-
 ## Why not air conditioning?
 
 {{< postimage classes="float right fig-50" path="/jmsbrdy.com/ugly-ac.jpg" title="Perfectly installed AC unit" >}}

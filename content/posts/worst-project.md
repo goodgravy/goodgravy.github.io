@@ -6,7 +6,6 @@ title:  "The worst project I ever worked on"
 
 ---
 
-
 I was recently asked:
 
 > what's the worst project you ever worked on?
@@ -14,8 +13,6 @@ I was recently asked:
 After a quick scan through my mental graveyard of half-finished, half-assed
 ideas too embarrassing for me to dignify with a link here, I settled upon my
 first job out of university.
-
-<!--more-->
 
 ## The company
 
@@ -37,7 +34,7 @@ The main challenge of the role was reliably managing jobs in wildly heterogeneou
 environments and getting useful information back if something went wrong.
 
 The team had originally used a bunch of cron-style jobs on each build machine,
-which -- a couple of times a day -- would pull the code, compile it, and make the
+which – a couple of times a day – would pull the code, compile it, and make the
 results available on a network share.
 
 ## The project
@@ -50,7 +47,7 @@ meant that builds could be started on arbitrary machines, at arbitrary times,
 with arbitrary changesets; it also gated the jobs so that build machines didn't
 get swamped with several at once.
 
-JEM was kind of A Big Deal and -- if the scuttlebutt was to be believed -- had
+JEM was kind of A Big Deal and – if the scuttlebutt was to be believed – had
 launched the guy behind it onto a promotion hyper-fast track.
 
 ## The problem
@@ -96,8 +93,8 @@ To roll your own solution when a suitable alternative already exists is a poor
 show, but understandable and very common.
 
 Still rolling your own solution when the alternative is well-known to
-you and you can use it for free -- and with effectively unlimited support from the
-world's top experts -- is inexcusable.
+you and you can use it for free – and with effectively unlimited support from the
+world's top experts – is inexcusable.
 
 **Still** rolling your own solution when the tangible output of your daily work
 _is itself the perfect solution_ (which you can use for free, with unlimited

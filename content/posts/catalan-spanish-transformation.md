@@ -15,8 +15,6 @@ In fact, when you look at the Spanish and Catalan words next to each other, it s
 
 Of course, the languages are very different and often use completely distinct words, but it got me thinking: how reliably can we guess a Catalan word from a Spanish one, using just a small set of simple transformations?
 
-<!--more-->
-
 Well, tl;dr, you can make surprisingly informed guesses with very few rules!
 
 I put together a little test in [Elixir](https://elixir-lang.org/) (which you **have** to try if you've not already – I love it) to see which of these word transformations are more or less useful in guessing a Catalan word from a Spanish one.
