@@ -7,12 +7,6 @@ import Head from '../components/head'
 
 interface Props {
   readonly data: PageQueryData
-  readonly pageContext: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    previous?: any
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    next?: any
-  }
 }
 
 const StyledUl = styled('ul')`
@@ -27,7 +21,6 @@ const StyledUl = styled('ul')`
 const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const {previous, next} = pageContext
 
   return (
     <Layout title={siteTitle}>
@@ -38,22 +31,6 @@ const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
         </header>
         <div className={`page-content`}>
           <div dangerouslySetInnerHTML={{__html: post.html}} />
-          <StyledUl>
-            {previous && (
-              <li>
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {next && (
-              <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              </li>
-            )}
-          </StyledUl>
         </div>
       </article>
     </Layout>
