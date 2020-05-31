@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: 'jmsbrdy.com',
-    description: 'James Brady\'s personal blog',
+    description: "James Brady's personal blog",
     siteUrl: 'https://jmsbrdy.com',
     author: {
       name: 'James Brady',
@@ -37,7 +37,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1280,
+              showCaptions: true,
             },
           },
           {
@@ -51,7 +51,7 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
-        "excerpt_separator": `<!-- excerpt -->`
+        excerpt_separator: `<!-- excerpt -->`,
       },
     },
     {

@@ -186,22 +186,19 @@ figure {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  max-width: 55%;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  margin: 0 0 3em 0;
+  margin: 0 auto 3em auto;
+  max-width: 640px;
 }
 
 figcaption {
-  float: right;
-  clear: right;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.1rem;
+  font-style: italic;
   line-height: 1.6;
   vertical-align: baseline;
-  position: relative;
-  max-width: 40%;
 }
 
 figure.fullwidth figcaption {
