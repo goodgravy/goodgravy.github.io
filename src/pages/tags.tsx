@@ -19,20 +19,22 @@ const Tags: React.FC<Props> = ({data}) => {
         <h1>All tags</h1>
         <div className={`page-content`}>
           {group &&
-            group.map(
-              tag =>
-                tag && (
-                  <div key={tag.fieldValue}>
-                    <h3>
-                      <Link to={`/tags/${tag.fieldValue}/`}>{tag.fieldValue}</Link>
-                    </h3>
-                    <small>
-                      {tag.totalCount} post
-                      {tag.totalCount === 1 ? '' : 's'}
-                    </small>
-                  </div>
-                ),
-            )}
+            group
+              .sort((tag1, tag2) => tag2.totalCount - tag1.totalCount)
+              .map(
+                (tag) =>
+                  tag && (
+                    <div key={tag.fieldValue}>
+                      <h3>
+                        <Link to={`/tags/${tag.fieldValue}/`}>{tag.fieldValue}</Link>
+                      </h3>
+                      <small>
+                        {tag.totalCount} post
+                        {tag.totalCount === 1 ? '' : 's'}
+                      </small>
+                    </div>
+                  ),
+              )}
         </div>
       </article>
     </Layout>
