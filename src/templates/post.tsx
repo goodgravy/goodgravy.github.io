@@ -1,7 +1,8 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
-import {styled} from '../styles/theme'
+import {graphql} from 'gatsby'
+import Img from 'gatsby-image'
 
+import {styled} from '../styles/theme'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -9,16 +10,47 @@ interface Props {
   readonly data: PageQueryData
 }
 
-const StyledUl = styled('ul')`
-  list-style-type: none;
+interface HeaderProps {
+  readonly title: string
+  readonly image: any
+}
 
-  li::before {
-    content: '' !important;
-    padding-right: 0 !important;
-  }
+const FullWidthDiv = styled.div`
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 25em;
 `
 
-const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
+const PostHeader: React.FC<HeaderProps> = ({title, image}) => {
+  const headerImage = !!image && (
+    <FullWidthDiv>
+      <Img
+        fluid={image.childImageSharp.fluid}
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%',
+        }}
+        alt="Cover image"
+      />
+    </FullWidthDiv>
+  )
+
+  return (
+    <header>
+      {headerImage}
+      <h1>{title}</h1>
+    </header>
+  )
+}
+
+const PostTemplate: React.FC<Props> = ({data}) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
 
@@ -26,9 +58,7 @@ const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
     <Layout title={siteTitle}>
       <Head title={post.frontmatter.title} description={post.excerpt} />
       <article>
-        <header>
-          <h1>{post.frontmatter.title}</h1>
-        </header>
+        <PostHeader title={post.frontmatter.title} image={post.frontmatter.coverImage} />
         <div className={`page-content`}>
           <div dangerouslySetInnerHTML={{__html: post.html}} />
         </div>
@@ -49,6 +79,7 @@ interface PageQueryData {
     html: string
     frontmatter: {
       title: string
+      coverImage: any
     }
   }
 }
@@ -66,6 +97,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -25,6 +25,7 @@ interface PostPreview {
           fluid: any
         }
       }
+      readonly staticThumbnail: string
     }
   }
 }
@@ -40,6 +41,7 @@ interface ThumbProps {
       fluid: any
     }
   }
+  readonly staticThumbnail: string
 }
 
 const StyledPostExcerpt = styled.div`
@@ -52,10 +54,16 @@ const StyledThumbnail = styled(Img)`
   float: right;
   margin-left: 1em;
 `
+const StyledStaticThumbnail = styled.img`
+  width: 256px;
+  float: right;
+  margin-left: 1em;
+`
+
 const PostExcerpt: React.FC<PostExcerptProps> = ({node, title}) => {
   return (
-    <StyledPostExcerpt key={node.fields.slug}>
-      <Thumbnail thumbnail={node.frontmatter.thumbnail} />
+    <StyledPostExcerpt>
+      <Thumbnail thumbnail={node.frontmatter.thumbnail} staticThumbnail={node.frontmatter.staticThumbnail} />
       <h3>
         <Link to={node.fields.slug}>{title}</Link>
       </h3>
@@ -64,8 +72,10 @@ const PostExcerpt: React.FC<PostExcerptProps> = ({node, title}) => {
   )
 }
 
-const Thumbnail: React.FC<ThumbProps> = ({thumbnail}) => {
-  return thumbnail ? <StyledThumbnail fluid={thumbnail.childImageSharp.fluid} /> : null
+const Thumbnail: React.FC<ThumbProps> = ({thumbnail, staticThumbnail}) => {
+  if (thumbnail) return <StyledThumbnail fluid={thumbnail.childImageSharp.fluid} />
+  if (staticThumbnail) return <StyledStaticThumbnail src={staticThumbnail} />
+  return null
 }
 
 const Index: React.FC<PageProps> = ({data}) => {
@@ -80,7 +90,7 @@ const Index: React.FC<PageProps> = ({data}) => {
         <div className={`page-content`}>
           {posts.map(({node}) => {
             const title = node.frontmatter.title || node.fields.slug
-            return <PostExcerpt node={node} title={title} />
+            return <PostExcerpt key={node.fields.slug} node={node} title={title} />
           })}
         </div>
       </article>
@@ -126,6 +136,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            staticThumbnail
           }
         }
       }
