@@ -214,10 +214,22 @@ img {
   max-width: 100%;
 }
 
-div.fullwidth,
 table.fullwidth {
   width: 100%;
 }
+
+div.fullwidth {
+  width: 90vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -45vw;
+  margin-right: -45vw;
+}
+
+div.fullwidth figure { float: left }
+div.fullwidth figure.five { width: 19%; margin-left: 1% }
+div.fullwidth figure.four { width: 24%; margin-left: 1% }
 
 div.table-wrapper {
   overflow-x: auto;
@@ -248,7 +260,6 @@ pre.code.fullwidth {
 }
 
 .fullwidth {
-  max-width: 100%;
   clear: both;
 }
 
