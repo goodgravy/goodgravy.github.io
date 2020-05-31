@@ -9,9 +9,8 @@ keywords:
 - tech
 - elixir
 - google
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/elixir-logo.png"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/constable-clouds.jpg"
+thumbnail: ../assets/elixir-logo.png
+coverImage: ../assets/constable-clouds.jpg
 coverSize: "partial"
 # coverMeta: "out"
 ---
@@ -20,6 +19,8 @@ I stepped through [this guide](https://cloud.google.com/community/tutorials/elix
 
 In doing so, I confirmed GCP doesn't make use of Erlang's hot code reloading when re-deploying apps, but how important is that?
 
+<!-- excerpt -->
+
 ## How long does it take to get started?
 **Starting point**: OS X machine with Python installed; Google account with developer access and an existing payment profile.
 
@@ -27,7 +28,7 @@ Minutes elapsed | Step
 ----------------|------
 0  | Start!
 1  | Create new Google Cloud project
-3  | Add billing information (using existing payment profile)—they labour the point that you won't actually be charged
+3  | Add billing information (using existing payment profile) – they labour the point that you won't actually be charged
 8  | Google Cloud SDK installed and initialised
 13 | Elixir and Node packages installed locally
 15 | Local development server up and running
@@ -40,7 +41,7 @@ Minutes elapsed | Step
 ## Surprises, good and bad
 * Considering I deliberately began from a pretty unprepared starting point, I was pleased with how quickly the initial setup stages went (creating a new GCP project, installing the SDK locally, …). Quite often, these types of quick start tutorials _seem_ quick on the surface of it, but it turns out there's a bunch of annoying admin you need to do first to get to the real starting point. Not so with this one.
 * This is a community-provided tutorial, and there are other very similarly named tutorials (see [this list](https://cloud.google.com/community/tutorials/)) with little to no distinction made about the differences between them, or why you might want to choose this over that. In addition, there are rudimentary _Getting Started_ instructions on the [GCP Elixir page](https://cloud.google.com/elixir/) which are different from the tutorials. It's easy to get confused or distracted when there's not a single, official source of information.
-* Erlang applications (and Elixir apps by extension) have a great feature of [hot code loading](https://medium.com/@kansi/hot-code-loading-with-erlang-and-rebar3-8252af16605b) which means that the application can be changed live, without needing to take down and restart the service. However, this feature isn't—and can't be—used in any of the full service cloud platforms as far as I know. You could implement it yourself on EC2 or similar, of course, but I'd prefer not to.  More detail about why this is important below.
+* Erlang applications (and Elixir apps by extension) have a great feature of [hot code loading](https://medium.com/@kansi/hot-code-loading-with-erlang-and-rebar3-8252af16605b) which means that the application can be changed live, without needing to take down and restart the service. However, this feature isn't – and can't be – used in any of the full service cloud platforms as far as I know. You could implement it yourself on EC2 or similar, of course, but I'd prefer not to.  More detail about why this is important below.
 * The update to the app took longer than I was expecting. The initial deploy needs to set up all sorts of infrastructure, I'm sure, so it's understandable it took a while (about 13 minutes in my case). However, the subsequent deploy should be much more straightforward and I'm surprised it took 10 minutes.
 * As is the norm (I find) with Google services, there wasn't a focus on an amazing developer experience. The platform is undoubtedly more extensible and configurable than something like Heroku, and the trade-off is that you have to wade through a bit more complexity to get things up and running, and to do common tasks.
 
@@ -50,15 +51,61 @@ As mentioned above, Erlang and Elixir apps can be updated on the fly without sto
 
 By including an [`Agent`](https://elixir-lang.org/getting-started/mix-otp/agent.html) in the Phoenix app, I could store state between requests:
 
-{{< gist goodgravy e9127ac2eeeaa85a250cbef0f084527d >}}
+```elixir
+# words.ex
+defmodule AppengineExample.Words do
+  use Agent
+
+  def start_link do
+    Agent.start_link(fn -> [] end, name: __MODULE__)
+  end
+
+  def put(value) do
+    Agent.update(__MODULE__, fn(state) -> state ++ [value] end)
+  end
+
+  def get do
+    Agent.get(__MODULE__, fn(state) -> state end)
+  end
+end
+```
 
 I hooked my controllers up to that `Agent`, to save and retrieve words submitted from a `<form>`:
 
-{{< gist goodgravy ddaeda0b1506b07714d9e4926678675f >}}
+```elixir
+# page_controller.ex
+defmodule AppengineExampleWeb.PageController do
+  use AppengineExampleWeb, :controller
+
+  def index(conn, _params) do
+    render conn, "index.html", words: AppengineExample.Words.get
+  end
+
+  def save(conn,  %{"word" => word}) do
+    AppengineExample.Words.put(word)
+    redirect conn, to: "/"
+  end
+end
+```
 
 When running the server locally, I could update the code of a running server with something like:
 
-{{< gist goodgravy c26483b0c550229feb1663d348a20629 >}}
+```bash
+# create the initial release
+env MIX_ENV=prod mix release --env=prod
+
+# run the server in the background
+env PORT=8080 _build/prod/rel/appengine_example/bin/appengine_example foreground &
+
+# edit mix.exs to bump the version
+vim mix.exs
+
+# create the upgrade release
+env MIX_ENV=prod mix release --upgrade --env=prod
+
+# deploy the upgrade
+_build/prod/rel/appengine_example/bin/appengine_example upgrade 0.0.2
+```
 
 Crucially, **state stored in the `Agent` was preserved** throughout this upgrade.
 

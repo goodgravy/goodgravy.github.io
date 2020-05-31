@@ -8,24 +8,23 @@ tags:
 keywords:
 - tech
 - interviewing
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/CV_alan_sugar.jpg"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/blake-connally-373084.jpg"
-coverSize: "partial"
-coverMeta: "out"
+thumbnail: ../assets/CV_alan_sugar.jpg"
+coverImage: ../assets/blake-connally-373084.jpg
 ---
 
-I recently came across [a discussion on Reddit](https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/) concerning take-home tests as part of an interview process. Is it was acceptable for companies to ask candidates to work on a problem in their own time, so that their submitted solution helps decide whether to move forwards to an on-site interview?
+I recently came across [a discussion on Reddit](https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/) concerning take-home tests as part of an interview process. It basically boiled down to:
+
+> Is it acceptable for companies to ask candidates to work on a problem in their own time, so that their submitted solution helps decide whether to move forwards to an on-site interview?
 
 The level of antipathy towards take-home tests in that discussion was an enormous surprise. The majority of commenters were not just against the idea, but **virulently** so, railing against it as another example of unreasonable demands made on candidates. Most people viewed these tests as a waste of time, rude, disrespectful, or a combination of all three. I think there was [only one person](https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/dsw9cmk/) whose opinion wasn't negative, and even that was ambivalent at best.
 
-I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they're approached in a thoughtful and careful way, they're one of the best tools for effective interviewing. Here's what I think does—and doesn't—work.
+I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they're approached in a thoughtful and careful way, they're one of the best tools for effective interviewing. Here's what I think does – and doesn't – work.
 
 ## What doesn't work
-A poorly implemented take-home test can alienate candidates or fail to be a useful indicator of job performance—or both. Here's what to avoid:
+A poorly implemented take-home test can alienate candidates or fail to be a useful indicator of job performance – or both. Here's what to avoid:
 
 ### Using problems unrelated to the company or the role
-It's a well-worn adage that interviews are as much about the candidate assessing the company as the company assessing the candidate. For engineers especially, one of the key motivators for on-the-job satisfaction is whether they feel they're doing challenging, impactful work. As such, why would you give them anything else as part of a take-home test?
+It's a well-worn adage that interviews are as much about the candidate assessing the company as the company assessing the candidate. For engineers especially, one of the key indicators for on-the-job satisfaction is whether they feel they're doing challenging, impactful work. As such, why would you give them anything else as part of a take-home test?
 
 Some "off the shelf" question you found on the Internet and pose as a take-home challenge isn't going to give the candidate any insight whatsoever into the kinds of challenges and problem domain they may end up working in if they do eventually join your team.
 
@@ -38,16 +37,16 @@ Not only is the answer to those questions _"No"_ for most roles, a take-home tes
 
 When all human knowledge is effectively available to us 24/7, it becomes much more important that we can find, filter, and apply information and ideas, rather than them being sat in our heads. Any take-home test which requires the candidate to regurgitate specific knowledge is probably a waste of time.
 
-Of course, for some roles, familiarity with a particular framework or language is crucial, but such familiarity can be tested by asking the candidate to solve a more general question. If they use the tools poorly—or fail to use the right ones at all—that's a better indicator than asking pop quiz-style questions about the tool itself.
+Of course, for some roles, familiarity with a particular framework or language is crucial, but such familiarity can be tested by asking the candidate to solve a more general question. If they use the tools poorly – or fail to use the right ones at all – that's a better indicator than asking pop quiz-style questions about the tool itself.
 
 ### No time limit
 We know that every piece of an interview process is extremely stressful for a candidate, so why not avoid a time limit to help make this piece less intense?
 
 The answer is fairness and diversity.
 
-We must remember that not every candidate has the same background situation. Perhaps a recent college graduate is willing and able to pull an all-nighter, fitting thirty-six hours of Monster-fuelled work into a weekend, but that's not true of most people. Perhaps the candidate has a family to care for, a health condition, a full-time job they can't take vacation from, …
+We must remember that not every candidate has the same background situation. Perhaps a recent college graduate is willing and able to pull an all-nighter, fitting thirty-six hours of Monster-fuelled work into a weekend, but that's not true of most people. Perhaps the candidate has a family to care for, a health condition, a full-time job they can't take vacation from, ...
 
-We would hate to disadvantage people in a situation like that—and so should you. A time limit helps to ensure a level playing field between candidates.
+We would hate to disadvantage people in a situation like that – and so should you. A time limit helps to ensure a level playing field between candidates.
 
 ## What we do at Teespring
 

@@ -14,9 +14,8 @@ keywords:
 - export
 - api
 - sabadell
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,g_center,h_280,w_280/jmsbrdy.com/calculator.jpg"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/piggy.jpg"
+thumbnail: ../assets/calculator.jpg
+coverImage: ../assets/piggy.jpg
 coverSize: "partial"
 coverMeta: "out"
 ---
@@ -27,6 +26,7 @@ YNAB **does** support a manual process, where you upload QFX or OFX files – o
 
 Surely we can do better?
 
+<!-- excerpt -->
 So became [**ynabadell**](https://github.com/goodgravy/ynabadell) – a tool to automatically import transactions from Sabadell into your YNAB ledger.
 
 Technically speaking, **ynabadell** resembles an ETL system in many ways:

@@ -52,7 +52,7 @@ top and bottom of the block, with holes pre-punched in it. This makes it easy
 to see where the notes are hiding, and hence where the recipient should poke a
 pencil to get one out.
 
-Lastly, we'll use washi tape -- basically patterned sticky tape -- around the
+Lastly, we'll use washi tape – basically patterned sticky tape – around the
 edge, to keep the crêpe nice and tidy.
 
 This shows a cross-section of the completed box:

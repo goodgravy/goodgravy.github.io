@@ -11,36 +11,35 @@ keywords:
 - side projects
 - motivation
 - career
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/spoon-making.gif"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/spiral-wood.jpg"
-coverSize: "partial"
-coverMeta: "out"
+staticThumbnail: /img/spoon-making.gif
+coverImage: ../assets/spiral-wood.jpg
 ---
 
 I'm fortunate to enjoy my job. I hope you do too. Figuring out clever solutions to difficult problems is innately satisfying. However, I've always felt a yearning for various hobbies and side projects to augment the gratification I get from my work.
 
 I recently gained some clarity about this yearning: what it is we are looking for, and why it's important. Hopefully there's something here that strikes a chord with you, and is of use.
 
+<!-- excerpt -->
+
 In most professions, our daily work comes down to efficiently and effectively completing projects. In my case: hiring people, shipping software, building companies. For other people, perhaps it's landing a big client, building a house, pulling off a successful product launch, organising a successful conference, making a sale.
 
-We take on larger, more complex projects as we grow in our careers and this provides a gratifying sense of forwards progress over time. We develop and refine our skills as we go—enabling us to take on larger projects—and this increase in ability and confidence is gratifying in and of itself.
+We take on larger, more complex projects as we grow in our careers and this provides a gratifying sense of forwards progress over time. We develop and refine our skills as we go – enabling us to take on larger projects – and this increase in ability and confidence is gratifying in and of itself.
 
-I believe one reason skill growth is so satisfying is that it is _atelic_[^1], meaning that it isn't predicated on a particular deliverable, or on a particular timeline. Yes, we might aim to complete a training course—for example—by this or that date, but finishing the course isn't what gives us that warm fuzzy feeling: it is the gratification of seeing ourselves become an ever-so slightly better version of ourselves. This path of personal growth is a process which we can take as far as we want, as quickly or slowly as we want.
+I believe one reason skill growth is so satisfying is that it is _atelic_[^1], meaning that it isn't predicated on a particular deliverable, or on a particular timeline. Yes, we might aim to complete a training course – for example – by this or that date, but finishing the course isn't what gives us that warm fuzzy feeling: it is the gratification of seeing ourselves become an ever-so slightly better version of ourselves. This path of personal growth is a process which we can take as far as we want, as quickly or slowly as we want.
 
 However, one of the traps I've seen people fall prey to in their careers is to focus too much on the atelic.
 
-Without applying yourself to solving problems, effecting changes, and providing meaningful results, you will come up short when compared to others—even if you learned a lot in the process and truly developed your skill set. There's nothing more bleak than feeling limited or ineffectual, especially if you believe you **should** be progressing due to your atelic efforts.
+Without applying yourself to solving problems, effecting changes, and providing meaningful results, you will come up short when compared to others – even if you learned a lot in the process and truly developed your skill set. There's nothing more bleak than feeling limited or ineffectual, especially if you believe you **should** be progressing due to your atelic efforts.
 
-To be clear, professional development is crucial (and it's fun!), but at some point—especially the further into your career you are—you need to apply those shiny new skills to solve real problems.
+To be clear, professional development is crucial (and it's fun!), but at some point – especially the further into your career you are – you need to apply those shiny new skills to solve real problems.
 
 ## So how does this all relate to hobbies?
 
 One of my hobbies is woodworking. More specifically, the [sort of woodworking](https://www.youtube.com/user/PaulSellersWoodwork) which would have been familiar to my grandpa: using slow, error-prone, difficult-to-master handtools. Eschewing modern [power-tools](https://en.wikipedia.org/wiki/Thickness_planer), [gizmos](https://en.wikipedia.org/wiki/Domino_joiner) or [guides](https://www.highlandwoodworking.com/david-barron-magnetic-dovetail-saw-guide.aspx) designed to flatten or sidestep the learning curve.
 
-{{< postimage classes="fig-33" path="/jmsbrdy.com/bench-plane.jpg" >}}
-{{< postimage classes="fig-33" path="/jmsbrdy.com/chisel.jpg" >}}
-{{< postimage classes="fig-33" path="/jmsbrdy.com/dovetail-saw.jpg" >}}
+![](../assets/bench-plane.jpg)
+![](../assets/chisel.jpg)
+![](../assets/dovetail-saw.jpg)
 
 <div style="clear:both"></div>
 

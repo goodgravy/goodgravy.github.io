@@ -86,7 +86,7 @@ an official escalation channel which meant a flight change can be comped within
 when she saw fit.
 
 Air travel is a fiercely competitive industry, and I wouldn't have been at all
-surprised if -- to keep costs down -- there had been absolutely no wiggle room
+surprised if – to keep costs down – there had been absolutely no wiggle room
 on that flight change fee. After all, 2008 was the year of the [infamous
 uncompensated guitar
 breaking](http://en.wikipedia.org/wiki/United_Breaks_Guitars). It strikes me as

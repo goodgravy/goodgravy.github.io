@@ -4,7 +4,7 @@ date: 2017-09-01T15:06:22+02:00
 keywords:
 - tech
 - ml
-coverImage: https://res.cloudinary.com/dshgddh17/jmsbrdy.com/neural.jpg
+coverImage: ../assets/neural.jpg
 thumbnailImage: https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/neural-thumb.jpeg
 thumbnailImagePosition: "right"
 published: false

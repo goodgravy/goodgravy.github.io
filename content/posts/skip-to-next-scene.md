@@ -10,11 +10,7 @@ keywords:
 - scrubbing
 - content-aware
 - media
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/clapperboard.png"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/black-lodge.jpg"
-coverSize: "partial"
-coverMeta: "out"
+coverImage: ../assets/black-lodge.jpg
 ---
 
 Don't video player controls seem dumb?
@@ -25,6 +21,8 @@ DVDs were the first format I know of that allowed you to skip via **chapters**, 
 
 Here's an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I'll leave the bad news to the end!
 
+<!-- excerpt -->
+
 # Video compression – how does it work?
 The short answer is: I don't know, but that's never stopped me before so…
 
@@ -32,7 +30,7 @@ A key concept in video encoding is _frame types_. Each _frame_ (a single image i
 
 Inter frames are where things get interesting. The idea is that for the **vast** majority of video content, frame N is pretty similar to frame N-1 (and frame N+1 for that matter). Using this fact, it's possible to store frame N in a **much** more compact way by representing it as a delta on its neighbouring frames. Interestingly, this so-called inter framing is why colours and shapes can appear to erroneously "smear" over a second or two of video if the video file is damaged or incomplete. The decoder gets confused and can propagate forward corruption from one frame into subsequent frames.
 
-{{<postimage title="In this diagram, the green **I** frames are the key frames. The blue and red **B** and **P** frames are different types of inter frames." path="/jmsbrdy.com/ipb.png">}}
+!["In this diagram, the green **I** frames are the key frames. The blue and red **B** and **P** frames are different types of inter frames.](../assets/ipb.png)
 
 Video encoders support automatic insertion of key frames when they detect a significant delta between two frames – e.g. across scene changes. The thinking here is that if two adjacent frames are quite dissimilar, there's no benefit in calculating delta and using an inter frame: we might as well store the first frame of the new scene as a key frame.
 

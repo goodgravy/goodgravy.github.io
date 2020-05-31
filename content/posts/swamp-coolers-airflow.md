@@ -3,8 +3,7 @@ date:  "2017-08-19T00:00:00Z"
 keywords:  []
 tags:  ["swamp-cooler"]
 title:  "Swamp cooler: experimenting with airflow"
-thumbnailImage:  "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/fan.gif"
-thumbnailImagePosition:  "right"
+staticThumbnail:  "/img/fan.gif"
 ---
 
 The first step of my [swamp cooler project](/tags/swamp-cooler/) is to figure out the construction of the evaporative cooling vessel.

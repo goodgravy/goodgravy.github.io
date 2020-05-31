@@ -12,9 +12,8 @@ keywords:
 - locking
 - concurrency
 - performance
-thumbnailImage: "https://res.cloudinary.com/dshgddh17/c_lfill,h_280,w_280/jmsbrdy.com/lock.jpg"
-thumbnailImagePosition: right
-coverImage: "https://res.cloudinary.com/dshgddh17/jmsbrdy.com/cilla.jpg"
+thumbnail: ../assets/lock.jpg
+coverImage: ../assets/cilla.jpg
 coverSize: "partial"
 coverMeta: "out"
 coverCaption: "Cover image is apropos of nothing, but isn't she a nice doggie?"
@@ -75,7 +74,7 @@ The `Waiting for table metadata lock` state of the process was the key to unlock
 
 * Trigger creation is classed as a DDL type of statement by MySQL
 * DDL statements need an exclusive lock on all the tables they operate on
-* Step #2 for LHM is trigger creation (see [above]({{<ref "#what-should-happen-and-what-did-happen" >}}))
+* Step #2 for LHM is trigger creation (see [above](#what-should-happen--and-what-did-happen))
 * We had an existing problem with unoptimised queries running for a long time against some tables
 * Those long-running queries were sometimes issued within a transaction
 

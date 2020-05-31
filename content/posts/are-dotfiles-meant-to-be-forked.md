@@ -19,8 +19,8 @@ tips, tricks, and tools many of us have in our
 However, I think it's important to draw a distinction between the **tooling**
 around dotfiles, and the **content** of the dotfiles themselves.
 
-The **tooling** -- which handles the grunt-work of applying the dotfiles
-configuration to a computer -- should be quite consistent between all of us.
+The **tooling** – which handles the grunt-work of applying the dotfiles
+configuration to a computer – should be quite consistent between all of us.
 There's not much personal preference or variation here: code-sharing makes
 sense for our tooling.
 
@@ -87,7 +87,7 @@ and also grab whatever useful nuggets you come across and include those too.
 Our dotfiles should be a wildly heterogeneous grab bag of snippets from here,
 there, and everywhere that constantly shift over time.
 
-Let's use code-sharing where it makes sense -- for the tooling -- and just
+Let's use code-sharing where it makes sense – for the tooling – and just
 copy-paste snippets for the rest.
 
 ## Interested?
