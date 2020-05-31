@@ -56,7 +56,7 @@ const PostTemplate: React.FC<Props> = ({data}) => {
 
   return (
     <Layout title={siteTitle}>
-      <Head title={post.frontmatter.title} description={post.excerpt} />
+      <Head title={post.frontmatter.title} description={post.excerpt} keywords={post.frontmatter.keywords} />
       <article>
         <PostHeader title={post.frontmatter.title} image={post.frontmatter.coverImage} />
         <div className={`page-content`}>
@@ -79,6 +79,7 @@ interface PageQueryData {
     html: string
     frontmatter: {
       title: string
+      keywords: string[]
       coverImage: any
     }
   }
@@ -97,6 +98,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        keywords
         coverImage {
           childImageSharp {
             fluid(maxWidth: 2000) {

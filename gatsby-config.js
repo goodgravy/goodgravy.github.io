@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: 'jmsbrdy.com',
-    description: "James Brady's personal blog",
+    description: 'jmsbrdy.com',
     siteUrl: 'https://jmsbrdy.com',
     author: {
       name: 'James Brady',
