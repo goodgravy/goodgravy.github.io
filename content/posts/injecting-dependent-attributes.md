@@ -1,7 +1,14 @@
 ---
 date:  "2017-08-01T00:00:00Z"
-keywords:  ["tech"]
-tags:  []
+keywords:
+- tech
+- factorybot
+- testing
+- ruby
+tags:
+- tech
+- ruby
+- code
 title:  "Injecting into transient FactoryBot attributes"
 ---
 

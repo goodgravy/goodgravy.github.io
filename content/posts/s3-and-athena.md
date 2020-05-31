@@ -5,6 +5,8 @@ tags:
 - tech
 - aws
 - data
+- devops
+- databases
 keywords:
 - aws
 - athena
@@ -12,6 +14,11 @@ keywords:
 - etl
 - tableau
 - sql
+- tech
+- aws
+- data
+- devops
+- databases
 thumbnail: ../assets/aws-athena-logo.png
 coverImage: ../assets/athena.jpg
 

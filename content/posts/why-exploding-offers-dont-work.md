@@ -1,7 +1,18 @@
 ---
 date:  "2015-02-11T18:03:18+01:00"
 description:  ""
-keywords:  []
+keywords:
+- interviewing
+- career
+- offer
+- hr
+- job offer
+- engineering
+tags:
+- interviewing
+- career
+- tech
+
 title:  "Why exploding job offers don't work for senior hires"
 thumbnail: ../assets/explosion.jpg
 

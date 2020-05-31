@@ -10,6 +10,7 @@ keywords:
 - scrubbing
 - content-aware
 - media
+- streaming
 coverImage: ../assets/black-lodge.jpg
 ---
 

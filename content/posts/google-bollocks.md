@@ -1,5 +1,9 @@
 ---
-tags:  ["Tech", "News", "Google"]
+tags:
+- tech
+- google
+keywords:
+- google
 date:  "2015-01-16T14:50:15+01:00"
 title:  "Google Bollocks: their seminal new product"
 thumbnail:  "../assets/Google_-G-_Logo.png"

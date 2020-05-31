@@ -1,6 +1,17 @@
 ---
-Description:  "Taking \"Not Invented Here\" to a whole new level."
-Tags:  ["IBM", "tech"]
+description:  "Taking \"Not Invented Here\" to a whole new level."
+tags:
+- IBM
+- tech
+- career
+keywords:
+- IBM
+- websphere
+- mq
+- hursley
+- hursley park
+- job
+- compilation
 date:  "2013-07-05T16:43:55+01:00"
 title:  "The worst project I ever worked on"
 

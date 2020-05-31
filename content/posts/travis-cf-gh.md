@@ -1,7 +1,16 @@
 ---
 date:  "2017-07-12T00:00:00Z"
-keywords:  ["tech"]
-tags:  []
+keywords:
+- tech
+- devops
+- deployment
+- cloudflare
+- travis
+- github
+tags:
+- tech
+- devops
+- code
 title:  "Deploying a static site to Github Pages using Travis and Cloudflare"
 
 ---

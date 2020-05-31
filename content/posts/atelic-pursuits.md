@@ -5,6 +5,7 @@ date: 2018-02-02T13:25:50-05:00
 tags:
 - woodwork
 - tech
+- career
 keywords:
 - woodwork
 - hobbies

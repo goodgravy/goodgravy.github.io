@@ -4,19 +4,18 @@ date: 2018-03-29T06:21:34-07:00
 tags:
 - tech
 - teespring
+- databases
+- devops
 keywords:
 - tech
 - mysql
 - innodb
 - databases
 - locking
+- devops
 - concurrency
 - performance
 thumbnail: ../assets/lock.jpg
-coverImage: ../assets/cilla.jpg
-coverSize: "partial"
-coverMeta: "out"
-coverCaption: "Cover image is apropos of nothing, but isn't she a nice doggie?"
 ---
 
 One of the main reasons InnoDB is the go-to choice for our MySQL tables is that it supports row-level locking[^1]. This means that as we're reading from and writing to a table, we don't need to wait for **all** the other processes to finish up their work before we can get access to that table.

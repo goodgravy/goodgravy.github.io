@@ -1,7 +1,13 @@
 ---
 date:  "2017-08-01T00:00:00Z"
-keywords:  []
-tags:  ["swamp-cooler"]
+keywords:
+- air conditioning
+- evaporative cooling
+- energy efficiency
+- cooling
+tags:
+- swamp-cooler
+- diy
 title:  "Swamp coolers for the house?"
 thumbnail:  "../assets/hot-temp.png"
 ---

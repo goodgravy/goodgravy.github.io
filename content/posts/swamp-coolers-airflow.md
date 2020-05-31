@@ -1,7 +1,13 @@
 ---
 date:  "2017-08-19T00:00:00Z"
-keywords:  []
-tags:  ["swamp-cooler"]
+keywords:
+- air conditioning
+- evaporative cooling
+- energy efficiency
+- cooling
+tags:
+- swamp-cooler
+- diy
 title:  "Swamp cooler: experimenting with airflow"
 staticThumbnail:  "/img/fan.gif"
 ---

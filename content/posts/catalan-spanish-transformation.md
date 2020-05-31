@@ -4,6 +4,11 @@ date: 2017-08-25T15:06:22+02:00
 keywords:
 - tech
 - elixir
+tags:
+- tech
+- elixir
+- languages
+
 ---
 
 I'm currently learning Catalan and Spanish, and am reminded every day of the languages' [shared ancestor](https://en.wikipedia.org/wiki/Romance_languages) by how often they share similar (or identical) words.

@@ -1,7 +1,16 @@
 ---
 date:  "2016-12-19T20:56:42+01:00"
 description:  ""
-keywords:  []
+keywords:
+- culture
+- computer science
+- queues
+- spain
+- china
+- uk
+- england
+tags:
+- tech
 title:  "Queues, Culture, and Computer Science"
 thumbnail:  "../assets/array.png"
 ---

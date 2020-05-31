@@ -1,7 +1,12 @@
 ---
 date:  "2013-03-17T13:25:08+01:00"
 description:  "A punch box is an easy DIY project that's perfect for gifting."
-keywords:  ["DIY", "present"]
+keywords:
+- diy
+- craft
+- present
+tags:
+- diy
 title:  "Home-made present: how to make a punch box"
 thumbnail: ../assets/finished.jpg
 

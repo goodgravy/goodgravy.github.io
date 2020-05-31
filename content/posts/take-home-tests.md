@@ -8,6 +8,10 @@ tags:
 keywords:
 - tech
 - interviewing
+- tests
+- candidates
+- jobs
+
 thumbnail: ../assets/CV_alan_sugar.jpg"
 coverImage: ../assets/blake-connally-373084.jpg
 ---

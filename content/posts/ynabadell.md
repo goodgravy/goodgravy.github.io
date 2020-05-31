@@ -4,6 +4,7 @@ slug: "ynabadell"
 date: 2019-02-04T18:42:48+01:00
 tags:
 - tech
+- code
 - javascript
 keywords:
 - javascript
@@ -16,8 +17,6 @@ keywords:
 - sabadell
 thumbnail: ../assets/calculator.jpg
 coverImage: ../assets/piggy.jpg
-coverSize: "partial"
-coverMeta: "out"
 ---
 
 We've recently started using You Need A Budget ([YNAB](https://www.youneedabudget.com/)) to plan our finances. Unfortunately, like most finance apps it's focussed squarely on the north american market: its automatic transaction importing only works for some US and Canadian banks – and we live and bank in Spain…

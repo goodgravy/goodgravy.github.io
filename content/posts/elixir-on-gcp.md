@@ -5,14 +5,15 @@ tags:
 - tech
 - elixir
 - google
+- gcp
+- devops
 keywords:
 - tech
 - elixir
 - google
+- devops
 thumbnail: ../assets/elixir-logo.png
 coverImage: ../assets/constable-clouds.jpg
-coverSize: "partial"
-# coverMeta: "out"
 ---
 
 I stepped through [this guide](https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-app-engine) for a _Hello World_ app running on Google Cloud Platform. How quickly can you get something working, and how convenient would it be to use longer-term?
