@@ -308,6 +308,13 @@ pre.code.fullwidth {
     max-width: 90%;
   }
 
+  div.fullwidth {
+    width: 100%;
+    position: inherit;
+    margin: 0;
+  }
+  div.fullwidth figure { width: 100% !important }
+
   figcaption,
   figure.fullwidth figcaption {
     margin-right: 0%;
