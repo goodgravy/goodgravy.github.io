@@ -45,7 +45,7 @@ const PostHeader: React.FC<HeaderProps> = ({title, image}) => {
   return (
     <header>
       {headerImage}
-      <h1>{title}</h1>
+      <h1 className="page-header">{title}</h1>
     </header>
   )
 }

@@ -4,37 +4,35 @@ import {StaticQuery, graphql} from 'gatsby'
 type StaticQueryData = {
   site: {
     siteMetadata: {
-      description: string
       social: {
-        github: string
+        gravatar: string
       }
     }
   }
 }
 
-const Bio: React.FC = () => (
+const Avatar: React.FC = () => (
   <StaticQuery
     query={graphql`
       query {
         site {
           siteMetadata {
-            description
             social {
-              github
+              gravatar
             }
           }
         }
       }
     `}
     render={(data: StaticQueryData): React.ReactElement | null => {
-      const {description, social} = data.site.siteMetadata
+      const {social} = data.site.siteMetadata
       return (
-        <div className="page-header">
-          <h1>{description}</h1>
+        <div className="image-cropper">
+          <img src={social.gravatar} alt="avatar" className="profile-pic" />
         </div>
       )
     }}
   />
 )
 
-export default Bio
+export default Avatar

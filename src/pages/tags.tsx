@@ -14,9 +14,9 @@ const Tags: React.FC<Props> = ({data}) => {
 
   return (
     <Layout title={siteTitle}>
-      <Head title="All tags" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <Head title="All tags" keywords={[`blog`, `goodgravy`, `jmsbrdy`, `tags`]} />
       <article>
-        <h1>All tags</h1>
+        <h1 className="page-header">All tags</h1>
         <div className={`page-content`}>
           {group &&
             group

@@ -52,12 +52,7 @@ figure {
 // These style are based on https://edwardtufte.github.io/tufte-css/
 const styles = () => `
 body {
-  width: 87.5%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 12.5%;
   background-color: white;
-  max-width: 1400px;
 }
 
 h1 {
@@ -88,9 +83,9 @@ hr {
   padding: 0;
 }
 
-article {
-  position: relative;
-  padding: 5rem 0rem;
+.page-content, .page-header, footer {
+  max-width: 35em;
+  margin: 50px 100px;
 }
 
 section {
@@ -114,7 +109,7 @@ p {
 blockquote::before{
   font-family:Arial;
   content: "\u201C";
-  color:#78C0A8;
+  color: hsl(160, 36%, 45%);
   font-size:4em;
   position: absolute;
   left: 10px;
@@ -127,7 +122,7 @@ blockquote {
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #78C0A8 ;
+  border-left:8px solid hsl(160, 36%, 45%);
   line-height:1.6;
   position: relative;
   background:#EDEDED;
@@ -138,7 +133,6 @@ blockquote::after{
 }
 
 blockquote p {
-  width: 75%;
   margin-right: 20px;
 }
 
@@ -189,10 +183,8 @@ figure.fullwidth figcaption {
   margin-right: 24%;
 }
 
-a:link,
-a:visited {
-  color: inherit;
-}
+a:link { color:hsl(160, 36%, 45%); }
+a:visited { color: inherit; }
 
 img {
   max-width: 100%;
@@ -202,13 +194,14 @@ table.fullwidth {
   width: 100%;
 }
 
-div.fullwidth {
-  width: 90vw;
-  position: relative;
+.fullwidth {
   left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
   right: 50%;
-  margin-left: -45vw;
-  margin-right: -45vw;
+  width: 100vw;
 }
 
 div.fullwidth figure { float: left }
@@ -276,10 +269,9 @@ pre.code.fullwidth {
 }
 
 @media (max-width: 760px) {
-  body {
-    width: 84%;
-    padding-left: 8%;
-    padding-right: 8%;
+  .page-content, .page-header, footer {
+    max-width: 100%;
+    margin: 50px 15px;
   }
 
   hr,
@@ -319,6 +311,7 @@ pre.code.fullwidth {
   }
 
   blockquote {
+    width: 90%;
     margin-left: 1.5em;
     margin-right: 0em;
   }
