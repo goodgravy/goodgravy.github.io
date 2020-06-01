@@ -1,12 +1,16 @@
 import React from 'react'
 import {StaticQuery, graphql, Link} from 'gatsby'
-import {GlobalStyle, styled} from '../styles/theme'
 import Img from 'gatsby-image'
 
+import {GlobalStyle, styled} from '../styles/theme'
+import ContentWidth from '../components/content-width'
+
+const navHeight = '78px'
 const StyledNav = styled.nav`
+  height: ${navHeight};
+
   a.home {
-    float: left;
-    padding: 10px 30px;
+    padding: 0 30px;
     position: fixed;
   }
 
@@ -18,17 +22,19 @@ const StyledNav = styled.nav`
 
   ul {
     list-style-type: none;
-    margin: 0 0 0 100px;
-    padding: 0;
+    text-align: right;
+    height: ${navHeight};
   }
 
-  li:first-child {
-    margin-left: 0px;
+  li:last-child {
+    margin-right: 0px;
   }
 
   li {
     display: inline-block;
-    margin: 16px;
+    margin: 0 16px !important;
+    font-size: 120%;
+    line-height: ${navHeight};
 
     a {
       color: black;
@@ -37,16 +43,14 @@ const StyledNav = styled.nav`
   }
 `
 
-const StyledFooter = styled.footer`
-  padding-bottom: 36px;
+const LogoWrapper = styled.div`
+  padding: 10px;
+  background-color: hsla(0, 100%, 100%, 50%);
+  line-height: 0;
 `
+const Logo = styled(Img)``
 
-interface Props {
-  readonly title?: string
-  readonly children: React.ReactNode
-}
-
-const Layout: React.FC<Props> = ({children}) => (
+const SiteLogo: React.FC = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -60,33 +64,51 @@ const Layout: React.FC<Props> = ({children}) => (
       }
     `}
     render={(data) => (
-      <>
-        <GlobalStyle />
-        <StyledNav className="navigation">
-          <Link to={`/`} className="home">
-            <Img fixed={data.file.childImageSharp.fixed} />
-          </Link>
-          <ul>
-            <li>
-              <Link to={`/tags`}>Tags</Link>
-            </li>
-            <li>
-              <Link to={`/about`}>About</Link>
-            </li>
-          </ul>
-        </StyledNav>
-        <main className="content" role="main">
-          {children}
-        </main>
-        <StyledFooter className="footer">
-          © {new Date().getFullYear()},{` `}
-          <a href="https://jmsbrdy.com">jmsbrdy.com</a>. Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </StyledFooter>
-      </>
+      <LogoWrapper>
+        <Logo fixed={data.file.childImageSharp.fixed} />
+      </LogoWrapper>
     )}
   />
+)
+
+const StyledFooter = styled.footer`
+  padding: 0 36px 36px;
+  text-align: right;
+`
+
+interface Props {
+  readonly title?: string
+  readonly children: React.ReactNode
+}
+
+const Layout: React.FC<Props> = ({children}) => (
+  <>
+    <GlobalStyle />
+    <StyledNav className="navigation">
+      <Link to={`/`} className="home">
+        <SiteLogo />
+      </Link>
+      <ContentWidth>
+        <ul>
+          <li>
+            <Link to={`/tags`}>Tags</Link>
+          </li>
+          <li>
+            <Link to={`/about`}>About</Link>
+          </li>
+        </ul>
+      </ContentWidth>
+    </StyledNav>
+    <main className="content" role="main">
+      {children}
+    </main>
+    <StyledFooter className="footer">
+      © {new Date().getFullYear()},{` `}
+      <a href="https://jmsbrdy.com">jmsbrdy.com</a>. Built with
+      {` `}
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
+    </StyledFooter>
+  </>
 )
 
 export default Layout

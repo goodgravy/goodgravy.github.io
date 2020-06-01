@@ -70,7 +70,6 @@ h2 {
 h3 {
   margin-top: 2rem;
   margin-bottom: 1.4rem;
-  line-height: 1;
 }
 
 hr {
@@ -81,11 +80,6 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
-}
-
-.page-content, .page-header, footer {
-  max-width: 35em;
-  margin: 50px 100px;
 }
 
 section {
@@ -117,7 +111,6 @@ blockquote::before{
 }
 
 blockquote {
-  width:60%;
   margin:50px 0 50px;
   font-style:italic;
   color: #555555;
@@ -269,11 +262,6 @@ pre.code.fullwidth {
 }
 
 @media (max-width: 760px) {
-  .page-content, .page-header, footer {
-    max-width: 100%;
-    margin: 50px 15px;
-  }
-
   hr,
   section > p,
   section > footer,

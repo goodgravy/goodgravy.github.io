@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
 
 import {styled} from '../styles/theme'
+import ContentWidth from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -25,27 +26,26 @@ const FullWidthDiv = styled.div`
   height: 25em;
 `
 
+const CoverImg = styled(Img)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+`
+
 const PostHeader: React.FC<HeaderProps> = ({title, image}) => {
   const headerImage = !!image && (
     <FullWidthDiv>
-      <Img
-        fluid={image.childImageSharp.fluid}
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%',
-        }}
-        alt="Cover image"
-      />
+      <CoverImg fluid={image.childImageSharp.fluid} alt="Cover image" />
     </FullWidthDiv>
   )
 
   return (
     <header>
       {headerImage}
-      <h1 className="page-header">{title}</h1>
+      <ContentWidth>
+        <h1 className="page-header">{title}</h1>
+      </ContentWidth>
     </header>
   )
 }
@@ -59,9 +59,9 @@ const PostTemplate: React.FC<Props> = ({data}) => {
       <Head title={post.frontmatter.title} description={post.excerpt} keywords={post.frontmatter.keywords} />
       <article>
         <PostHeader title={post.frontmatter.title} image={post.frontmatter.coverImage} />
-        <div className={`page-content`}>
+        <ContentWidth>
           <div dangerouslySetInnerHTML={{__html: post.html}} />
-        </div>
+        </ContentWidth>
       </article>
     </Layout>
   )
