@@ -15,6 +15,7 @@ tags:
 
 title:  "Why exploding job offers don't work for senior hires"
 thumbnail: ../assets/explosion.jpg
+coverImage: ../assets/explosion.jpg
 
 ---
 
