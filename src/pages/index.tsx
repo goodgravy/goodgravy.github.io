@@ -3,9 +3,9 @@ import {Link, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 
 import {styled} from '../styles/theme'
+import ContentArticle from '../components/content-article'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import Bio from '../components/bio'
 
 interface PageProps {
   readonly data: PageQueryData
@@ -43,6 +43,10 @@ interface ThumbProps {
   }
   readonly staticThumbnail: string
 }
+
+const Article = styled.article`
+  margin-top: 100px;
+`
 
 const StyledPostExcerpt = styled.div`
   margin-bottom: 3em;
@@ -92,14 +96,12 @@ const Index: React.FC<PageProps> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <article>
-        <div className={`page-content`}>
-          {posts.map(({node}) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return <PostExcerpt key={node.fields.slug} node={node} title={title} />
-          })}
-        </div>
-      </article>
+      <ContentArticle>
+        {posts.map(({node}) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return <PostExcerpt key={node.fields.slug} node={node} title={title} />
+        })}
+      </ContentArticle>
     </Layout>
   )
 }

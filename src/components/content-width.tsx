@@ -5,7 +5,7 @@ import {styled} from '../styles/theme'
 const breakpointWidth = `760px`
 
 const Wrapper = styled.div`
-  margin: 0 100px;
+  margin: 0 0 0 100px;
 
   @media (max-width: ${breakpointWidth}) {
     margin: 0 15px;
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   max-width: 35em;
-  margin: auto;
+  margin: 0 auto;
   @media (max-width: ${breakpointWidth}) {
     max-width: 100%;
   }

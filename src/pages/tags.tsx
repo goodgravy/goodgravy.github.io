@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 
+import ContentArticle from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -15,7 +16,7 @@ const Tags: React.FC<Props> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="All tags" keywords={[`blog`, `goodgravy`, `jmsbrdy`, `tags`]} />
-      <article>
+      <ContentArticle>
         <h1 className="page-header">All tags</h1>
         <div className={`page-content`}>
           {group &&
@@ -36,7 +37,7 @@ const Tags: React.FC<Props> = ({data}) => {
                   ),
               )}
         </div>
-      </article>
+      </ContentArticle>
     </Layout>
   )
 }

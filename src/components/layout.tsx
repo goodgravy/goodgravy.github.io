@@ -17,6 +17,7 @@ const StyledNav = styled.nav`
   @media (max-width: 760px) {
     a.home {
       position: inherit;
+      float: left;
     }
   }
 
@@ -32,7 +33,9 @@ const StyledNav = styled.nav`
 
   li {
     display: inline-block;
-    margin: 0 16px !important;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 0px !important;
     font-size: 120%;
     line-height: ${navHeight};
 
