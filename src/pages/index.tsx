@@ -47,6 +47,13 @@ interface ThumbProps {
 const StyledPostExcerpt = styled.div`
   margin-bottom: 3em;
   overflow: auto;
+
+  h3 {
+    a,
+    a:visited {
+      color: hsl(160, 36%, 45%);
+    }
+  }
 `
 
 const StyledThumbnail = styled(Img)`
@@ -85,7 +92,6 @@ const Index: React.FC<PageProps> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <Bio />
       <article>
         <div className={`page-content`}>
           {posts.map(({node}) => {

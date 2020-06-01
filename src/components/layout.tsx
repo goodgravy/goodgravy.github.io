@@ -31,6 +31,7 @@ const StyledNav = styled.nav`
     margin: 16px;
 
     a {
+      color: black;
       background: none;
     }
   }
