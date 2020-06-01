@@ -261,6 +261,20 @@ pre.code.fullwidth {
   height: 100%;
 }
 
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
 @media (max-width: 760px) {
   body {
     width: 84%;

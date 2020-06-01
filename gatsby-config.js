@@ -13,6 +13,7 @@ module.exports = {
     },
     social: {
       github: 'https://github.com/goodgravy',
+      gravatar: 'https://www.gravatar.com/avatar/363e08c01d9caf37d45bf6e5a011421b?s=500',
     },
   },
   plugins: [
