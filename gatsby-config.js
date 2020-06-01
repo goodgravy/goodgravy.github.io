@@ -83,5 +83,11 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }

@@ -51,42 +51,28 @@ figure {
 
 // These style are based on https://edwardtufte.github.io/tufte-css/
 const styles = () => `
-html {
-  font-size: 15px;
-}
-
 body {
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 12.5%;
-  font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
   background-color: white;
-  color: #111;
   max-width: 1400px;
 }
 
 h1 {
-  font-weight: 400;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
-  font-size: 3.2rem;
   line-height: 1;
 }
 
 h2 {
-  font-style: italic;
-  font-weight: 400;
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
-  font-size: 2.2rem;
   line-height: 1;
 }
 
 h3 {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.7rem;
   margin-top: 2rem;
   margin-bottom: 1.4rem;
   line-height: 1;
@@ -115,7 +101,6 @@ section {
 p,
 ol,
 ul {
-  font-size: 1.4rem;
   line-height: 2rem;
 }
 
@@ -137,7 +122,6 @@ blockquote::before{
 }
 
 blockquote {
-  font-size: 1.4rem;
   width:60%;
   margin:50px 0 50px;
   font-style:italic;
@@ -233,7 +217,6 @@ div.fullwidth figure.four { width: 24%; margin-left: 1% }
 
 div.table-wrapper {
   overflow-x: auto;
-  font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
 code {
