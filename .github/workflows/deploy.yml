@@ -14,3 +14,8 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           gatsby-args: '--'
+      - name: Purge Cloudflare cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CF_API_TOKEN }}
