@@ -19,6 +19,8 @@ Much has been written about the deep cultural significance that orderly queueing
 
 As a programmer, though, it's also interesting that there are clear parallels between core data structures found in computer science and the approaches to queueing found around the world.
 
+<!-- excerpt -->
+
 # The United Kingdom: arrays
 
 The spiritual home of the queue, many of its citizens would argue. A perceptible smugness tends to exude from the pasty pores of my countrymen when they lament how other, "less refined" cultures "don't even know how to queue"…

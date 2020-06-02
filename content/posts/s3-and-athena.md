@@ -26,6 +26,8 @@ coverImage: ../assets/athena.jpg
 
 We use [Fivetran](https://fivetran.com/) and [Snowflake](https://www.snowflake.com/) for our ETL system and data warehouse at Teespring. They work well for the vast majority of our use cases, but we recently ran into an urgent problem where those tools couldn't help. This is the story of how we solved the issue with Athena and S3.
 
+<!-- excerpt -->
+
 ## Telemetry data in our production facilities
 We gather a large amount of data about the flow of work through our production facilities. Who scanned which QR codes at what time? Which press was used by which person during what period, and how many items did they produce? What are our inventory levels for each SKU in each locations, and how many SKUs have been picked and are ready to enter the next phase of fulfillment?
 

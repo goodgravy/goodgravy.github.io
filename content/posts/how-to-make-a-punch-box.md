@@ -19,12 +19,8 @@ her birthday.
 Being creatively barren, I attempted plagiarism.
 
 <!-- excerpt -->
-I remembered seeing [this
-Kickstarter
-project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes-for-valentines-day)
-ages ago. It's based on an old parlour game: the idea is to conceal little
-messages inside a nice-looking block, to be popped out with a pencil when the
-recipient feels like it.
+
+I remembered seeing [this Kickstarter project](http://www.kickstarter.com/projects/leafcutterdesigns/retro-punch-boxes-for-valentines-day) ages ago. It's based on an old parlour game: the idea is to conceal little messages inside a nice-looking block, to be popped out with a pencil when the recipient feels like it.
 
 Now, that Kickstarter project is long since finished but I reckoned I could
 have a pretty good go at making my own version. Here's what I ended up with so

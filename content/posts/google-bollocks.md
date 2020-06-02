@@ -15,6 +15,8 @@ We think of it as the tongue-in-cheek mnemonic for recalling the [sign of the cr
 
 **I think not**.
 
+<!-- excerpt -->
+
 It's become clear to me that [infamous](http://www.journalism.org/2014/03/06/media-coverage-of-pope-francis-first-year/) [technophile](http://www.washingtonpost.com/blogs/the-switch/wp/2014/01/23/the-pope-calls-the-internet-a-gift-from-god/), Pope Francis, has leveraged his position as head of the Catholic church to inflect the product roadmap of everyone's favourite search behemoth: Google.
 
 Let's look at news around recent product launches for Google:

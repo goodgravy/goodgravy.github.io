@@ -26,6 +26,7 @@ YNAB **does** support a manual process, where you upload QFX or OFX files – o
 Surely we can do better?
 
 <!-- excerpt -->
+
 So became [**ynabadell**](https://github.com/goodgravy/ynabadell) – a tool to automatically import transactions from Sabadell into your YNAB ledger.
 
 Technically speaking, **ynabadell** resembles an ETL system in many ways:

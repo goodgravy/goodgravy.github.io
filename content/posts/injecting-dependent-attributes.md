@@ -24,6 +24,8 @@ http://site.com/.well-known/pki-validation/4b1706977f59ffe3c1ddf282bbee6f45.txt
 
 Creating factories to effectively test it was surprisingly fiddly! Here are the options I considered and what worked for me – in the hope it's of some use to you.
 
+<!-- excerpt -->
+
 ## Static value
 
 The simplest approach would be to just use a static value for the URL in the factory:

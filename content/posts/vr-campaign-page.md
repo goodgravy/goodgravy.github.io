@@ -30,6 +30,8 @@ couple of Google Cardboard-based virtual reality viewers that I hadn't gotten
 around to playing with yet, and this hackathon was the perfect opportunity to
 have a play!
 
+<!-- excerpt -->
+
 The basic idea was to use the [Virtual Reality capabilities in
 WebGL](https://vr.chromeexperiments.com/) to give a Cardboard-equipped customer
 a 3D virtual preview of the product. This is still experimental stuff, but

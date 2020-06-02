@@ -15,11 +15,17 @@ title:  "Deploying a static site to Github Pages using Travis and Cloudflare"
 
 ---
 
+**Update June 2020: I am no longer using this infrastructure for my site. See [Deploying a Gatsby site to GitHub Pages using Actions and Cloudflare](/gatsby-pages-actions-cloudflare).**
+
+---
+
 A quick and easy way to use these 3rd party services to deliver your site:
 
 * [Cloudflare](https://www.cloudflare.com/) speeds up your site and gives you HTTPS for free.
 * [Github Pages](https://pages.github.com/) is basically zero-configuration, free hosting.
 * [Travis CI](https://travis-ci.org/) glues the pieces together. And it's free.
+
+<!-- excerpt -->
 
 # The setup for this site
 

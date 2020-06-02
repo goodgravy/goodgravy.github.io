@@ -24,6 +24,8 @@ For larger tables, this ability to have multiple processes working on the same t
 
 However, we recently ran into a problem where – because of a detail of how InnoDB and MySQL work – we ended up doing table-level locking rather than row-level, with disastrous results.
 
+<!-- excerpt -->
+
 # What should happen – and what did happen
 We use [LHM](https://github.com/soundcloud/lhm) to manage our database migrations. Other tools exist, but most (if we're talking about MySQL) work on the principle of:
 

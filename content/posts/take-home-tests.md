@@ -22,6 +22,8 @@ I recently came across [a discussion on Reddit](https://www.reddit.com/r/cscaree
 
 The level of antipathy towards take-home tests in that discussion was an enormous surprise. The majority of commenters were not just against the idea, but **virulently** so, railing against it as another example of unreasonable demands made on candidates. Most people viewed these tests as a waste of time, rude, disrespectful, or a combination of all three. I think there was [only one person](https://www.reddit.com/r/cscareerquestions/comments/7rdogv/dont_do_the_long_take_home_assignments_like/dsw9cmk/) whose opinion wasn't negative, and even that was ambivalent at best.
 
+<!-- excerpt -->
+
 I have been asked to do take-home tests in the past, and did see that if poorly conceived and executed they can be a bad experience for the candidate. However, if they're approached in a thoughtful and careful way, they're one of the best tools for effective interviewing. Here's what I think does – and doesn't – work.
 
 ## What doesn't work

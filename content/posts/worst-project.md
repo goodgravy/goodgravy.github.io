@@ -32,6 +32,8 @@ development laboratory, [Hursley
 Park](http://en.wikipedia.org/wiki/Hursley_House), home of the mighty **CICS**,
 **WebSphere MQ** and **MessageBroker** products.
 
+<!-- excerpt -->
+
 These are the gold standard in messaging and transaction processing backends
 that do the heavy-lifting behind the scenes of lots of Big Enterprise Systems.
 

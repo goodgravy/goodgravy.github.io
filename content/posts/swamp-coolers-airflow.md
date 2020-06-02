@@ -16,6 +16,8 @@ The first step of my [swamp cooler project](/tags/swamp-cooler/) is to figure ou
 
 I'd like to use an upturned terracotta pot for the vessel itself, with air entering at the bottom, passing up the inside and out the drainage hole at the top.
 
+<!-- excerpt -->
+
 Unlike the [Cold Pot](http://thibault-faverie.com/Cold-Pot) – which pushes air through a dry aluminium sleeve – I'm trying to maximise the surface area of wet terracotta which the incoming air passes over before emerging from the exhaust.
 
 To do this, I'm thinking that encouraging the air to swirl up in a vortex could be a good approach. Not only does it mean the air spends more time in the cool interior, it will also be pushed against the damp vessel wall by the apparent centrifugal force.
