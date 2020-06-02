@@ -3,9 +3,10 @@ import {StaticQuery, graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
 
 import {GlobalStyle, styled} from '../styles/theme'
-import ContentWidth from '../components/content-width'
 
 const navHeight = '78px'
+const rightBorder = '36px'
+
 const StyledNav = styled.nav`
   height: ${navHeight};
 
@@ -22,6 +23,8 @@ const StyledNav = styled.nav`
   }
 
   ul {
+    padding: 0 ${rightBorder} 0 100px;
+    text-align: right;
     list-style-type: none;
     text-align: right;
     height: ${navHeight};
@@ -75,7 +78,7 @@ const SiteLogo: React.FC = () => (
 )
 
 const StyledFooter = styled.footer`
-  padding: 0 36px 36px;
+  padding: 0 ${rightBorder} 36px;
   text-align: right;
 `
 
@@ -91,16 +94,14 @@ const Layout: React.FC<Props> = ({children}) => (
       <Link to={`/`} className="home">
         <SiteLogo />
       </Link>
-      <ContentWidth>
-        <ul>
-          <li>
-            <Link to={`/tags`}>Tags</Link>
-          </li>
-          <li>
-            <Link to={`/about`}>About</Link>
-          </li>
-        </ul>
-      </ContentWidth>
+      <ul>
+        <li>
+          <Link to={`/tags`}>Tags</Link>
+        </li>
+        <li>
+          <Link to={`/about`}>About</Link>
+        </li>
+      </ul>
     </StyledNav>
     <main className="content" role="main">
       {children}
