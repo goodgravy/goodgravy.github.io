@@ -176,8 +176,8 @@ figure.fullwidth figcaption {
   margin-right: 24%;
 }
 
-a:link { color:hsl(160, 36%, 45%); }
-a:visited { color: inherit; }
+a { color:hsl(160, 36%, 45%); }
+a:visited { color:hsl(160, 36%, 35%); }
 
 img {
   max-width: 100%;
