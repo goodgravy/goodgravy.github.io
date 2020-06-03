@@ -38,18 +38,17 @@ When we saw that efficiency had dropped at our Kentucky plant, we therefore didn
 ## Liberating the inaccessible data
 We had a few options to be able to munge and understand the data from our plant. These included:
 
-1. Punching a hole through the plant firewall and allowing Fivetran to extract data directly from the databases.
-1. Setting up a read replica outside of the firewall, and allowing Fivetran to pull data from there.
-1. Setting up new tooling **inside** the firewall to extract and analyse the data there, rather than in Tableau.
-1. Shuttle the data out of the facility and have it end up in Tableau through some other means.
+#### Option #1: Punching a hole through the plant firewall and allowing Fivetran to extract data directly from the databases.
+This is recommended against [by Fivetran themselves](https://fivetran.com/docs/databases/mysql/setup-guide#allowportaccess) due to load on the master database.
 
-Option #1 is recommended against [by Fivetran themselves](https://fivetran.com/docs/databases/mysql/setup-guide#allowportaccess) due to load on the master database.
+#### Option #2: Setting up a read replica outside of the firewall, and allowing Fivetran to pull data from there.
+To me this is pretty clearly _the right option_ here, but unfortunately it didn't work for us in this case. Setting up a new read replica in RDS is easy enough, but we knew from past experience that dumping all the data out of the plant's databases, loading that into the new replica, and having the replication catch-up would mean several hours of downtime. Our facility is running 24/7 at maximum capacity at the moment (hence why fixing this efficiency problem was so urgent!): hours of downtime was unacceptable.
 
-Option #2 is pretty clearly _the right option_ here, but unfortunately it didn't work for us in this case. Setting up a new read replica in RDS is easy enough, but we knew from past experience that dumping all the data out of the plant's databases, loading that into the new replica, and having the replication catch-up would mean several hours of downtime. Our facility is running 24/7 at maximum capacity at the moment (hence why fixing this efficiency problem was so urgent!): hours of downtime was unacceptable.
+#### Option #3: Setting up new tooling **inside** the firewall to extract and analyse the data there, rather than in Tableau.
+Workable, but stinks. We want to correlate these data with other information already in Tableau, and create holistic dashboards: we need these data out from behind the firewall.
 
-Option #3 is workable, but stinks. We want to correlate these data with other information already in Tableau, and create holistic dashboards: we need these data out from behind the firewall.
-
-So we're left with option #4. Despite my initial wariness, it was actually a good fit for our particular situation for a couple of reasons:
+#### Option #4: Shuttle the data out of the facility and have it end up in Tableau through some other means.
+So we're left with this option... Despite my initial wariness, it was actually a good fit for our particular situation for a couple of reasons:
 
 - We only care about recent data – stretching back a few weeks up to today. So, exporting the data and sending it somewhere outside the private network wasn't a crazy idea.
 - We only cared about a narrow subset of the data – the production rate on the presses – so again, this made the manual export more reasonable.
