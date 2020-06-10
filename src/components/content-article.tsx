@@ -1,17 +1,17 @@
 import React from 'react'
 
-import {styled} from '../styles/theme'
 import ContentWidth from './content-width'
+import * as CSS from 'csstype'
 
-const Article = styled.article`
-  margin-top: 100px;
-`
+const articleStyles: CSS.Properties = {
+  marginTop: '100px',
+}
 
 const ContentArticle = ({children}) => {
   return (
-    <Article>
+    <article style={articleStyles}>
       <ContentWidth>{children}</ContentWidth>
-    </Article>
+    </article>
   )
 }
 
