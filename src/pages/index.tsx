@@ -55,20 +55,25 @@ const StyledPostExcerpt = styled.div`
   h3 {
     a,
     a:visited {
-      color: hsl(160, 36%, 45%);
+      color: hsl(230, 36%, 45%);
     }
   }
 `
 
-const StyledThumbnail = styled(Img)`
+const thumbnailStyles = `
   width: 256px;
   float: right;
   margin-left: 1em;
+
+  @media (max-width: 760px) {
+    width: 150px;
+  }
+`
+const StyledThumbnail = styled(Img)`
+  ${thumbnailStyles}
 `
 const StyledStaticThumbnail = styled.img`
-  width: 256px;
-  float: right;
-  margin-left: 1em;
+  ${thumbnailStyles}
 `
 
 const PostExcerpt: React.FC<PostExcerptProps> = ({node, title}) => {

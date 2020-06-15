@@ -4,7 +4,7 @@ import ContentWidth from './content-width'
 import * as CSS from 'csstype'
 
 const articleStyles: CSS.Properties = {
-  marginTop: '100px',
+  marginTop: '80px',
 }
 
 const ContentArticle = ({children}) => {

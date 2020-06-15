@@ -40,6 +40,7 @@ const Head: React.FC<Props> = ({title, description, lang, keywords}) => (
       const metaDescription = description || data.site.siteMetadata.description
       lang = lang || 'en'
       keywords = keywords || []
+      const color = `49579C`
       return (
         <Helmet
           htmlAttributes={{
@@ -79,6 +80,18 @@ const Head: React.FC<Props> = ({title, description, lang, keywords}) => (
             {
               name: `twitter:description`,
               content: metaDescription,
+            },
+            {
+              name: `theme-color`,
+              content: color,
+            },
+            {
+              name: `msapplication-navbutton-color`,
+              content: color,
+            },
+            {
+              name: `apple-mobile-web-app-status-bar-style`,
+              content: color,
             },
           ].concat(
             keywords.length > 0

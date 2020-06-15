@@ -6,6 +6,8 @@ import {GlobalStyle, styled} from '../styles/theme'
 
 const navHeight = '78px'
 const rightBorder = '36px'
+const paddingNarrow = '15px'
+const logoPadding = '10px'
 
 const StyledNav = styled.nav`
   height: ${navHeight};
@@ -13,13 +15,6 @@ const StyledNav = styled.nav`
   a.home {
     padding: 0 30px;
     position: fixed;
-  }
-
-  @media (max-width: 760px) {
-    a.home {
-      position: inherit;
-      float: left;
-    }
   }
 
   ul {
@@ -47,10 +42,22 @@ const StyledNav = styled.nav`
       background: none;
     }
   }
+
+  @media (max-width: 760px) {
+    a.home {
+      padding-left: calc(${paddingNarrow} - ${logoPadding});
+      position: inherit;
+      float: left;
+    }
+
+    ul {
+      padding-right: ${paddingNarrow};
+    }
+  }
 `
 
 const LogoWrapper = styled.div`
-  padding: 10px;
+  padding: ${logoPadding};
   background-color: hsla(0, 100%, 100%, 50%);
   line-height: 0;
 `
