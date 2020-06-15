@@ -40,68 +40,23 @@ const Head: React.FC<Props> = ({title, description, lang, keywords}) => (
       const metaDescription = description || data.site.siteMetadata.description
       lang = lang || 'en'
       keywords = keywords || []
-      const color = `49579C`
+      const color = '#49579C'
       return (
-        <Helmet
-          htmlAttributes={{
-            lang,
-          }}
-          title={title}
-          titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-          meta={[
-            {
-              name: `description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:title`,
-              content: title,
-            },
-            {
-              property: `og:description`,
-              content: metaDescription,
-            },
-            {
-              property: `og:type`,
-              content: `website`,
-            },
-            {
-              name: `twitter:card`,
-              content: `summary`,
-            },
-            {
-              name: `twitter:creator`,
-              content: data.site.siteMetadata.author.name,
-            },
-            {
-              name: `twitter:title`,
-              content: title,
-            },
-            {
-              name: `twitter:description`,
-              content: metaDescription,
-            },
-            {
-              name: `theme-color`,
-              content: color,
-            },
-            {
-              name: `msapplication-navbutton-color`,
-              content: color,
-            },
-            {
-              name: `apple-mobile-web-app-status-bar-style`,
-              content: color,
-            },
-          ].concat(
-            keywords.length > 0
-              ? {
-                  name: `keywords`,
-                  content: keywords.join(`, `),
-                }
-              : [],
-          )}
-        />
+        <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`}>
+          <html lang={lang} />
+          <meta name="description" content={metaDescription} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={metaDescription} />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={metaDescription} />
+          <meta name="twitter:creator" content={data.site.siteMetadata.author.name} />
+          <meta name="theme-color" content={color} />
+          <meta name="msapplication-navbutton-color" content={color} />
+          <meta name="apple-mobile-web-app-status-bar-style" content={color} />
+          {keywords.length > 0 && <meta name="keywords" content={keywords.join(`, `)} />}
+        </Helmet>
       )
     }}
   />
