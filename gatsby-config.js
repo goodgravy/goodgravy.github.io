@@ -3,8 +3,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'jmsbrdy.com',
-    description: 'jmsbrdy.com',
+    title: 'jmsbrdy',
+    description: "James Brady's site",
     siteUrl: 'https://jmsbrdy.com',
     author: {
       name: 'James Brady',

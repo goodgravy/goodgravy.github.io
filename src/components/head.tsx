@@ -44,6 +44,7 @@ const Head: React.FC<Props> = ({title, description, lang, keywords}) => (
       return (
         <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`}>
           <html lang={lang} />
+          <title>{title}</title>
           <meta name="description" content={metaDescription} />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={metaDescription} />
