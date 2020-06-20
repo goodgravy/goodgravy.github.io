@@ -55,7 +55,7 @@ const StyledPostExcerpt = styled.div`
   h3 {
     a,
     a:visited {
-      color: hsl(230, 36%, 45%);
+      color: hsl(230, 50%, 45%);
     }
   }
 `

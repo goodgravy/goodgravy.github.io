@@ -54,7 +54,7 @@ We must remember that not every candidate has the same background situation. Per
 
 We would hate to disadvantage people in a situation like that – and so should you. A time limit helps to ensure a level playing field between candidates.
 
-## What we do at Teespring
+## What works at Teespring
 
 So, with all these pitfalls, why can take-home tests still be one of the best tools for effective interviewing?
 

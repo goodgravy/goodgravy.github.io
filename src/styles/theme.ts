@@ -103,7 +103,7 @@ p {
 blockquote::before{
   font-family:Arial;
   content: "\u201C";
-  color: hsl(230, 36%, 45%);
+  color: hsl(230, 50%, 45%);
   font-size:4em;
   position: absolute;
   left: 10px;
@@ -115,7 +115,7 @@ blockquote {
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid hsl(230, 36%, 45%);
+  border-left:8px solid hsl(230, 50%, 45%);
   line-height:1.6;
   position: relative;
   background:#EDEDED;
@@ -130,9 +130,9 @@ blockquote p {
 }
 
 blockquote footer {
-  width: 55%;
   font-size: 1.1rem;
   text-align: right;
+  font-style: normal;
 }
 
 section > p,
@@ -176,8 +176,8 @@ figure.fullwidth figcaption {
   margin-right: 24%;
 }
 
-a { color:hsl(230, 36%, 45%); }
-a:visited { color:hsl(230, 36%, 35%); }
+a { color:hsl(230, 50%, 45%); }
+a:visited { color:hsl(230, 50%, 30%); }
 
 img {
   max-width: 100%;
