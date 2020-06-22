@@ -15,6 +15,7 @@ const StyledNav = styled.nav`
   a.home {
     padding: 0 30px;
     position: fixed;
+    z-index: 10;
   }
 
   ul {
