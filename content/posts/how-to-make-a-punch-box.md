@@ -7,6 +7,7 @@ keywords:
 - present
 tags:
 - diy
+- woodwork
 title:  "Home-made present: how to make a punch box"
 thumbnail: ../assets/finished.jpg
 
