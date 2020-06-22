@@ -15,16 +15,23 @@ const About: React.FC<Props> = ({data}) => {
 
   return (
     <Layout title={siteTitle}>
-      <Head title="About James Brady" keywords={[`blog`, `goodgravy`, `jmsbrdy`]} />
+      <Head title="About James Brady" keywords={[`blog`, `goodgravy`, `jmsbrdy`, `james brady`]} />
       <ContentArticle>
         <Avatar />
-        <p>I’m a software engineer by trade and a woodworker for fun.</p>
+        <p>
+          Hello! I’m a <a href="/tags/tech/">software engineer</a> by trade and a{' '}
+          <a href="/tags/woodwork/">woodworker</a> for fun.
+        </p>
         <p>I like hard problems and learning new things with which solve them.</p>
         <p>
-          I’m learning to speak Catalan. I like hiking up hills and mountain biking down them. I play the trumpet
-          poorly.
+          I’m learning to speak Catalan. I like hiking <strong>up</strong> hills and mountain biking{' '}
+          <strong>down</strong> them. I play the trumpet poorly.
         </p>
-        <p>That is all. </p>
+        <p>
+          I live in <a href="https://goo.gl/maps/f1U1Ke241Uv4n24Q6">Oristà</a>, a micro-village in rural Catalunya. My
+          wife, Odette, is an author and creativity coach. Together, we operate an artist&apos;s retreat called{' '}
+          <a href="https://celdelnord.com/">Cel del Nord</a>.
+        </p>
       </ContentArticle>
     </Layout>
   )
