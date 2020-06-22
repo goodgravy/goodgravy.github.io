@@ -26,6 +26,8 @@ As described in an earlier post, I've been using James Clear's [Atomic Habits](h
 
 The focus on process and incremental gains has been useful, and leaves one with a fairly clear set of steps to work through – unlike many self-improvement books. It got me to thinking, though, _how could the same approach be applied to a team or company_?
 
+<!-- excerpt -->
+
 The core principles of the book are based on the the Cue&nbsp;/&nbsp;Craving&nbsp;/&nbsp;Response&nbsp;/&nbsp;Reward cycle[^1].
 
 ![](../assets/the-habit-loop.png)

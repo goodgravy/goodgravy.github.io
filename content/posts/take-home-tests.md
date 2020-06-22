@@ -12,7 +12,7 @@ keywords:
 - candidates
 - jobs
 
-thumbnail: ../assets/CV_alan_sugar.jpg"
+thumbnail: ../assets/blake-connally-373084.jpg
 coverImage: ../assets/blake-connally-373084.jpg
 ---
 
