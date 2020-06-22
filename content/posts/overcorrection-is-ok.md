@@ -32,9 +32,9 @@ As Rebecca said:
 
 I'm sure that at the time it felt very unpleasant for Matt Damon to become a target for such anger – leading to him retracting the statements and "getting in the backseat" as he said. However, as Rebecca predicted then, [his career hasn't suffered at all](https://www.imdb.com/name/nm0000354/).
 
-To Sam, the outcry seemed to be an unfortunate overreaction. To me, that seems fine: good, in fact. A public figure made poorly-considered and insensitive comments, got some flak, took them back, said sorry, and everything carried on. Perhaps there was some overreaction at the time – understandably, given many people extremely angry – but the actor's error was correctly quickly and there was no lasting damage.
+To Sam, the outcry seemed to be an unfortunate overreaction. To me, that seems fine: good, in fact. A public figure made poorly-considered and insensitive comments, got some flak, took them back, said sorry, and everything carried on. Perhaps there was some overreaction at the time – understandably, given many people extremely angry – but the actor's error was corrected quickly and there was no lasting damage.
 
-Although we're still too early in the current Black Lives Matter protests to know how things will play out, I think the same principle applies here. I'm not pro-looting, of course, but I think we need to give the protesters on the streets some leeway to overreact because in the end **it will result in a quicker arrival at a better society**.
+Although we're still too early in the current Black Lives Matter protests to know how things will play out, I think the same principle applies here. I'm not pro-looting, of course, but I think we need to give the protesters on the streets some leeway because in the end **it will result in a quicker arrival at a better society**.
 
 ## Asymptotes and intersections
 Let's say there is a mythical "100% perfect" society that we're aiming for.
