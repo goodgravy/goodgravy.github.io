@@ -1,9 +1,10 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 import ContentArticle from '../components/content-width'
-import Layout from '../components/layout'
 import Head from '../components/head'
+import Layout from '../components/layout'
+import PostExcerpt from '../components/post-excerpt.tsx'
 
 interface Props {
   readonly data: PageQueryData
@@ -22,19 +23,10 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
       <Head title={`Posts tagged "${tag}"`} keywords={[`blog`, `gatsby`, tag, `jmsbrdy`, `james brady`]} />
       <ContentArticle>
         <h1>Posts tagged {tag}</h1>
-        <div className={`page-content`}>
-          {posts.map(({node}) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <h3>
-                  <Link to={node.fields.slug}>{title}</Link>
-                </h3>
-                <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
-              </div>
-            )
-          })}
-        </div>
+        {posts.map(({node}) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return <PostExcerpt key={node.fields.slug} node={node} title={title} />
+        })}
       </ContentArticle>
     </Layout>
   )
@@ -70,7 +62,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 1000, filter: {frontmatter: {tags: {in: [$tag]}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: {published: {ne: false}, tags: {in: [$tag]}}}
+      sort: {fields: [frontmatter___date], order: DESC}
+    ) {
       totalCount
       edges {
         node {
@@ -79,8 +74,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             title
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 256) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            staticThumbnail
           }
         }
       }
