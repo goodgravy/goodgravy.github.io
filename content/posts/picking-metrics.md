@@ -16,7 +16,7 @@ tags:
 - metrics
 - politics
 title: "A referendum on metrics we care about as a society"
-
+coverImage: ../assets/athenian-democracy.png
 ---
 
 Being [fixated on planning](/are-roadmaps-useful/) at the moment, the truism of how important it is to carefully pick the metrics by which you define success lingers in the back of my mind.
