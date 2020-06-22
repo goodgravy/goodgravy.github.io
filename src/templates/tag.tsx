@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 
+import ContentArticle from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -18,14 +19,9 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
 
   return (
     <Layout title={siteTitle}>
-      <Head
-        title={`Posts tagged "${tag}"`}
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, tag]}
-      />
-      <article>
-        <header>
-          <h1>Posts tagged {tag}</h1>
-        </header>
+      <Head title={`Posts tagged "${tag}"`} keywords={[`blog`, `gatsby`, tag, `jmsbrdy`, `james brady`]} />
+      <ContentArticle>
+        <h1>Posts tagged {tag}</h1>
         <div className={`page-content`}>
           {posts.map(({node}) => {
             const title = node.frontmatter.title || node.fields.slug
@@ -34,13 +30,12 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
                 <h3>
                   <Link to={node.fields.slug}>{title}</Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
                 <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
               </div>
             )
           })}
         </div>
-      </article>
+      </ContentArticle>
     </Layout>
   )
 }
@@ -79,7 +74,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          excerpt(pruneLength: 2500)
+          excerpt(pruneLength: 300)
           fields {
             slug
           }
