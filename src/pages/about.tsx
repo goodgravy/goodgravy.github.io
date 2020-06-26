@@ -1,5 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
+import Obfuscate from 'react-obfuscate'
 
 import Avatar from '../components/avatar'
 import ContentArticle from '../components/content-width'
@@ -31,6 +32,21 @@ const About: React.FC<Props> = ({data}) => {
           I live in <a href="https://goo.gl/maps/f1U1Ke241Uv4n24Q6">Oristà</a>, a micro-village in rural Catalunya. My
           wife, Odette, is an author and creativity coach. Together, we operate an artist&apos;s retreat called{' '}
           <a href="https://celdelnord.com/">Cel del Nord</a>.
+        </p>
+        <h3>Contacting me</h3>
+        <p>I would love to hear from you if:</p>
+        <ul>
+          <li>You liked something I&apos;ve posted on this blog</li>
+          <li>You didn&apos;t like something I&apos;ve posted on this blog</li>
+          <li>You&apos;re working on something I seem to be interested in</li>
+          <li>You&apos;d like to work together</li>
+        </ul>
+        <p>
+          I&apos;m not looking for career opportunities, so please don&apos;t contact me if you&apos;re a recruiter.
+          Thanks!
+        </p>
+        <p>
+          Email: <Obfuscate email="james@jmsbrdy.com" />.
         </p>
       </ContentArticle>
     </Layout>
