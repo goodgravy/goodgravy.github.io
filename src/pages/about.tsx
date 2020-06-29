@@ -26,12 +26,23 @@ const About: React.FC<Props> = ({data}) => {
         <p>I like hard problems and learning new things with which solve them.</p>
         <p>
           I’m learning to speak Catalan. I like hiking <strong>up</strong> hills and mountain biking{' '}
-          <strong>down</strong> them. I play the trumpet poorly.
+          <strong>down</strong> them. I play the trumpet poorly. My current interests are{' '}
+          <a href="https://jamesclear.com/atomic-habits">Atomic Habits</a>,{' '}
+          <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettlekasten</a>, and feeling like I&apos;m catching up
+          on 2,000 years of writing on ethics.
         </p>
         <p>
           I live in <a href="https://goo.gl/maps/f1U1Ke241Uv4n24Q6">Oristà</a>, a micro-village in rural Catalunya. My
           wife, Odette, is an author and creativity coach. Together, we operate an artist&apos;s retreat called{' '}
           <a href="https://celdelnord.com/">Cel del Nord</a>.
+        </p>
+        <h3>Remote work</h3>
+        <p>
+          I have worked as a part of a distributed team for 12 years, and have been 100% remote since December 2016.
+        </p>
+        <p>
+          The tectonic shift in working patterns forced upon us by the Covid-19 pandemic has made learning and sharing
+          even more important in this area.
         </p>
         <h3>Contacting me</h3>
         <p>I would love to hear from you if:</p>
