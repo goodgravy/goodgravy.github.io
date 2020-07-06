@@ -36,10 +36,11 @@ const PostHeader: React.FC<HeaderProps> = ({title, image}) => {
 const PostTemplate: React.FC<Props> = ({data}) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
+  const excerpt = post.frontmatter.description || post.excerpt
 
   return (
     <Layout title={siteTitle}>
-      <Head title={post.frontmatter.title} description={post.excerpt} keywords={post.frontmatter.keywords} />
+      <Head title={post.frontmatter.title} description={excerpt} keywords={post.frontmatter.keywords} />
       <article>
         <PostHeader title={post.frontmatter.title} image={post.frontmatter.coverImage} />
         <ContentWidth>

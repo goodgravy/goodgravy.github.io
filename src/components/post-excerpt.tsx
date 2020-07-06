@@ -13,6 +13,7 @@ interface PostPreview {
     readonly frontmatter: {
       readonly date: string
       readonly title: string
+      readonly description: string
       readonly thumbnail: {
         readonly childImageSharp: {
           fluid: any
@@ -70,14 +71,15 @@ const StyledStaticThumbnail = styled.img`
   ${thumbnailStyles}
 `
 
-const PostExcerpt: React.FC<PostExcerptProps> = ({node, title}) => {
+const PostExcerpt: React.FC<PostExcerptProps> = ({node, title, description}) => {
+  const excerpt = description || node.excerpt
   return (
     <StyledPostExcerpt>
       <Thumbnail thumbnail={node.frontmatter.thumbnail} staticThumbnail={node.frontmatter.staticThumbnail} />
       <h3>
         <Link to={node.fields.slug}>{title}</Link>
       </h3>
-      <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
+      <p dangerouslySetInnerHTML={{__html: excerpt}} />
     </StyledPostExcerpt>
   )
 }

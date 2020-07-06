@@ -20,7 +20,8 @@ const Index: React.FC<PageProps> = ({data}) => {
       <ContentArticle>
         {posts.map(({node}) => {
           const title = node.frontmatter.title || node.fields.slug
-          return <PostExcerpt key={node.fields.slug} node={node} title={title} />
+          const description = node.frontmatter.description
+          return <PostExcerpt key={node.fields.slug} node={node} title={title} description={description} />
         })}
       </ContentArticle>
     </Layout>
@@ -58,6 +59,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            description
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 256) {
