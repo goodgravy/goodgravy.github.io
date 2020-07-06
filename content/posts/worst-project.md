@@ -1,5 +1,5 @@
 ---
-description:  "Taking \"Not Invented Here\" to a whole new level."
+description:  "I was recently asked: what's the worst project you ever worked on? I settled upon my first job out of university – taking \"Not Invented Here\" syndrome to a whole new level."
 tags:
 - IBM
 - tech
@@ -31,8 +31,6 @@ I was hired as a Software Engineer by IBM, to work out of their main UK
 development laboratory, [Hursley
 Park](http://en.wikipedia.org/wiki/Hursley_House), home of the mighty **CICS**,
 **WebSphere MQ** and **MessageBroker** products.
-
-<!-- excerpt -->
 
 These are the gold standard in messaging and transaction processing backends
 that do the heavy-lifting behind the scenes of lots of Big Enterprise Systems.

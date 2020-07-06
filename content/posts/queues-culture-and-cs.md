@@ -1,6 +1,5 @@
 ---
 date:  "2016-12-19T20:56:42+01:00"
-description:  ""
 keywords:
 - culture
 - computer science

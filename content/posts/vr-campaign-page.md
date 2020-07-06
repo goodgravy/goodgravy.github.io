@@ -1,5 +1,5 @@
 ---
-description:  "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project"
+description:  "A quick and dirty proof of concept for a virtual reality Teespring campaign page, created as a potential hackathon project."
 tags:
 - tech
 - teespring
@@ -29,8 +29,6 @@ A friend of mine at
 couple of Google Cardboard-based virtual reality viewers that I hadn't gotten
 around to playing with yet, and this hackathon was the perfect opportunity to
 have a play!
-
-<!-- excerpt -->
 
 The basic idea was to use the [Virtual Reality capabilities in
 WebGL](https://vr.chromeexperiments.com/) to give a Cardboard-equipped customer

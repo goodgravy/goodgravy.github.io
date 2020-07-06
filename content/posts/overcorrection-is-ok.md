@@ -1,5 +1,6 @@
 ---
 title: "Overcorrection is OK when righting historical wrongs"
+description: "In a recent podcast, Sam Harris talks about the importance of level-headed and open-minded conversation as perhaps our only tool to acknowledge historical evils and find the best way to move forwards to a fairer society. Despite being a huge admirer of Sam's work, and my genuine belief that in tackling this fraught topic he is doing his best to help in an extremely complex and difficult time, I think he's got it wrong here."
 date: 2020-06-14T11:16:21-08:00
 tags:
 - ethics

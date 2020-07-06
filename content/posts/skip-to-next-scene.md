@@ -1,6 +1,6 @@
 ---
-title: "Skip to next scene in video?"
-slug: "skip-to-next-scene"
+title: "Enabling automatic \"skip-to-next-scene\" in videos"
+description: "Don't video player controls seem dumb? Desktop and web-based players alike allow the user to jump forwards or backwards by 5 or 10 seconds, or possibly speed up and slow down playback. These controls operate identically no matter what the user is watching – there's no connection between the content of the video, and the controls. Here's an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I'll leave the bad news to the end!"
 date: 2018-12-05T16:14:41-08:00
 tags:
 - tech
@@ -21,8 +21,6 @@ Desktop and web-based players alike allow the user to jump forwards or backwards
 DVDs were the first format I know of that allowed you to skip via **chapters**, but even something as basic as those coarse-grained content-aware controls aren't available in things like YouTube videos today.
 
 Here's an idea for how to identify the salient points in a video that a user might want to skip to: the good news is that this could all be done automatically, and with very little overhead; I'll leave the bad news to the end!
-
-<!-- excerpt -->
 
 # Video compression – how does it work?
 The short answer is: I don't know, but that's never stopped me before so…
