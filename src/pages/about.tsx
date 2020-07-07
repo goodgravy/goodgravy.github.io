@@ -20,16 +20,18 @@ const About: React.FC<Props> = ({data}) => {
       <ContentArticle>
         <Avatar />
         <p>
-          Hello! I’m a <a href="/tags/tech/">software engineer</a> by trade and a{' '}
-          <a href="/tags/woodwork/">woodworker</a> for fun.
+          Hello! I’m a <a href="/tags/tech/">technology leader</a> with a background in software engineering.
         </p>
-        <p>I like hard problems and learning new things with which solve them.</p>
+        <h3>Outside of tech</h3>
         <p>
-          I’m learning to speak Catalan. I like hiking <strong>up</strong> hills and mountain biking{' '}
-          <strong>down</strong> them. I play the trumpet poorly. My current interests are{' '}
-          <a href="https://jamesclear.com/atomic-habits">Atomic Habits</a>,{' '}
-          <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettlekasten</a>, and feeling like I&apos;m catching up
-          on 2,000 years of writing on ethics.
+          I&apos;m a hobbyist <a href="/tags/woodwork/">woodworker</a>, I’m learning to speak Catalan, I like hiking{' '}
+          <strong>up</strong> hills and mountain biking <strong>down</strong> them. I play the trumpet poorly. I enjoy
+          hard problems and learning new things with which to solve them.
+        </p>
+        <p>
+          My current interests are <a href="https://jamesclear.com/atomic-habits">Atomic Habits</a>,{' '}
+          <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettlekasten</a>, and trying to catch up on 2,000 years
+          of ethical theory.
         </p>
         <p>
           I live in <a href="https://goo.gl/maps/f1U1Ke241Uv4n24Q6">Oristà</a>, a micro-village in rural Catalunya. My
