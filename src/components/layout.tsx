@@ -104,10 +104,10 @@ const Layout: React.FC<Props> = ({children}) => (
       </Link>
       <ul>
         <li>
-          <Link to={`/tags`}>Tags</Link>
+          <Link to={`/tags/`}>Tags</Link>
         </li>
         <li>
-          <Link to={`/about`}>About</Link>
+          <Link to={`/about/`}>About</Link>
         </li>
       </ul>
     </StyledNav>
