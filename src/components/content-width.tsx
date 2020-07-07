@@ -21,8 +21,8 @@ const Inner = styled.div`
 `
 
 const ContentWidth: React.FC = ({children}) => (
-  <Wrapper>
-    <Inner>{children}</Inner>
+  <Wrapper className="wrapper">
+    <Inner className="inner">{children}</Inner>
   </Wrapper>
 )
 
