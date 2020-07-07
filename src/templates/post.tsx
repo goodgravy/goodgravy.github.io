@@ -82,6 +82,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
         keywords
         coverImage {
           childImageSharp {

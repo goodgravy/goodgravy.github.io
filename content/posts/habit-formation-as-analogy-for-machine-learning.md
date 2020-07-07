@@ -1,6 +1,6 @@
 ---
 date: "2020-07-05T13:15:13+01:00"
-description: "There are striking similarities between the training of a neural network and the way that we – as humans – form habits. How should that inform our thinking about the potential for this type of artificial intelligence, and what we should and shouldn't be asking of it?"
+description: "There are striking similarities between the training of a neural network and the way that we – as humans – form habits. How should that inform our thinking about the potential for this type of artificial intelligence, and what we should and shouldn't be asking of it?"
 keywords:
 - tech
 - ai
@@ -11,7 +11,6 @@ keywords:
 - back-propagation
 - system 1
 - system 2
-
 tags:
 - tech
 - ai
