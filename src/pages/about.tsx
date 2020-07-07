@@ -3,9 +3,9 @@ import {graphql} from 'gatsby'
 import Obfuscate from 'react-obfuscate'
 
 import Avatar from '../components/avatar'
-import ContentArticle from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import {ContentArticle} from '../components/content-article'
 
 interface Props {
   readonly data: PageQueryData
@@ -17,7 +17,7 @@ const About: React.FC<Props> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="About James Brady" keywords={[`blog`, `goodgravy`, `jmsbrdy`, `james brady`]} />
-      <ContentArticle>
+      <ContentArticle className="body">
         <Avatar />
         <p>
           Hello! I’m a <a href="/tags/tech/">technology leader</a> with a background in software engineering.

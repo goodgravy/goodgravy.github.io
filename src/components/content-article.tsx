@@ -1,18 +1,13 @@
-import React from 'react'
+import {styled} from '../styles/theme'
 
-import ContentWidth from './content-width'
-import * as CSS from 'csstype'
+export const ContentArticle = styled.article`
+  margin-left: 13vw;
+  width: 560px;
 
-const articleStyles: CSS.Properties = {
-  marginTop: '80px',
-}
-
-const ContentArticle = ({children}) => {
-  return (
-    <article style={articleStyles}>
-      <ContentWidth>{children}</ContentWidth>
-    </article>
-  )
-}
-
-export default ContentArticle
+  @media (max-width: 760px) {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 94vw;
+    min-width: 300px;
+  }
+`

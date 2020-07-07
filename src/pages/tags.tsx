@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 
-import ContentArticle from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import {ContentArticle} from '../components/content-article'
 
 interface Props {
   readonly data: PageQueryData
@@ -16,27 +16,25 @@ const Tags: React.FC<Props> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="All tags" keywords={[`blog`, `goodgravy`, `jmsbrdy`, `tags`]} />
-      <ContentArticle>
+      <ContentArticle className="body">
         <h1 className="page-header">All tags</h1>
-        <div className={`page-content`}>
-          {group &&
-            group
-              .sort((tag1, tag2) => tag2.totalCount - tag1.totalCount)
-              .map(
-                (tag) =>
-                  tag && (
-                    <div key={tag.fieldValue}>
-                      <h3>
-                        <Link to={`/tags/${tag.fieldValue}/`}>{tag.fieldValue}</Link>
-                      </h3>
-                      <small>
-                        {tag.totalCount} post
-                        {tag.totalCount === 1 ? '' : 's'}
-                      </small>
-                    </div>
-                  ),
-              )}
-        </div>
+        {group &&
+          group
+            .sort((tag1, tag2) => tag2.totalCount - tag1.totalCount)
+            .map(
+              (tag) =>
+                tag && (
+                  <div key={tag.fieldValue}>
+                    <h3>
+                      <Link to={`/tags/${tag.fieldValue}/`}>{tag.fieldValue}</Link>
+                    </h3>
+                    <small>
+                      {tag.totalCount} post
+                      {tag.totalCount === 1 ? '' : 's'}
+                    </small>
+                  </div>
+                ),
+            )}
       </ContentArticle>
     </Layout>
   )

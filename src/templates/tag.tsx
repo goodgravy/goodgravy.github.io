@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
-import ContentArticle from '../components/content-width'
+import {ContentArticle} from '../components/content-article'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import PostExcerpt from '../components/post-excerpt.tsx'
@@ -21,7 +21,7 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
   return (
     <Layout title={siteTitle}>
       <Head title={`Posts tagged "${tag}"`} keywords={[`blog`, `gatsby`, tag, `jmsbrdy`, `james brady`]} />
-      <ContentArticle>
+      <ContentArticle className="body">
         <h1>Posts tagged {tag}</h1>
         {posts.map(({node}) => {
           const title = node.frontmatter.title || node.fields.slug

@@ -3,7 +3,6 @@ import {StaticQuery, graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
 
 import {GlobalStyle, styled} from '../styles/theme'
-import ContentWidth from '../components/content-width'
 
 const navHeight = '78px'
 const rightBorder = '36px'
@@ -86,6 +85,10 @@ const SiteLogo: React.FC = () => (
   />
 )
 
+const StyledMain = styled.main`
+  overflow: hidden;
+`
+
 const StyledFooter = styled.footer`
   padding: 0 ${rightBorder} 36px;
   text-align: right;
@@ -99,11 +102,6 @@ interface Props {
 const Layout: React.FC<Props> = ({children}) => (
   <div className="layout">
     <GlobalStyle />
-    {/* ABSOLUTELY no idea why, but removing this ContentWidth component     */}
-    {/* results in the classes of various rendered elements being different  */}
-    {/* between server-side and browser-side rendering. This, in turn        */}
-    {/* breaks a wide range of styling rules.                                */}
-    <ContentWidth />
     <StyledNav className="navigation">
       <Link to={`/`} className="home">
         <SiteLogo />
@@ -117,9 +115,9 @@ const Layout: React.FC<Props> = ({children}) => (
         </li>
       </ul>
     </StyledNav>
-    <main className="content" role="main">
+    <StyledMain className="content" role="main">
       {children}
-    </main>
+    </StyledMain>
     <StyledFooter className="footer">
       © {new Date().getFullYear()},{` `}
       <a href="https://jmsbrdy.com">jmsbrdy.com</a>. Built with
