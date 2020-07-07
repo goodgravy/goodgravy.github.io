@@ -1,11 +1,11 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
-import ContentWidth from '../components/content-width'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import FullWidthContainer from '../components/full-width-container'
 import CoverImg from '../components/cover-image'
+import {ContentArticle} from '../components/content-article'
 
 interface Props {
   readonly data: PageQueryData
@@ -16,37 +16,30 @@ interface HeaderProps {
   readonly image: any
 }
 
-const PostHeader: React.FC<HeaderProps> = ({title, image}) => {
+const PostHeader: React.FC<HeaderProps> = ({image}) => {
   const headerImage = !!image && (
     <FullWidthContainer>
       <CoverImg fluid={image.childImageSharp.fluid} alt="Cover image" />
     </FullWidthContainer>
   )
 
-  return (
-    <header>
-      {headerImage}
-      <ContentWidth>
-        <h1 className="page-header">{title}</h1>
-      </ContentWidth>
-    </header>
-  )
+  return <header>{headerImage}</header>
 }
 
 const PostTemplate: React.FC<Props> = ({data}) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const excerpt = post.frontmatter.description || post.excerpt
+  const postTitle = post.frontmatter.title
 
   return (
     <Layout title={siteTitle}>
-      <Head title={post.frontmatter.title} description={excerpt} keywords={post.frontmatter.keywords} />
-      <article>
-        <PostHeader title={post.frontmatter.title} image={post.frontmatter.coverImage} />
-        <ContentWidth>
-          <div dangerouslySetInnerHTML={{__html: post.html}} />
-        </ContentWidth>
-      </article>
+      <Head title={postTitle} description={excerpt} keywords={post.frontmatter.keywords} />
+      <PostHeader image={post.frontmatter.coverImage} />
+      <ContentArticle className="body">
+        <h1 className="page-header">{postTitle}</h1>
+        <div dangerouslySetInnerHTML={{__html: post.html}} />
+      </ContentArticle>
     </Layout>
   )
 }

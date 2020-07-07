@@ -1,10 +1,10 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
-import ContentArticle from '../components/content-article'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import PostExcerpt from '../components/post-excerpt.tsx'
+import {ContentArticle} from '../components/content-article'
 
 interface PageProps {
   readonly data: PageQueryData
@@ -17,7 +17,7 @@ const Index: React.FC<PageProps> = ({data}) => {
   return (
     <Layout title={siteTitle}>
       <Head title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <ContentArticle>
+      <ContentArticle className="body">
         {posts.map(({node}) => {
           const title = node.frontmatter.title || node.fields.slug
           const description = node.frontmatter.description
